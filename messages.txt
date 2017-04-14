@@ -1,0 +1,21 @@
+## Loading required package: Hmisc
+## Loading required package: lattice
+## Loading required package: survival
+## Loading required package: Formula
+## Loading required package: ggplot2
+## 
+## Attaching package: 'Hmisc'
+## The following objects are masked from 'package:base':
+## 
+##     format.pval, round.POSIXt, trunc.POSIXt, units
+## Loading required package: rms
+## Loading required package: SparseM
+## 
+## Attaching package: 'SparseM'
+## The following object is masked from 'package:base':
+## 
+##     backsolve
+## Warning: running command 'kpsewhich Sweave.sty' had status 1
+## Warning in test_latex_pkg("Sweave", file.path(R.home("share"), "texmf", : unable to find LaTeX package 'Sweave'; will use a copy from knitr
+## Warning: running command 'kpsewhich Sweavel.sty' had status 1
+## Warning in test_latex_pkg("Sweavel", system.file("misc", "Sweavel.sty", : unable to find LaTeX package 'Sweavel'; will use a copy from knitr
