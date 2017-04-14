@@ -15,7 +15,3 @@
 ## The following object is masked from 'package:base':
 ## 
 ##     backsolve
-## Warning: running command 'kpsewhich Sweave.sty' had status 1
-## Warning in test_latex_pkg("Sweave", file.path(R.home("share"), "texmf", : unable to find LaTeX package 'Sweave'; will use a copy from knitr
-## Warning: running command 'kpsewhich Sweavel.sty' had status 1
-## Warning in test_latex_pkg("Sweavel", system.file("misc", "Sweavel.sty", : unable to find LaTeX package 'Sweavel'; will use a copy from knitr

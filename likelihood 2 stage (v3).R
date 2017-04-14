@@ -1,5 +1,4 @@
-
-like.2s=function(p1=0.60,p0=0.40,n.i=17,n=41,ka.i=(1/4),kb.i=4,ka=(1/4),kb=4,simon=TRUE,r1=7,r=21,output=FALSE){
+like.2s=function(p1=0.60,p0=0.40, n.i=17,n=41,ka.i=(1/4),kb.i=4,ka=(1/4),kb=4,simon=TRUE,r1=7,r=21,output=FALSE){
 ######################################
 ## Author: Jeffrey D. Blume
 ## Date:   June 2012
@@ -31,7 +30,7 @@ or=(p1*(1-p0))/((p0)*(1-p1))
 if (simon==TRUE) {
 ka.i=1/3.375 #(or^(r1))*((1-p1)/(1-p0))^(n.i)
 kb.i=Inf
-ka=1         #(or^(r))*((1-p1)/(1-p0))^(n)
+ka=1.5         #(or^(r))*((1-p1)/(1-p0))^(n)
 kb=Inf
 }
 
@@ -41,6 +40,7 @@ kb=Inf
 
 top.i=round((log(kb.i)-n.i*log((1-p1)/(1-p0)))/log(or),10)
 bot.i=round((log(ka.i)-n.i*log((1-p1)/(1-p0)))/log(or),10)
+
   ## if our r1 (bot.i) isn't an integer, change accordingly. The LR will then change, so change that too. 
 if(floor(bot.i) < bot.i & bot.i < ceiling(bot.i)){
   bot.i <- floor(bot.i)
@@ -109,6 +109,18 @@ fndf.0=(1+lrf.0)^-1
 lr=c(lri.0,lri.1,lrf.0,lrf.1)
 fdr=c(fndi.0,fdri.1,fndf.0,fdrf.1)
 
+x=floor((bot.i+1):min(n.i,bot))
+ptrm.0=pbinom(floor(bot.i),size=n.i,prob=p0)+sum(dbinom(x,size=n.i,prob=p0)*pbinom((bot-x),size=(n-n.i),prob=p0))
+ptrm.1=pbinom(floor(bot.i),size=n.i,prob=p1)+sum(dbinom(x,size=n.i,prob=p1)*pbinom((bot-x),size=(n-n.i),prob=p1))
+
+## Type I error
+t1err <- 1-ptrm.0
+
+## Power
+pow <- 1-ptrm.1
+
+
+
 results=cbind(results,unname(lr),unname(fdr))
 dimnames(results)[[2]]=c("Stage","Hyp","Str","Mis","Weak","All","ESS","LR","FDR")
 
@@ -121,12 +133,14 @@ cat("#########################################################################\n
 if (simon==FALSE ) {cat("##  Likelihood Two-Stage Design \n")}
 else (cat("##  Simon's Optimal Two-Stage Design (Likelihood display) \n"))
 cat("## ---------------------------------------------------------------\n")
-cat("##  r.i (Simon) : ",bot.i,"\n")
+cat("##  r.i (Simon) : ",bot.i,"\n")  
 cat("##  r   (Simon) : ",ceiling(bot),"\n")
 cat("##  Hypotheses  : H0: p = ",round(p0,2)," ;  H1: p = ",round(p1,2),"  (OR =",round(or,2),")\n",sep="")
 cat("##  Interim     : SS = ",sprintf("%3.0f",round(n.i,1)),"    ;  continue if 1/", round(1/ka.i,2)," < LR < ",round(kb.i,2),"\n",sep="")
 cat("##  Final       : SS = ",sprintf("%3.0f",round(n,1)),  "    ;  weak ev  if 1/", round(1/ka,2)," < LR < ",round(kb,2),"\n",sep="")
 cat("##  Expected SS : H0:",sprintf("%5.2f",round(ess.0,2)),"  ;  H1:",sprintf("%5.2f",round(ess.1,2)),"\n")
+cat("##  Type 1 error: ",round(t1err,3),"\n")
+cat("##  Power       : ",round(pow,3),"\n")
 #cat("## ---------------------------------------------------------------\n")
 cat("## -------------------------------\n")
 cat("##  Interim          H0       H1 \n")
@@ -148,6 +162,7 @@ cat("##  FDR          ",sprintf("%4.4f",round(fndf.0,4)), ";",sprintf("%4.4f",ro
 #cat("## -------------------------------\n")
 cat("#########################################################################\n")
 }
+
 results <- as.data.frame(results)
 if (output==TRUE) {results}
 }

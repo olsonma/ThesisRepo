@@ -11,14 +11,16 @@
 ## closed form type 1 error and power for unplanned sample sizes, and simulated type I error and power for planned sample sizes.
 
 ## in order to run this function, must define the functions `changDes` and `changDesAlter`
-
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/like.2s.Simon.R")
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changUnplannedSS.R")
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changUnplannedSSAlter.R")
 changDesCompare <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
                      n1  = 17,  nt = 41, 
                      n1a = 17, nta = 41,
                      p0  = 0.4, p1 = 0.6, 
                      sim = TRUE){
                      	
-	Design    <- matrix(c("Chang","Chang Alter",""), nrow=3)
+	Design    <- matrix(c("Chang","Chang Alter","likelihood",""), nrow=4)
 	chang     <-     as.matrix(changDes(r1   = r1,   rt  = rt, beta = beta, alpha = alpha,
             				   n1  = n1,   nt = nt, 
             				   n1a = n1a, nta = nta,
@@ -26,13 +28,14 @@ changDesCompare <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
  	changAlter<- as.matrix(changDesAlter(r1   = r1,    rt  = rt, beta = beta, alpha = alpha,
             				   n1  = n1,   nt = nt, 
             			       n1a = n1a, nta = nta,
-              			   	   p0  = p0,   p1 = p1, sim = sim)  )           					 
+              			   	   p0  = p0,   p1 = p1, sim = sim)  )  
+ 	like.2s <- as.matrix(like.2s.Simon(r1   = r1,    rt  = rt, beta = beta, alpha = alpha,
+ 	                                   n1  = n1,   nt = nt, 
+ 	                                   n1a = n1a, nta = nta,
+ 	                                   p0  = p0,   p1 = p1, sim = sim))
               					 
-	dfCompare <- rbind(chang, changAlter, rep("", dim(chang)[2]))
+	dfCompare <- rbind(chang, changAlter,like.2s, rep("", dim(chang)[2]))
 	dfCompare <- data.frame(Design = Design, dfCompare)
 	return(dfCompare)               	
 }
-#changDesCompare(a   = 7,   c  = 21, beta = 0.2, alpha = 0.05,
-#                     n1  = 17,  nt = 41, 
-#                     n1a = 17, nta = 41,
-#                     p0  = 0.4, p1 = 0.6)
+
