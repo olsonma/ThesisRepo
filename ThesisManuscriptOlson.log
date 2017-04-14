@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 APR 2017 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 APR 2017 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1238,20 +1238,20 @@ Overfull \hbox (56.0249pt too wide) in paragraph at lines 629--656
 ] [14] [15]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--666
+Underfull \hbox (badness 10000) in paragraph at lines 666--672
 
  []
 
 [16
 
 ] (./ThesisManuscriptOlson.bbl [17])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 721.
  [18
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 715.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 721.
  (./ThesisManuscriptOlson.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 715.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 721.
 
 
  *File List*
@@ -1389,10 +1389,10 @@ ThesisManuscriptOlson.out
 ThesisManuscriptOlson.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 715.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 721.
 Package rerunfilecheck Info: File `ThesisManuscriptOlson.out' has not changed.
 (rerunfilecheck)             Checksum: AF70A6EE0E346997DEC8CC0E39A7A38E;1075.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 715.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 721.
  ) 
 Here is how much of TeX's memory you used:
  14912 strings out of 493014
