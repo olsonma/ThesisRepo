@@ -716,7 +716,7 @@ Maybe put the chang design here that goes beyond stage 2 sample size being origi
 
 %\bibliographystyle{apacite}
 \bibliographystyle{ieeetr}
-\bibliography{/Users/mollyolson/Documents/Vanderbilt/Masters_Thesis/ThesisWork/thesisBib}		
+\bibliography{/Users/mollyolson/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/thesisBib}		
 
 \end{document} 
 
