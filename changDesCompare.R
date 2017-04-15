@@ -20,7 +20,7 @@ changDesCompare <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
                      p0  = 0.4, p1 = 0.6, 
                      sim = TRUE){
                      	
-	Design    <- matrix(c("Chang","Chang Alter","likelihood",""), nrow=4)
+	Design    <- matrix(c("Chang","Chang Alter","Likelihood"), nrow=3)
 	chang     <-     as.matrix(changDes(r1   = r1,   rt  = rt, beta = beta, alpha = alpha,
             				   n1  = n1,   nt = nt, 
             				   n1a = n1a, nta = nta,
@@ -34,7 +34,8 @@ changDesCompare <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
  	                                   n1a = n1a, nta = nta,
  	                                   p0  = p0,   p1 = p1, sim = sim))
               					 
-	dfCompare <- rbind(chang, changAlter,like.2s, rep("", dim(chang)[2]))
+	#dfCompare <- rbind(chang, changAlter,like.2s, rep("", dim(chang)[2]))
+ 	dfCompare <- rbind(chang, changAlter,like.2s)
 	dfCompare <- data.frame(Design = Design, dfCompare)
 	return(dfCompare)               	
 }

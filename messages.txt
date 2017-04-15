@@ -15,3 +15,9 @@
 ## The following object is masked from 'package:base':
 ## 
 ##     backsolve
+## Loading required package: xtable
+## 
+## Attaching package: 'xtable'
+## The following objects are masked from 'package:Hmisc':
+## 
+##     label, label<-

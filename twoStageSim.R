@@ -4,16 +4,16 @@
 ## defined as "unplanned" parameters in `changDes`. i.e the parameters are
 ## probably renamed in the function. 
 ## this was used for trial and error purposes. 
-
+sim <- 100000
 ###########################	
 ## type I error simulation
 ###########################
-r1 <- 8
-rt <- 21
-n1 <- 19
-nt <- 43
-p0 <- .4
-p1 <- .6
+r1 <- 1
+rt <- 5
+n1 <- 27
+nt <- 53
+p0 <- .05
+p1 <- .15
 
 
 ## under null
@@ -24,7 +24,7 @@ totalResponse <- NULL
 totalStage1   <- NULL
 totalStage2   <- NULL
 
-for(j in 1:1000){
+for(j in 1:sim){
   
   ## set up first stage
   for(i in 1:n1){
@@ -50,8 +50,8 @@ for(j in 1:1000){
   }
 }
 
-rejectNull/1000
-
+t1err <- rejectNull/sim
+t1err
 
 
 ###########################
@@ -66,7 +66,7 @@ totalResponse <- NULL
 totalStage1   <- NULL
 totalStage2   <- NULL
 
-for(j in 1:1000){
+for(j in 1:sim){
   
   ## set up first stage
   for(i in 1:n1){
@@ -92,4 +92,6 @@ for(j in 1:1000){
   }
 }
 
-rejectNull/1000
+pow <- rejectNull/sim
+pow
+

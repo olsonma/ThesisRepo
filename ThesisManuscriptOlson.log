@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 APR 2017 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  15 APR 2017 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -212,8 +212,26 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen129
 \l_MT_below_shortintertext_sep=\dimen130
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count116
+\LTcapwidth=\dimen131
+\LT@head=\box31
+\LT@firsthead=\box32
+\LT@foot=\box33
+\LT@lastfoot=\box34
+\LT@cols=\count117
+\LT@rows=\count118
+\c@LT@tables=\count119
+\c@LT@chunks=\count120
+\LT@p@ftn=\toks22
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen131
+\bigstrutjot=\dimen132
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -221,17 +239,21 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen132
-\captionmargin@=\dimen133
-\captionwidth=\dimen134
-\caption@tempdima=\dimen135
-\caption@indent=\dimen136
-\caption@parindent=\dimen137
-\caption@hangindent=\dimen138
+\captionmargin=\dimen133
+\captionmargin@=\dimen134
+\captionwidth=\dimen135
+\caption@tempdima=\dimen136
+\caption@indent=\dimen137
+\caption@parindent=\dimen138
+\caption@hangindent=\dimen139
 )
-\c@ContinuedFloat=\count116
+\c@ContinuedFloat=\count121
 Package caption Info: listings package is loaded.
-)
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
@@ -244,15 +266,15 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box31
-\beforetitleunit=\skip53
-\aftertitleunit=\skip54
-\ttl@plus=\dimen139
-\ttl@minus=\dimen140
-\ttl@toksa=\toks22
-\titlewidth=\dimen141
-\titlewidthlast=\dimen142
-\titlewidthfirst=\dimen143
+\ttl@box=\box35
+\beforetitleunit=\skip57
+\aftertitleunit=\skip58
+\ttl@plus=\dimen140
+\ttl@minus=\dimen141
+\ttl@toksa=\toks23
+\titlewidth=\dimen142
+\titlewidthlast=\dimen143
+\titlewidthfirst=\dimen144
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tex-gyre/tgschola.sty
 Package: tgschola 2009/09/27 v1.2 TeX Gyre Schola as default roman family
@@ -288,18 +310,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count117
-\Gm@cntv=\count118
-\c@Gm@tempcnt=\count119
-\Gm@bindingoffset=\dimen144
-\Gm@wd@mp=\dimen145
-\Gm@odd@mp=\dimen146
-\Gm@even@mp=\dimen147
-\Gm@layoutwidth=\dimen148
-\Gm@layoutheight=\dimen149
-\Gm@layouthoffset=\dimen150
-\Gm@layoutvoffset=\dimen151
-\Gm@dimlist=\toks23
+\Gm@cnth=\count122
+\Gm@cntv=\count123
+\c@Gm@tempcnt=\count124
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks24
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -311,11 +333,11 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks24
-\minrowclearance=\skip55
+\everycr=\toks25
+\minrowclearance=\skip59
 )
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count120
+\rownum=\count125
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -350,19 +372,19 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count121
-\rotFPtop=\skip56
-\rotFPbot=\skip57
-\rot@float@box=\box32
-\rot@mess@toks=\toks25
+\c@r@tfl@t=\count126
+\rotFPtop=\skip60
+\rotFPbot=\skip61
+\rot@float@box=\box36
+\rot@mess@toks=\toks26
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count122
-\float@exts=\toks26
-\float@box=\box33
-\@float@everytoks=\toks27
-\@floatcapt=\box34
+\c@float@type=\count127
+\float@exts=\toks27
+\float@box=\box37
+\@float@everytoks=\toks28
+\@floatcapt=\box38
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
@@ -372,41 +394,41 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks28
-\SOUL@lasttoken=\toks29
-\SOUL@cmds=\toks30
-\SOUL@buffer=\toks31
-\SOUL@token=\toks32
-\SOUL@spaceskip=\skip58
-\SOUL@ttwidth=\dimen152
-\SOUL@uldp=\dimen153
-\SOUL@ulht=\dimen154
+\SOUL@word=\toks29
+\SOUL@lasttoken=\toks30
+\SOUL@cmds=\toks31
+\SOUL@buffer=\toks32
+\SOUL@token=\toks33
+\SOUL@spaceskip=\skip62
+\SOUL@ttwidth=\dimen153
+\SOUL@uldp=\dimen154
+\SOUL@ulht=\dimen155
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/eepic/eepic.sty
 Extension to Epic and LaTeX. Version 1.1e - Released Dec 21, 1999
-\@gphlinewidth=\count123
-\@eepictcnt=\count124
-\@tempdimc=\dimen155
-\maxovaldiam=\dimen156
-\@filltype=\box35
+\@gphlinewidth=\count128
+\@eepictcnt=\count129
+\@tempdimc=\dimen156
+\maxovaldiam=\dimen157
+\@filltype=\box39
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count125
-\sf@farskip=\skip59
-\sf@captopadj=\dimen157
-\sf@capskip=\skip60
-\sf@nearskip=\skip61
-\c@subfigure=\count126
-\c@subfigure@save=\count127
-\c@lofdepth=\count128
-\c@subtable=\count129
-\c@subtable@save=\count130
-\c@lotdepth=\count131
-\sf@top=\skip62
-\sf@bottom=\skip63
+\c@KVtest=\count130
+\sf@farskip=\skip63
+\sf@captopadj=\dimen158
+\sf@capskip=\skip64
+\sf@nearskip=\skip65
+\c@subfigure=\count131
+\c@subfigure@save=\count132
+\c@lofdepth=\count133
+\c@subtable=\count134
+\c@subtable@save=\count135
+\c@lotdepth=\count136
+\sf@top=\skip66
+\sf@bottom=\skip67
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/euscript.sty
 Package: euscript 2009/06/22 v3.00 Euler Script fonts
@@ -415,9 +437,9 @@ LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count132
-\c@@ppsavesec=\count133
-\c@@ppsaveapp=\count134
+\c@@pps=\count137
+\c@@ppsavesec=\count138
+\c@@ppsaveapp=\count139
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/koma-script/tocstyle.sty
 Package: tocstyle 2016/04/12 v0.2h-alpha KOMA-Script package (versatile toc sty
@@ -431,7 +453,7 @@ Package tocstyle Warning: THIS IS AN ALPHA VERSION!
 (tocstyle)                THERE IS NO SUPPORT, IF YOU USE THIS PACKAGE!
 (tocstyle)                Maybe it would be better, not to load this package.
 
-\tocstyle@indentstyle=\count135
+\tocstyle@indentstyle=\count140
 Package tocstyle Info: no tocstyle.cfg found on input line 956.
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
@@ -549,8 +571,8 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen158
-\epsfysize=\dimen159
+\epsfxsize=\dimen159
+\epsfysize=\dimen160
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
@@ -564,67 +586,67 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen160
-\lightrulewidth=\dimen161
-\cmidrulewidth=\dimen162
-\belowrulesep=\dimen163
-\belowbottomsep=\dimen164
-\aboverulesep=\dimen165
-\abovetopsep=\dimen166
-\cmidrulesep=\dimen167
-\cmidrulekern=\dimen168
-\defaultaddspace=\dimen169
-\@cmidla=\count136
-\@cmidlb=\count137
-\@aboverulesep=\dimen170
-\@belowrulesep=\dimen171
-\@thisruleclass=\count138
-\@lastruleclass=\count139
-\@thisrulewidth=\dimen172
+\heavyrulewidth=\dimen161
+\lightrulewidth=\dimen162
+\cmidrulewidth=\dimen163
+\belowrulesep=\dimen164
+\belowbottomsep=\dimen165
+\aboverulesep=\dimen166
+\abovetopsep=\dimen167
+\cmidrulesep=\dimen168
+\cmidrulekern=\dimen169
+\defaultaddspace=\dimen170
+\@cmidla=\count141
+\@cmidlb=\count142
+\@aboverulesep=\dimen171
+\@belowrulesep=\dimen172
+\@thisruleclass=\count143
+\@lastruleclass=\count144
+\@thisrulewidth=\dimen173
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip64
-\cftbeforetoctitleskip=\skip65
-\cftaftertoctitleskip=\skip66
-\cftbeforepartskip=\skip67
-\cftpartnumwidth=\skip68
-\cftpartindent=\skip69
-\cftbeforechapskip=\skip70
-\cftchapindent=\skip71
-\cftchapnumwidth=\skip72
-\cftbeforesecskip=\skip73
-\cftsecindent=\skip74
-\cftsecnumwidth=\skip75
-\cftbeforesubsecskip=\skip76
-\cftsubsecindent=\skip77
-\cftsubsecnumwidth=\skip78
-\cftbeforesubsubsecskip=\skip79
-\cftsubsubsecindent=\skip80
-\cftsubsubsecnumwidth=\skip81
-\cftbeforeparaskip=\skip82
-\cftparaindent=\skip83
-\cftparanumwidth=\skip84
-\cftbeforesubparaskip=\skip85
-\cftsubparaindent=\skip86
-\cftsubparanumwidth=\skip87
-\cftbeforeloftitleskip=\skip88
-\cftafterloftitleskip=\skip89
-\cftbeforefigskip=\skip90
-\cftfigindent=\skip91
-\cftfignumwidth=\skip92
-\cftbeforelottitleskip=\skip93
-\cftafterlottitleskip=\skip94
-\cftbeforetabskip=\skip95
-\cfttabindent=\skip96
-\cfttabnumwidth=\skip97
-\cftbeforesubfigskip=\skip98
-\cftsubfigindent=\skip99
-\cftsubfignumwidth=\skip100
-\cftbeforesubtabskip=\skip101
-\cftsubtabindent=\skip102
-\cftsubtabnumwidth=\skip103
+\cftparskip=\skip68
+\cftbeforetoctitleskip=\skip69
+\cftaftertoctitleskip=\skip70
+\cftbeforepartskip=\skip71
+\cftpartnumwidth=\skip72
+\cftpartindent=\skip73
+\cftbeforechapskip=\skip74
+\cftchapindent=\skip75
+\cftchapnumwidth=\skip76
+\cftbeforesecskip=\skip77
+\cftsecindent=\skip78
+\cftsecnumwidth=\skip79
+\cftbeforesubsecskip=\skip80
+\cftsubsecindent=\skip81
+\cftsubsecnumwidth=\skip82
+\cftbeforesubsubsecskip=\skip83
+\cftsubsubsecindent=\skip84
+\cftsubsubsecnumwidth=\skip85
+\cftbeforeparaskip=\skip86
+\cftparaindent=\skip87
+\cftparanumwidth=\skip88
+\cftbeforesubparaskip=\skip89
+\cftsubparaindent=\skip90
+\cftsubparanumwidth=\skip91
+\cftbeforeloftitleskip=\skip92
+\cftafterloftitleskip=\skip93
+\cftbeforefigskip=\skip94
+\cftfigindent=\skip95
+\cftfignumwidth=\skip96
+\cftbeforelottitleskip=\skip97
+\cftafterlottitleskip=\skip98
+\cftbeforetabskip=\skip99
+\cfttabindent=\skip100
+\cfttabnumwidth=\skip101
+\cftbeforesubfigskip=\skip102
+\cftsubfigindent=\skip103
+\cftsubfignumwidth=\skip104
+\cftbeforesubtabskip=\skip105
+\cftsubtabindent=\skip106
+\cftsubtabnumwidth=\skip107
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
@@ -670,14 +692,14 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen173
-\Hy@linkcounter=\count140
-\Hy@pagecounter=\count141
+\@linkdim=\dimen174
+\Hy@linkcounter=\count145
+\Hy@pagecounter=\count146
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count142
+\Hy@SavedSpaceFactor=\count147
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -689,12 +711,12 @@ Package hyperref Info: Plain pages OFF on input line 4461.
 Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
-\c@Hy@tempcnt=\count143
+\c@Hy@tempcnt=\count148
 LaTeX Info: Redefining \url on input line 5044.
-\XeTeXLinkMargin=\dimen174
-\Fld@menulength=\count144
-\Field@Width=\dimen175
-\Fld@charsize=\dimen176
+\XeTeXLinkMargin=\dimen175
+\Fld@menulength=\count149
+\Field@Width=\dimen176
+\Fld@charsize=\dimen177
 Package hyperref Info: Hyper figures OFF on input line 6298.
 Package hyperref Info: Link nesting OFF on input line 6303.
 Package hyperref Info: Hyper index ON on input line 6306.
@@ -704,24 +726,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6323.
 Package hyperref Info: PDF/A mode OFF on input line 6328.
 LaTeX Info: Redefining \ref on input line 6368.
 LaTeX Info: Redefining \pageref on input line 6372.
-\Hy@abspage=\count145
-\c@Item=\count146
-\c@Hfootnote=\count147
+\Hy@abspage=\count150
+\c@Item=\count151
+\c@Hfootnote=\count152
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
-\Fld@listcount=\count148
-\c@bookmark@seq@number=\count149
+\Fld@listcount=\count153
+\c@bookmark@seq@number=\count154
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip104
+\Hy@SectionHShift=\skip108
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
@@ -732,19 +754,19 @@ Package: suffix 2006/07/15 1.5a Variant command support
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count150
-\decimalpart=\count151
+\integerpart=\count155
+\decimalpart=\count156
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks33
+\AC@clearlist=\toks34
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count152
+\etb@tempcnta=\count157
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2015/05/05 v3.01
@@ -754,10 +776,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
 )
-\XKV@depth=\count153
+\XKV@depth=\count158
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -765,17 +787,17 @@ Package: fcprefix 2012/09/28
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2012/09/28
-\fc@digit@counter=\count154
+\fc@digit@counter=\count159
 ))
-\c@padzeroesN=\count155
-\fc@tmpcatcode=\count156
-\@DT@modctr=\count157
-\@ordinalctr=\count158
-\@orgargctr=\count159
-\@strctr=\count160
-\@tmpstrctr=\count161
-\@DT@loopN=\count162
-\@DT@X=\count163
+\c@padzeroesN=\count160
+\fc@tmpcatcode=\count161
+\@DT@modctr=\count162
+\@ordinalctr=\count163
+\@orgargctr=\count164
+\@strctr=\count165
+\@tmpstrctr=\count166
+\@DT@loopN=\count167
+\@DT@X=\count168
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2013/08/17
@@ -783,41 +805,41 @@ File: fc-english.def 2013/08/17
 (/usr/local/texlive/2016/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count164
-\@month=\count165
-\@year=\count166
-\c@HOUR=\count167
-\c@HOURXII=\count168
-\c@MINUTE=\count169
-\c@TOHOUR=\count170
-\c@TOMINUTE=\count171
-\c@SECOND=\count172
-\currenthour=\count173
-\currentminute=\count174
-\currentsecond=\count175
+\@day=\count169
+\@month=\count170
+\@year=\count171
+\c@HOUR=\count172
+\c@HOURXII=\count173
+\c@MINUTE=\count174
+\c@TOHOUR=\count175
+\c@TOMINUTE=\count176
+\c@SECOND=\count177
+\currenthour=\count178
+\currentminute=\count179
+\currentsecond=\count180
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count176
-\dayofyear=\count177
-\dayofweek=\count178
+\@dtctr=\count181
+\dayofyear=\count182
+\dayofweek=\count183
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks36
-\dt@b=\toks37
+\dt@a=\toks37
+\dt@b=\toks38
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
-\@float@every@algorithm=\toks38
-\c@algorithm=\count179
+\@float@every@algorithm=\toks39
+\c@algorithm=\count184
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count180
-\c@ALC@line=\count181
-\c@ALC@rem=\count182
-\c@ALC@depth=\count183
-\ALC@tlm=\skip105
-\algorithmicindent=\skip106
+\c@ALC@unique=\count185
+\c@ALC@line=\count186
+\c@ALC@rem=\count187
+\c@ALC@depth=\count188
+\ALC@tlm=\skip109
+\algorithmicindent=\skip110
 )
 \@nomenclaturefile=\write5
 \openout5 = `ThesisManuscriptOlson.nlo'.
@@ -826,56 +848,56 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 Writing nomenclature file ThesisManuscriptOlson.nlo
 (/usr/local/texlive/2016/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen177
-\c@nlinenum=\count184
-\TeXr@lab=\toks39
+\rotheadsize=\dimen178
+\c@nlinenum=\count189
+\TeXr@lab=\toks40
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen178
+\ttl@leftsep=\dimen179
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/abstract/abstract.sty
 Package: abstract 2009/06/08 v1.2a configurable abstracts
-\abstitleskip=\skip107
-\absleftindent=\skip108
-\absrightindent=\skip109
-\absparindent=\skip110
-\absparsep=\skip111
+\abstitleskip=\skip111
+\absleftindent=\skip112
+\absrightindent=\skip113
+\absparindent=\skip114
+\absparsep=\skip115
 )
-\li=\skip112
-\di=\skip113
-\@float@every@Box=\toks40
-\c@Box=\count185
+\li=\skip116
+\di=\skip117
+\@float@every@Box=\toks41
+\c@Box=\count190
 
 (./ThesisManuscriptOlson.aux)
 \openout1 = `ThesisManuscriptOlson.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 325.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 325.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 326.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 326.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 325.
-LaTeX Font Info:    ... okay on input line 325.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 325.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 326.
+LaTeX Font Info:    ... okay on input line 326.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 326.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -883,17 +905,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count186
-\scratchdimen=\dimen179
-\scratchbox=\box36
-\nofMPsegments=\count187
-\nofMParguments=\count188
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count189
-\MPscratchDim=\dimen180
-\MPnumerator=\count190
-\makeMPintoPDFobject=\count191
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count191
+\scratchdimen=\dimen180
+\scratchbox=\box40
+\nofMPsegments=\count192
+\nofMParguments=\count193
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count194
+\MPscratchDim=\dimen181
+\MPnumerator=\count195
+\makeMPintoPDFobject=\count196
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -908,7 +930,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count192
+\c@lstlisting=\count197
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
@@ -956,70 +978,70 @@ Package tocstyle Warning: Usage of `tocstyle' with `titletoc' detected.
 (tocstyle)                but not both of them together. I expect even
 (tocstyle)                error messages because of this combination.
 
-Package tocstyle Info: prepare \l@part for redefinition on input line 325.
+Package tocstyle Info: prepare \l@part for redefinition on input line 326.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 32
-5.
+6.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 32
-5.
+6.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 32
-5.
+6.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 32
-5.
+6.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 325.
+LaTeX Font Info:    Try loading font information for U+msa on input line 326.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 325.
+LaTeX Font Info:    Try loading font information for U+msb on input line 326.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 325.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 326.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
-Package tocstyle Info: prepare \l@chapter for redefinition on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+Package tocstyle Info: prepare \l@chapter for redefinition on input line 326.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 325.
-Package tocstyle Info: prepare \l@section for redefinition on input line 325.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 325
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+Package tocstyle Info: prepare \l@section for redefinition on input line 326.
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 326
 .
 Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 
-325.
-Package tocstyle Info: prepare \l@paragraph for redefinition on input line 325.
+326.
+Package tocstyle Info: prepare \l@paragraph for redefinition on input line 326.
 
 Package tocstyle Info: prepare \l@subparagraph for redefinition on input line 3
-25.
-Package tocstyle Info: prepare \l@table for redefinition on input line 325.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 325.
-\AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 325.
+26.
+Package tocstyle Info: prepare \l@table for redefinition on input line 326.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 326.
+\AtBeginShipoutBox=\box41
+Package hyperref Info: Link coloring OFF on input line 326.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1027,11 +1049,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count193
+\c@section@level=\count198
 )
-LaTeX Info: Redefining \ref on input line 325.
-LaTeX Info: Redefining \pageref on input line 325.
-LaTeX Info: Redefining \nameref on input line 325.
+LaTeX Info: Redefining \ref on input line 326.
+LaTeX Info: Redefining \pageref on input line 326.
+LaTeX Info: Redefining \nameref on input line 326.
 
 (./ThesisManuscriptOlson.out) (./ThesisManuscriptOlson.out)
 \@outlinefile=\write6
@@ -1155,6 +1177,11 @@ text indent by \l@... (lot, 1):  27.02475pt
 number indent by parent (lot, 1):  17.62482pt
 text indent calculated (lot, 1): 21.0pt
 number indent calculated (lot, 1): 17.62482pt
+number indent by \l@... (lot, 1):  17.62482pt
+text indent by \l@... (lot, 1):  27.02475pt
+number indent by parent (lot, 1):  17.62482pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 17.62482pt
 )
 \tf@lot=\write8
 \openout8 = `ThesisManuscriptOlson.lot'.
@@ -1171,17 +1198,17 @@ number indent calculated (lot, 1): 17.62482pt
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OT1+qcs on input line 457.
+LaTeX Font Info:    Try loading font information for OT1+qcs on input line 458.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tex-gyre/ot1qcs.fd
 File: ot1qcs.fd 2009/09/25 v1.2 font definition file for OT1/qcs
 )
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
+Underfull \hbox (badness 10000) in paragraph at lines 460--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
+Underfull \hbox (badness 10000) in paragraph at lines 460--463
 
  []
 
@@ -1190,12 +1217,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 459--462
 ] [2]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--486
+Underfull \hbox (badness 10000) in paragraph at lines 478--487
 
  []
 
 
-Overfull \hbox (32.01866pt too wide) in paragraph at lines 477--486
+Overfull \hbox (32.01866pt too wide) in paragraph at lines 478--487
 [] \OT1/ztmcm/m/n/12 = [][] [] \OML/ztmcm/m/it/12 b\OT1/ztmcm/m/n/12 (\OML/ztmc
 m/m/it/12 x[]; p; n[]\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 ,
  []
@@ -1203,7 +1230,7 @@ m/m/it/12 x[]; p; n[]\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 ,
 [3
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 488.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 489.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1212,24 +1239,24 @@ Chapter 3.
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 508--511
+Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
 
 [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 570--576
+Underfull \hbox (badness 10000) in paragraph at lines 571--577
 
  []
 
 [9] [10] [11]
-Overfull \hbox (60.97237pt too wide) in paragraph at lines 594--604
+Overfull \hbox (60.97237pt too wide) in paragraph at lines 595--605
 [] []$ 
  []
 
 [12]
 Chapter 4.
 
-Overfull \hbox (56.0249pt too wide) in paragraph at lines 629--656
+Overfull \hbox (56.0249pt too wide) in paragraph at lines 630--657
  []|  [] 
  []
 
@@ -1237,21 +1264,32 @@ Overfull \hbox (56.0249pt too wide) in paragraph at lines 629--656
 
 ] [14] [15]
 Chapter 5.
+[16
 
-Underfull \hbox (badness 10000) in paragraph at lines 666--672
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 665.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 665.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 665.
+ [17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 692--698
 
  []
 
-[16
+[18
 
-] (./ThesisManuscriptOlson.bbl [17])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 721.
- [18
+] (./ThesisManuscriptOlson.bbl [19])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 747.
+ [20
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 721.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 747.
  (./ThesisManuscriptOlson.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 721.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 747.
 
 
  *File List*
@@ -1283,9 +1321,11 @@ fancyvrb.sty    2008/02/07
 mathtools.sty    2015/11/12 v1.18 mathematical typesetting tools
     calc.sty    2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
  mhsetup.sty    2010/01/21 v1.2a programming setup (MH)
+longtable.sty    2014/10/28 v4.11 Multi-page Table package (DPC)
 multirow.sty    
  caption.sty    2016/02/21 v3.3-144 Customizing captions (AR)
 caption3.sty    2016/02/04 v1.7-139 caption3 kernel (AR)
+ltcaption.sty    2013/06/09 v1.4-94 longtable captions (AR)
 tocbibind.sty    2010/10/13 v1.5k extra ToC listings
 setspace.sty    2011/12/19 v6.7a set line spacing
 titlesec.sty    2016/03/21 v2.10.2 Sectioning titles
@@ -1389,19 +1429,19 @@ ThesisManuscriptOlson.out
 ThesisManuscriptOlson.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 721.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 747.
 Package rerunfilecheck Info: File `ThesisManuscriptOlson.out' has not changed.
 (rerunfilecheck)             Checksum: AF70A6EE0E346997DEC8CC0E39A7A38E;1075.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 721.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 747.
  ) 
 Here is how much of TeX's memory you used:
- 14912 strings out of 493014
- 222332 string characters out of 6133351
- 365911 words of memory out of 5000000
- 18035 multiletter control sequences out of 15000+600000
- 58244 words of font info for 128 fonts, out of 8000000 for 9000
+ 15089 strings out of 493014
+ 224657 string characters out of 6133351
+ 393376 words of memory out of 5000000
+ 18181 multiletter control sequences out of 15000+600000
+ 79852 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,77p,2413b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,77p,2413b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}{/usr/l
 ocal/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/201
@@ -1414,10 +1454,10 @@ nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ThesisManuscriptOlson.pdf (24 pages, 165205 bytes).
+Output written on ThesisManuscriptOlson.pdf (26 pages, 167160 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

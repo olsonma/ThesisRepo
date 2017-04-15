@@ -19,6 +19,7 @@
 
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{longtable}
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage[font=singlespacing]{caption}
@@ -311,6 +312,7 @@
 <<echo=FALSE>>=
 require(Hmisc)
 require(rms)
+require(xtable)
 options(prType='latex')
 knitrSet()
 @
@@ -613,7 +615,6 @@ We used Monte Carlo simulation to examine the performance of the study design of
 In order to compare these new Frequentist and Likelihood methods for deviation of sample size in the first stage, we first introduce a concrete example. An actual phase II cancer clinical trial was designed using the likelihood approach. In order to stick to convention, the trial would only stop early for futility. The planned design parameters are $n_1 = 17$, $n_t = 41$, $r_1 = 17$, $r_t = 21$, $p_0 = 0.4$, and $p_1 = 0.6$. This study design has an expected sample size of 25.6 and a probability of early termination under the null hypothesis of 64\%. This is considered an Admissible design and meets the nominal type I error rate, $\alpha = 0.05$, and type I error rate, $\beta = 0.2$. In concordance with the likelihood design, the authors provide alternative interim stopping rules for sample sizes that deviate from the planned design. These new designs have a probability of early termination under the null that exceed 50\% and preserve type I and type II error rates. Using the original likelihood design, but varying $n_1$, one can use Chang et al.'s and the adapted method to obtain similar results. We keep stage II sample size the same in this case. 
 
 <<echo=FALSE>>=
-library(Hmisc)
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changUnplannedSS.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changUnplannedSSAlter.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changDesCompare.R")
@@ -665,14 +666,40 @@ Generally, the stopping rules between the Chang designs and the likelihood desig
 
 \chapter{Results}
 
+\begin{landscape}
+\begin{table}[H]
+\caption{Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.4, $p_1$ = 0.6, $\alpha$ = 0.05, $\beta$ = 0.20)}
+\small
+  \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/varyN1.R")
 trial1 <- varyN1()
-table1 <- latex(trial1, title = "blah", file = "")
-table1
+table1 <- xtable(trial1, type = "latex", caption = "blah", digits = 3)
+print(table1, include.rownames = FALSE, floating = FALSE, digits = 5)# tabular.environment = "longtable",hline.after=c(-1,nrow(table1)),
+     # add.to.row = list(pos = list(0),command = "\\hline \\endhead "))
 @
-
-
+\begin{tabular}{cccccccccccccccccccccccccc}
+  \hline
+    \multicolumn{6}{c}{Planned Design}&\multicolumn{3}{r}{Attained Sample Size}&\multicolumn{8}{r}{Redesign}\\
+  \multicolumn{7}{c}{     }&\multicolumn{1}{l}{  }&\multicolumn{6}{l}{Chang Design}&\multicolumn{6}{l}{Adaptation of Chang Design}&\multicolumn{6}{l}{Likelihood Design}\\
+$p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{EN}_0$ & $n_1^\ast$ & $r_1^\ast$ & $r_t^\ast$ & $\alpha^\ast$ & $1-\beta^\ast$ & $\mbox{PET}_0^\ast$ & $\mbox{EN}_0^\ast$ & $r_1^\ast$ & $r_t^\ast$ & $\alpha^\ast$ & $1-\beta^\ast$ & $\mbox{PET}_0^\ast$ & $\mbox{EN}_)^\ast$ & $r_1^\ast$ & $r_t^\ast$ & $\alpha^\ast$ & $1-\beta^\ast$ & $\mbox{PET}_0^\ast$ & $\mbox{EN}_0^\ast$ \\ 
+  \hline
+0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 7 & 1 & 22 & 0.027 & 0.744 & 0.159 & 35.607 & 3 & 21 & 0.034 & 0.636 & 0.710 & 16.853 & 2 & 21 & 0.047 & 0.781 & 0.420 & 26.723 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 9 & 2 & 22 & 0.026 & 0.742 & 0.232 & 33.583 & 4 & 21 & 0.035 & 0.660 & 0.733 & 17.530 & 3 & 21 & 0.046 & 0.783 & 0.483 & 25.556 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 11 & 3 & 22 & 0.026 & 0.742 & 0.296 & 32.111 & 4 & 21 & 0.046 & 0.786 & 0.533 & 25.017 & 4 & 21 & 0.046 & 0.786 & 0.533 & 25.017 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 13 & 5 & 21 & 0.047 & 0.791 & 0.574 & 24.917 & 5 & 21 & 0.047 & 0.791 & 0.574 & 24.917 & 5 & 21 & 0.047 & 0.791 & 0.574 & 24.917 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 15 & 6 & 21 & 0.047 & 0.796 & 0.610 & 25.145 & 6 & 21 & 0.047 & 0.796 & 0.610 & 25.145 & 6 & 21 & 0.047 & 0.796 & 0.610 & 25.145 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 17 & 7 & 21 & 0.047 & 0.801 & 0.641 & 25.628 & 7 & 21 & 0.047 & 0.801 & 0.641 & 25.628 & 7 & 21 & 0.047 & 0.801 & 0.641 & 25.628 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 19 & 8 & 21 & 0.048 & 0.806 & 0.667 & 26.315 & 8 & 21 & 0.048 & 0.806 & 0.667 & 26.315 & 8 & 21 & 0.048 & 0.806 & 0.667 & 26.315 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 21 & 9 & 21 & 0.048 & 0.811 & 0.691 & 27.171 & 9 & 21 & 0.048 & 0.811 & 0.691 & 27.171 & 9 & 21 & 0.048 & 0.811 & 0.691 & 27.171 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 23 & 10 & 21 & 0.049 & 0.816 & 0.713 & 28.168 & 10 & 21 & 0.049 & 0.816 & 0.713 & 28.168 & 10 & 21 & 0.049 & 0.816 & 0.713 & 28.168 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 25 & 12 & 21 & 0.043 & 0.780 & 0.846 & 27.460 & 10 & 22 & 0.027 & 0.748 & 0.586 & 31.628 & 11 & 21 & 0.049 & 0.820 & 0.732 & 29.283 \\ 
+  0.4 & 0.6 & 17 & 41 & 7 & 21 & 25.628 & 27 & 13 & 21 & 0.044 & 0.790 & 0.855 & 29.025 & 11 & 22 & 0.027 & 0.749 & 0.613 & 32.422 & 12 & 21 & 0.050 & 0.824 & 0.750 & 30.502 \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
+\end{landscape}
 
 The findings will be put here - primarily tables covering different combinations of Simon's designs and unplanned sample sizes. 
 \newline

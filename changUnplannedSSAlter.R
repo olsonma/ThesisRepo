@@ -21,7 +21,8 @@ changDesAlter <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
     round(x, 3)
   }
   
-    pet0 <- round(pbinom(r1, n1, p0),3) ## probability of early termination under the null
+    pet0 <- pbinom(r1, n1, p0) ## probability of early termination under the null
+    EN0 <- n1 + (1-pet0) * (nt-n1)
     pet1 <- round(pbinom(r1, n1, p1),3)
 
   m     = n1a
@@ -189,6 +190,7 @@ if(sim == TRUE){
   results <- data.frame(p0 = p0, p1 = p1, n1 = n1, n = nt, r1 = r1, rt = rt,
                         alpha = alpha, power = 1-beta, 
                         pet0 = R(pet0), pet1 = R(pet1),
+                        EN0 = R(EN0),
                         n1star = n1a, nstar = nta,
                         r1star = r1star, rtstar = rtstar, 
                         type1Obs = R(type1), powerObs = R(powerObs),
@@ -201,6 +203,7 @@ if(sim == FALSE){
   results <- data.frame(p0 = p0, p1 = p1, n1 = n1, n = nt, r1 = r1, rt = rt,
                         alpha = alpha, power = 1-beta, 
                         pet0 = R(pet0), pet1 = R(pet1),
+                        EN0 = R(EN0),
                         n1star = n1a, nstar = nta,
                         r1star = r1star, rtstar = rtstar, 
                         type1Obs = R(type1), powerObs = R(powerObs),

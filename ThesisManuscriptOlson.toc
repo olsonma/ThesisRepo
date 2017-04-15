@@ -30,10 +30,10 @@
 \addvspace {\li }
 \contentsline {chapter}{\hbox to\@tempdima {5\hfil }Results}{16}{chapter.5}
 \vspace {\li }
-\contentsline {section}{\numberline {5.1}Discussion}{16}{section.5.1}
-\contentsline {section}{\numberline {5.2}Appendix}{16}{section.5.2}
-\contentsline {section}{\numberline {5.3}Questions}{17}{section.5.3}
-\contentsline {section}{\numberline {5.4}Notes}{17}{section.5.4}
+\contentsline {section}{\numberline {5.1}Discussion}{18}{section.5.1}
+\contentsline {section}{\numberline {5.2}Appendix}{18}{section.5.2}
+\contentsline {section}{\numberline {5.3}Questions}{18}{section.5.3}
+\contentsline {section}{\numberline {5.4}Notes}{19}{section.5.4}
 \addvspace {\li }
-\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{18}{section.5.4}
+\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{20}{section.5.4}
 \contentsfinish 

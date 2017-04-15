@@ -24,15 +24,56 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   ## LR and FDR computations assume flat prior
   #######################################	
   #p1=0.60;p0=0.40;n1a=16;nta=41;ka.i=(1/4);kb.i=4;ka=(1/4);kb=4;r1=7;r=21
+  R <- function(x){
+    round(x, 3)
+  }
+  
   
   ## returns odds ratio
   or=(p1*(1-p0))/((p0)*(1-p1))
-
-    ka.i=1/3.375 #(or^(r1))*((1-p1)/(1-p0))^(n1)
-    kb.i=Inf
-    ka=1.5         #(or^(rt))*((1-p1)/(1-p0))^(nt)
-    kb=Inf
-
+  
+  
+  ############################
+  ## under planned conditions
+  ############################
+  ka.iplan= (or^(r1))*((1-p1)/(1-p0))^(n1)
+  kb.iplan=Inf
+  kaplan= (or^(rt))*((1-p1)/(1-p0))^(nt)
+  kbplan=Inf
+  
+  top.iplan=round((log(kb.iplan)-n1*log((1-p1)/(1-p0)))/log(or),10)
+  bot.iplan=round((log(ka.iplan)-n1*log((1-p1)/(1-p0)))/log(or),10)
+  
+  ## if our r1 (bot.i) isn't an integer, change accordingly. The LR will then change, so change that too. 
+  if(floor(bot.iplan) < bot.iplan & bot.iplan < ceiling(bot.iplan)){
+    bot.iplan <- floor(bot.iplan)
+    ka.iplan  <- (or^(bot.iplan))*((1-p1)/(1-p0))^(n1)
+  }
+  
+  topplan=round((log(kbplan)-nt*log((1-p1)/(1-p0)))/log(or),10)
+  botplan=round((log(kaplan)-nt*log((1-p1)/(1-p0)))/log(or),10)
+  
+  pstr.i0p=pbinom(floor(bot.iplan),size=n1,prob=p0)
+  pmis.i0p=1-pbinom(floor(top.iplan),size=n1,prob=p0)
+  pwek.i0p=(pbinom(floor(top.iplan),size=n1,prob=p0)-pbinom(floor(bot.iplan),size=n1,prob=p0))
+  
+  pstr.i1p=1-pbinom(floor(top.iplan),size=n1,prob=p1)
+  pmis.i1p=pbinom(floor(bot.iplan),size=n1,prob=p1)
+  pwek.i1p=(pbinom(floor(top.iplan),size=n1,prob=p1)-pbinom(floor(bot.iplan),size=n1,prob=p1))
+  
+  ## Expected sample size
+  ess.0plan=n1+(pwek.i0p)*(nt-n1)
+  ess.1plan=n1+(pwek.i1p)*(nt-n1) 
+  
+  ###########################
+  ## under attained conditions
+  ###########################
+  
+  ka.i=1/3.375 #(or^(r1))*((1-p1)/(1-p0))^(n1)
+  kb.i=Inf
+  ka=1.5         #(or^(rt))*((1-p1)/(1-p0))^(nt)
+  kb=Inf
+  
   
   #######################################	
   ## LR bounds translated to successes
@@ -129,64 +170,39 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   ##################
   ## Output
   ##################
-  # 
-  # if (output==FALSE) {
-  #   cat("#########################################################################\n")
-  #   if (simon==FALSE ) {cat("##  Likelihood Two-Stage Design \n")}
-  #   else (cat("##  Simon's Optimal Two-Stage Design (Likelihood display) \n"))
-  #   cat("## ---------------------------------------------------------------\n")
-  #   cat("##  r.i (Simon) : ",bot.i,"\n")  
-  #   cat("##  r   (Simon) : ",ceiling(bot),"\n")
-  #   cat("##  Hypotheses  : H0: p = ",round(p0,2)," ;  H1: p = ",round(p1,2),"  (OR =",round(or,2),")\n",sep="")
-  #   cat("##  Interim     : SS = ",sprintf("%3.0f",round(n1a,1)),"    ;  continue if 1/", round(1/ka.i,2)," < LR < ",round(kb.i,2),"\n",sep="")
-  #   cat("##  Final       : SS = ",sprintf("%3.0f",round(n,1)),  "    ;  weak ev  if 1/", round(1/ka,2)," < LR < ",round(kb,2),"\n",sep="")
-  #   cat("##  Expected SS : H0:",sprintf("%5.2f",round(ess.0,2)),"  ;  H1:",sprintf("%5.2f",round(ess.1,2)),"\n")
-  #   cat("##  Type 1 error: ",round(t1err,3),"\n")
-  #   cat("##  Power       : ",round(pow,3),"\n")
-  #   #cat("## ---------------------------------------------------------------\n")
-  #   cat("## -------------------------------\n")
-  #   cat("##  Interim          H0       H1 \n")
-  #   cat("## -------------------------------\n")
-  #   cat("##  Continue     ",sprintf("%4.4f",round(pwek.i0,4)), ";",sprintf("%4.4f",round(pwek.i1,4)),"\n")
-  #   cat("##  Strong Ev    ",sprintf("%4.4f",round(pstr.i0,4)), ";",sprintf("%4.4f",round(pstr.i1,4)),"\n")
-  #   cat("##  Mislead Ev   ",sprintf("%4.4f",round(pmis.i0,4)), ";",sprintf("%4.4f",round(pmis.i1,4)),"\n")
-  #   cat("##  LR (Str Ev)   ",sprintf("%4.2f",round(lri.0,4)), "; ",sprintf("%4.2f",round(lri.1,4)),"\n")
-  #   cat("##  FDR          ",sprintf("%4.4f",round(fndi.0,4)), ";",sprintf("%4.4f",round(fdri.1,4)),"\n")
-  #   cat("## -------------------------------\n")
-  #   #cat("## -------------------------------\n")
-  #   cat("##  Final            H0       H1 \n")
-  #   cat("## -------------------------------\n")
-  #   cat("##  Weak Ev      ",sprintf("%4.4f",round(pwek.0,4)), ";",sprintf("%4.4f",round(pwek.1,4)),"\n")
-  #   cat("##  Strong Ev    ",sprintf("%4.4f",round(pstr.0,4)), ";",sprintf("%4.4f",round(pstr.1,4)),"\n")
-  #   cat("##  Mislead Ev   ",sprintf("%4.4f",round(pmis.0,4)), ";",sprintf("%4.4f",round(pmis.1,4)),"\n")
-  #   cat("##  LR (Str Ev)   ",sprintf("%4.2f",round(lrf.0,4)), "; ",sprintf("%4.2f",round(lrf.1,4)),"\n")
-  #   cat("##  FDR          ",sprintf("%4.4f",round(fndf.0,4)), ";",sprintf("%4.4f",round(fdrf.1,4)),"\n")
-  #   #cat("## -------------------------------\n")
-  #   cat("#########################################################################\n")
-  # }
-  R <- function(x){
-    round(x, 3)
-  }
-if(sim == FALSE){
-  resultsdf <- data.frame(p0= p0,  p1=p1, n1 = n1, n = nt, r1 = r1, rt = rt, alpha = alpha, power = 1-beta,  
-                          pet0 = NA, pet1 = NA, n1star = n1a, nstar = nta, r1star = bot.i, rtstar =bot.i, 
-                          type1Obs = R(t1err), powerObs = R(pow), pet0star = R(pstr.i0), pet1star = R(pmis.i1), 
-                          EN0star = R(ess.0), EN1star = R(ess.1))
-  #results <- as.data.frame(results)
 
-  #if (output==TRUE) {resultsdf}
-}
+
+  if(sim == FALSE){
+    resultsdf <- data.frame(p0= p0,  p1=p1, n1 = n1, n = nt, r1 = r1, rt = rt, alpha = alpha, power = 1-beta,  
+                            pet0 = R(pstr.i0p), pet1 = R(pmis.i1p), EN0 = R(ess.0plan), n1star = n1a, nstar = nta, r1star = bot.i, rtstar =bot, 
+                            type1Obs = R(t1err), powerObs = R(pow), pet0star = R(pstr.i0), pet1star = R(pmis.i1), 
+                            EN0star = R(ess.0), EN1star = R(ess.1))
+    
+  }
   if(sim == TRUE){
     resultsdf <- data.frame(p0= p0,  p1=p1, n1 = n1, n = nt, r1 = r1, rt = rt, alpha = alpha, power = 1-beta,  
-                            pet0 = NA, pet1 = NA, n1star = n1a, nstar = nta, r1star = bot.i, rtstar =bot.i, 
+                            pet0 = R(pstr.i0p), pet1 = R(pmis.i1p), EN0 = R(ess.0plan), n1star = n1a, nstar = nta, r1star = bot.i, rtstar =bot, 
                             type1Obs = R(t1err), powerObs = R(pow), pet0star = R(pstr.i0), pet1star = R(pmis.i1), 
                             EN0star = R(ess.0), EN1star = R(ess.1),type1Sim = NA, powerSim = NA)
   }
   resultsdf
   
 }
-#like.2s()
-#(get=like.2s(output=TRUE))
+
+
+####
+###
+##
+#
+
+
+
+
+
+
+
+
+
 
 
 ####
