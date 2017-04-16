@@ -111,7 +111,7 @@ plot <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_p
                                    rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
                                    p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
                                    p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
-                                   sim = 10000,
+                                   sim = 100,
                                    des = "Chang",
                                    alpha = 0.05, 
                                    beta = 0.8,
@@ -142,11 +142,11 @@ error.matAlter <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,
                                  rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
                                  p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
                                  p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
-                                 sim = 10000,
+                                 sim = 100,
                                  des = "Alter",
                                  alpha = 0.05, 
                                  beta = 0.8,
-                                 ntaMethod = "n2"
+                                 ntaMeth = "n2"
 )
 powerMatAlter <- error.matAlter[c(1,seq(3,nrow(error.matAlter),2)),]
 type1MatAlter <- error.matAlter[c(1,seq(2,nrow(error.matAlter),2)),]
@@ -173,11 +173,11 @@ error.matLik <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,48
                                rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
                                p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
                                p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
-                               sim = 10000,
+                               sim = 100,
                                des = "Likelihood",
                                alpha = 0.05, 
                                beta = 0.8,
-                               ntaMethod = "n2"
+                               ntaMeth = "n2"
 )
 powerMatLik <- error.matLik[c(1,seq(3,nrow(error.matLik),2)),]
 type1MatLik <- error.matLik[c(1,seq(2,nrow(error.matLik),2)),]

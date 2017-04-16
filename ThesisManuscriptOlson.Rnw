@@ -451,10 +451,6 @@ setwd("/Users/mollyolson/Documents/Vanderbilt/Masters_Thesis/ThesisWork")
 \cftlocalchange{toc}{1.55em}{2.55em}
 \chapter{Introduction}
 \vspace{-7mm}
-The introduction will talk about the motivation for the thesis. Introduce some examples of when we would need such methods. 
-\newline
-\newline
-
 Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if to warrant further study in a phase III clinical trial \cite{Porcher, Simon, Koyama}. Simon's two-stage design \cite{Simon} is a commonly used design in specifying sample sizes and critical values in phase II oncology clinical trials. Koyama and Chen \cite{Koyama} point out that it is common for actual sample sizes of these phase II trials to differ than the planned, pre-specified sample sizes. This could happen because of unanticipated accruement speed, drop-out rates are unexpected, and often multi-center trials can be slow in sharing information. Currently, when attained sample sizes differ from planned, call these unplanned sample sizes, it is common practice to treat the attained sample sizes as planned. Though, when acheived sample sizes differ from planned, hypothesis testing using the attained sample sizes as if they were planned is not valid and hypothesis testing in these cases is not straightforward \cite{Porcher, Koyama}. Because of these reasons, extensions of Simon's design for hypothesis testing with unplanned sample sizes is important.
 There have been many attempts to develop Frequentist methods that handle unplanned sample sizes in the second stage while using the planned stage I sample size, but my literature review found that there were only few Frequentist methods to handle unplanned sample sizes in both stage I and stage II. Likelihood based designs, that are able to be an extension of Simon's design, offer a nice solution to this problem because these designs offer flexibility in sample size without inflation of type I error.  In this paper, we discuss the different methods for Simon's design when the attained stage II sample size is different than planned and when attained sample sizes in both stages are different than planned. In chapter 4, we review a concrete example from a Likelihood-based clinical trial, and in chapter 5, results of a numerical and theoretical study comparing the Frequentist properties of approaches in the setting where both stages differ \textbf{wording} in different settings are presented.    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -466,27 +462,15 @@ There have been many attempts to develop Frequentist methods that handle unplann
 %------------------------------------------------------------%
 %----------- Background on Simon's design -------------------%
 %------------------------------------------------------------%
-Simon's design will go here. This section will also talk about extending/shortening a trial (unplanned sample sizes) and how recalculating as if it were the planned design will introduce bias and inflate type I error. Talk about prespecifying (maybe here?)
-\newline
-We will only talk about extensions to Simon's design, hypothesis testing, and only stopping for futility in this paper.  
-\newline
-\textbf{}
-\newline
 \indent Simon's II stage designs for clinical trials are common designs for phase II oncology clinical trials \cite{Simon}. In Simon's designs, the null hypothesis $\mbox{H}_0: p \leq p_0$ is tested against the alternative $\mbox{H}_1: p > p_1$, where $p$ is the true response probability, $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrents further investigation. Under these hypotheses, it is required that the type I error rate remain less than $\alpha$ and power remain above $1-\beta$. The general framework of Simon's design includes a sample size and critical value in each of the two stages. Let $n_1$ denote the first stage sample size, $n_t$ the sample size at the end of the second stage, $r_1$ the first stage critical value, and $r_t$ the critical value for the end of the second stage. Let $X_1$ be the number of successes observed in the first stage and $X_2$ be the number of additional success in the second stage. In the first stage, $n_1$ patients are enrolled. If $r_1$ or fewer patients ($X_1 \leq r_1$) are successes, then the regimen is rejected and the trial is stopped for futility. If $r_1 + 1$ patients are successful, then the trial continues to the second stage. In the second stage, $n_2 = n_t - n_1$ patients are enrolled. If $r_t$ or fewer out of the $n_t$ patients are successful ($X_t = X_1 + X_2 \leq r_t$), the treatment is considered to be futile, otherwise if $r_t + 1$ patients succeed, the treatment is considered to be effective and warrent further study.  \\
 \indent Design characteristics: Let $B$ denote the cumulative binomial distribution function and $b$ denote the binomial probability mass function. The probability of early termination with probability $p$ in Simon's designs is given by PET = $B(r_1, p, n_1)$. The expected sample size for probability $p$ is then $\mbox{EN} = n_1 + (1-\mbox{PET})n_2$. The probability of rejecting a drug for probability $p$ is then  $PR(p) = B(r_1, p, n_1) + \sum_{x=r_1+1}^{min[n_1,r]} b(x, p, n_1) B(r-x,p,n_2)$. It is required that $PR(p) \geq 1-\alpha$ and $PR(p) \leq \beta$. Given these constraints, it follows that unconditional conditional power, $UCP(p)$, given probability $p$, is given by $1-PR(p) = 1 - \left( B(r_1, p, n_1) + \sum_{x=r_1+1}^{min[n_1,r]} b(x, p, n_1) B(r-x,p,n_2) \right) = \sum_{r_1+1}^{n_1} \left\{\sum_{x_2 = r_t-x_1+1}^{n_2} b(x_2, p, n_2) \right\} b(x_1, p, n_1)$, and $UCP(p_1) \geq 1-\beta$ and $UCP(p_0) \leq \alpha$. \\
 \indent Simon introduced optimal and minimax designs. An optimal two-stage design is a Simon's design in which minimizes the expected sample size under the null hypothesis, response value $p_0$, ($\mbox{EN}_0$) while still satisfying the type I and type II error probability restrictions. The minimax design will minimize the maximum sample size ($n_1 + n_2$). Jung \textit{et al.} \cite{Jung} introduced an extension of Simon's designs called admissible designs that are considered a compromise between optimal and minimax designs because they have similar maximim sample size as the minimax design and a similar $EN_0$ to the optimal design.  Admissible designs optimize a straight line on the ($n$, $EN$)-plane, $q \times n + (1-q) \times \mbox{EN}$, for some $q \in [0,1]$ \cite{Jung}. Admissible designs satisfy ($\alpha, \beta$) constraints and obtain an expected sample size somewhere between optimal and minimax designs. Admissible designs may be attractive because they have agreeable properties of both the minimax and optimal design.  Simon does not allow for early termination of the trial for efficacy \cite{Simon}, and we do not consider that design here. 
 
-\begin{itemize}
-  \item We consider only redesigns here -something you can prespecify. Not calculate after you get the values. 
-  \item Talk about this in the "why we care"
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %------------------Literature Review-------------------------%
 \chapter{Deviation from Planned Sample Sizes In Second Stage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-This chapter will talk about unplanned sample sizes when only the second stage is different and when both stages can be different. The former will talk about methods such as Koyama and Chen, UMVUE, MLE, etc. The latter will talk about the likelihood design, Chang, adaptation of Chang, and possibly Wu. 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------Unplanned sample size in the first stage-----------%
 %\section{Deviation from Planned Sample Sizes in Second Stage}
@@ -499,8 +483,7 @@ When over- or under-enrollment occurs, a straightforward solution is to perform 
 %---------Unplanned sample sizes in first stage----------------%
 \chapter{Deviation from Planned Sample Sizes in First Stage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Decide later if subsections are needed.  \\
-\newline
+
 \indent Because accruement of patients can often be unexpected in the first stage, it's imperative that methods are available to handle situations with attained sample sizes that differ from the planned sample size. Green and Dahlberg \cite{Green} and Chen and Ng \cite{Chen} propose methods for inference when first stage sample sizes differ than planned. Green and Dahlberg extended Southwest Oncology Group's inference method by suggesting to perform a hypothesis test on $H_0: p=p_1$ versus $H_1: p < p_1$ in the first stage at the 0.02 $\alpha$-level and concluding futility if the p-value is $\leq 0.02$. They then suggest testing $H_0: p=p_0$ versus $H_1: p < p_0$ in the second stage at the 0.05 level. Li et al. indicate that this approach controls type I error and acheives desired power, though this approach is founded on an overall $\alpha$-level of 0.05, and it is unclear how this method would generalize to any $\alpha$-level \cite{Li}. Chang et al. also point out that Green and Dahlberg's designs can possibly be quite different than the planned designed. Chen and Ng suggest an approach to unplanned sample sizes by considering a range of sample sizes in both the first and second stage. They search these ranges for the minimax and optimal designs that satisfy error constraints using the average probability of termination for all possible first stage sample sizes and average expected sample size for all possible stage I and stage II sample size combinations \cite{Chen}. Limitations of this approach is that attained sample sizes may fall outside of the ranges specified, it does not consider admissible designs, and the average characteristics are only calculated rather than a specific design. Thus, we consider new approaches to unplanned sample sizes in the first stage in both the frequentist and likelihood settings.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -565,55 +548,52 @@ $$.
 One advantage to a likelihood sequential design is that the universal bound of misleading evidence under the null hypothesis is $P(LR_n > k_b|H_0) \leq \frac{1}{k_b}$ for any $\mbox{n} \geq 1$.
 The likelihood two stage design will enroll $n_1$ observations into the first stage. If we observe a likelihood ratio that is $k_{a_1} < LR_{n_1} < k_{b_1}$, where $k_{a_1}$ and $k_{b_1}$ are benchmarks for description of evidence in the first stage, we continue to the second stage. If we observe $\mbox{LR}_{n_1} \leq k_{a_1}$, the study will stop for futility and if we observe $\mbox{LR}_{n_1} \geq k_{b_1}$, the study will stop for efficacy. Then, $n_2$ patients are enrolled. If the $\mbox{LR}_{n_t} = \mbox{LR}_{n_1}\mbox{LR}_{n_2}$ is $k_{a_t} < \mbox{LR}_{n_t} < k_{b_t}$, where $k_{a_t}$ and $k_{b_t}$ are benchmarks at the end of stage II, then the study will conclude with weak evidence. The study will conclude with evidence for the alternative hypothesis if $\mbox{LR}_{n_t} \geq k_{b_t}$ and evidence for the null hypothesis if $\mbox{LR}_{n_t} \leq k_{a_t}$. \\
 \indent One can adapt the likelihood two stage design to emulate conventional, Simon-like designs such as optimal, minimax, or admissible designs. In order to do this, one can set $k_{a_1} = \frac{p_1(1-p_0)}{p_0(1-p_1)}^{r_1} \frac{1-p_1}{1-p_0}^{n_1} = \frac{1-p_0}{1-p_1}^{r_1-n_1}\frac{p_1}{p_0}^{r_1}$, $k_{a_t}  = \frac{p_1(1-p_0)}{p_0(1-p_1)}^{r_t} \frac{1-p_1}{1-p_0}^{n_t} = \frac{1-p_0}{1-p_1}^{r_t-n_t}\frac{p_1}{p_0}^{r_t}$, $k_{b_1} = \infty$, and $k_{b_t} = \infty$, where $n_1, n_t, r_1, r_2$ are Simon-like two-stage design parameters. I feel like you need to know r1 to get ka and you need to know ka to get r1. \\ Blume and Ayers describe that likelihood designs preserve type I error rate and is bounded by $\frac{1}{k_{b_t}}$ and is equal to $O_{p_i}\left({n}^{-1/2}\right)$. Under the likelihood design, error rates tend to be less of an issue because the the average of the error rates, $\frac{\alpha + \beta}{2}$, is minimized with the likelihood approach \cite{Blume}. Because these designs are not restricted by error rates, and rather use the likelihood ratio, this method offers favorable flexibility for unplanned sample sizes in the first stage. 
-\newline
-Interim: Translating to successes. This is the region in which we move to stage 2\\
-
-$\begin{aligned}
-& UB_{interim} = \frac{log(k_{bi}) - n_1 log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{p_0(1-p_1)})} \\
-& LB_{interim} = \frac{log(k_{ai}) - n_1 log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{p_0(1-p_1)})} \\
-&\text{(LB, UB) is the interval for weak evidence. If this was Simon's design, } LB_{interim} = r_1 \\
-  &\text{Probability of strong, misleading, and weak evidence under the null} \\
-  &\indent P(\mbox{Strong}_{0i}) = B(\floor*{LB_{interim}}, n_1, p_0) \\
-  &\indent P(Misleading_{0i}) = 1-B(\floor*{UB_{interim}}, n_1, p_0) \\
-  &\indent P(Weak_{0i}) = B(\floor*{UB_{interim}}, n_1, p_0) - B(\floor*{LB_{interim}}, n_1, p_0)\\
-  &\text{Probability of strong, misleading, and weak evidence under the alternative} \\
-  &\indent P(Strong_{0i}) = 1-B(\floor*{UB_{interim}}, n_1, p_1) \\
-  &\indent P(Misleading_{0i}) = B(\floor*{LB_{interim}}, n_1, p_1) \\
-  &\indent P(Weak_{0i}) = B(\floor*{UB_{interim}}, n_1, p_1) - B(\floor*{LB_{interim}}, n_1, p_1) \\
-  &\text{note: under Simon's, PET = 1-P(Weak)}
-\end{aligned}$
-  
-  \newpage 
-\vspace{5mm}
-\noindent \textbf{Translating likelihood properties into Simon-like design:} \\
-Final Stage: Translating to successes.\\
-$\begin{aligned}
-& \text{The amount of successes that allow for continuation to the second stage are:  }  \\                   
-& \qquad  (\floor*{LB_{interim}+1}, \floor*{min(n_1, UB_{interim})}) \\
-&\text{Probability of strong, misleading, and weak evidence under } H_p \\
-& P(Weak_p) = \sum_{x=\floor*{LB_{interim}+1}}^{\floor*{min(n_1, UB_{interim})}} \Big(b(x, n_1, p_p) \times B(UB_{interim} - x, n - n_1, p_p)\Big) - B(LB_{interim} - x, n - n_1, p_p)\\
-& P(Strong_p) = P(Strong_{0i}) + \sum_{x=\floor*{LB_{interim}+1}}^{\floor*{min(n_1, UB_{interim})}} \Big( b(x,n_1,p_0) \times B(LB_{interim} - x, n-n_1, p_0) \Big) \\
-& P(Misleading_p) = P(Misleading_{0i}) + \sum_{x=\floor*{LB_{interim}+1}}^{\floor*{min(n_1, UB_{interim})}} \Big(b(x, n_1, p_p) \times (1-B(UB_{interim} - x, n-n_1, p_p) \Big)
-\end{aligned}$
-
-
-\vspace{10mm}
-\noindent If we want to translate likelihood design into a Simon's design, we overwrite the LR limits above as:
-
-$\begin{aligned}
- &k_{ai} = OR^{r_1} \frac{1-p_1}{1-p_0}^{n_1} = \frac{1-p_0}{1-p_1}^{r_1-n_1}\frac{p_1}{p_0}^{r_1} \\
- &k_a  = OR^{r} \frac{1-p_1}{1-p_0}^{n} = \frac{1-p_0}{1-p_1}^{r-n}\frac{p_1}{p_0}^{r}\\
- &k_{bi} = k_b = \infty\\
-\end{aligned}$
+% \newline
+% Interim: Translating to successes. This is the region in which we move to stage 2\\
+% 
+% $\begin{aligned}
+% & UB_{interim} = \frac{log(k_{bi}) - n_1 log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{p_0(1-p_1)})} \\
+% & LB_{interim} = \frac{log(k_{ai}) - n_1 log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{p_0(1-p_1)})} \\
+% &\text{(LB, UB) is the interval for weak evidence. If this was Simon's design, } LB_{interim} = r_1 \\
+%   &\text{Probability of strong, misleading, and weak evidence under the null} \\
+%   &\indent P(\mbox{Strong}_{0i}) = B(\floor*{LB_{interim}}, n_1, p_0) \\
+%   &\indent P(Misleading_{0i}) = 1-B(\floor*{UB_{interim}}, n_1, p_0) \\
+%   &\indent P(Weak_{0i}) = B(\floor*{UB_{interim}}, n_1, p_0) - B(\floor*{LB_{interim}}, n_1, p_0)\\
+%   &\text{Probability of strong, misleading, and weak evidence under the alternative} \\
+%   &\indent P(Strong_{0i}) = 1-B(\floor*{UB_{interim}}, n_1, p_1) \\
+%   &\indent P(Misleading_{0i}) = B(\floor*{LB_{interim}}, n_1, p_1) \\
+%   &\indent P(Weak_{0i}) = B(\floor*{UB_{interim}}, n_1, p_1) - B(\floor*{LB_{interim}}, n_1, p_1) \\
+%   &\text{note: under Simon's, PET = 1-P(Weak)}
+% \end{aligned}$
+%   
+%   \newpage 
+% \vspace{5mm}
+% \noindent \textbf{Translating likelihood properties into Simon-like design:} \\
+% Final Stage: Translating to successes.\\
+% $\begin{aligned}
+% & \text{The amount of successes that allow for continuation to the second stage are:  }  \\                   
+% & \qquad  (\floor*{LB_{interim}+1}, \floor*{min(n_1, UB_{interim})}) \\
+% &\text{Probability of strong, misleading, and weak evidence under } H_p \\
+% & P(Weak_p) = \sum_{x=\floor*{LB_{interim}+1}}^{\floor*{min(n_1, UB_{interim})}} \Big(b(x, n_1, p_p) \times B(UB_{interim} - x, n - n_1, p_p)\Big) - B(LB_{interim} - x, n - n_1, p_p)\\
+% & P(Strong_p) = P(Strong_{0i}) + \sum_{x=\floor*{LB_{interim}+1}}^{\floor*{min(n_1, UB_{interim})}} \Big( b(x,n_1,p_0) \times B(LB_{interim} - x, n-n_1, p_0) \Big) \\
+% & P(Misleading_p) = P(Misleading_{0i}) + \sum_{x=\floor*{LB_{interim}+1}}^{\floor*{min(n_1, UB_{interim})}} \Big(b(x, n_1, p_p) \times (1-B(UB_{interim} - x, n-n_1, p_p) \Big)
+% \end{aligned}$
+% 
+% 
+% \vspace{10mm}
+% \noindent If we want to translate likelihood design into a Simon's design, we overwrite the LR limits above as:
+% 
+% $\begin{aligned}
+%  &k_{ai} = OR^{r_1} \frac{1-p_1}{1-p_0}^{n_1} = \frac{1-p_0}{1-p_1}^{r_1-n_1}\frac{p_1}{p_0}^{r_1} \\
+%  &k_a  = OR^{r} \frac{1-p_1}{1-p_0}^{n} = \frac{1-p_0}{1-p_1}^{r-n}\frac{p_1}{p_0}^{r}\\
+%  &k_{bi} = k_b = \infty\\
+% \end{aligned}$
 
 Because these methods for deviation from planned sample size in the first stage is not well studied in the literature, we only consider these cases for the remainder of this paper. 
 %%%%%%%%%%%%%%%%%%%%
 %% example
 %%%%%%%%%%%%%%%%%%%
 \chapter{Example}
-Here put the results of comparing the Chang et al paper and adaptation to the protocol of the study. 
-We used Monte Carlo simulation to examine the performance of the study design of Chang et al...
-\newline
 In order to compare these new Frequentist and Likelihood methods for deviation of sample size in the first stage, we first introduce a concrete example. An actual phase II cancer clinical trial was designed using the likelihood approach. In order to stick to convention, the trial would only stop early for futility. The planned design parameters are $n_1 = 17$, $n_t = 41$, $r_1 = 17$, $r_t = 21$, $p_0 = 0.4$, and $p_1 = 0.6$. This study design has an expected sample size of 25.6 and a probability of early termination under the null hypothesis of 64\%. This is considered an Admissible design and meets the nominal type I error rate, $\alpha = 0.05$, and type I error rate, $\beta = 0.2$. In concordance with the likelihood design, the authors provide alternative interim stopping rules for sample sizes that deviate from the planned design. These new designs have a probability of early termination under the null that exceed 50\% and preserve type I and type II error rates. Using the original likelihood design, but varying $n_1$, one can use Chang et al.'s and the adapted method to obtain similar results. We keep stage II sample size the same in this case. 
 
 <<echo=FALSE>>=
@@ -668,11 +648,11 @@ Generally, the stopping rules between the Chang designs and the likelihood desig
 
 \chapter{Results}
 
-We present results that are limited to our primary problem of interest in tables 5.1 through 5.6. \textbf{Did I say what our primary problem of interest is in this paper?} In each design, the planned design is specified and the first stage sample size varies from planned, while maintaining the original total sample size. We compare attained methods characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. \\
-\indent Table 5.1 displays a planned Admissible design with varying first stage sample size $\pm$ 10. We notice that under low $p_0$ and $p_1$, $s_1$ will vary between each method. Though, power and type I error tend to be similar between and within each attained method, while expected sample size also tends to be consistent. The Likelihood and Chang method are at risk of low probability of early termination, especially when the sample size is lower than planned. Table 5.2 shows an Optimal design when $p_0$ is 0.5. Between attained designs, particularly when there is overaccrual, $s_1$ is inconsistent. We particularly see a large difference when $n_1^{\ast\ast} = n_1 + 10$ between the Likelihood and Adaptation of Chang designs and the Chang design. When there are large deviations from the planned sample size, the $\mbox{PET}_0$ from Chang's design can stray from the planned design, as large as 0.667, while the adaptation to Chang's and the Likelihood design remain relatively close to the original. Because of this, Chang's design can also results in a large drop in expected sample size. The Likelihood design is anticonservative in type I error and conservative in type II error here, displaying a $\alpha^{\ast\ast} > \alpha$ and $1-\beta^{\ast\ast} > 1-\beta$. The Chang designs both have a conservative type I error for all sample size deviations and power that is close, but greater than the planned design. The Chang designs display a clear weakness here, which is that when these redesign methods are used when the attained sample size is the same as planned, different stopping rules can result. Because the required sample size is large in this case, we do not see a difference in $\mbox{PET}_0$ or $\mbox{EN}_0$ to three decimal places, though.\\
-\indent Table 5.3 displays results from a planned Minimax design when $p_0$ is larger than 0.5. Here, the Likelihood design has desireable properties with type I error and power consistently closed to the planned design for all deviations in sample size. Though, when the sample size is severely underaccrued, the probability of early termination nearly halves. The expected sample size is consistent between designs. The Chang designs stray from the planned nominal type I and type II errors when there is overaccrual. The $\mbox{PET}_0$ for the original Chang design varies significantly between deviations. \\
-\indent Table 5.4 through 5.6 display results for planned designs when $\alpha = \beta = 0.1$. Table 5.4 displays attained design characteristics for deviations in sample size when the planned first stage sample size is low. In all three attained designs, we see that as the attained sample size is lower than planned, there is a significant drop in power and a moderate to severe drop in type I error. The probability of early termination almost occurs with probability 1 when the attained sample size is $n_1^{\ast\ast} = 1$. In practice, though, accrual lower than planned here is not practical. When there is overaccrual, attained design characteristics are not concerning. 
-Table 5.5 illistrates the similarity between attained designs when $p_0$ = 0.3. All designs and their deviations are relatively consistent in type I error, power, and $\mbox{PET}_0$. Though, the adaptation of Chang's design is most consistent in the probability of early termination with the planned design, but we see a conservative deviation in type I error for large overaccrual. Table 5.6 displays similar results as table 5.3. \\
+We present results that are limited to our primary problem of interest in tables 6.1 through 6.6. \textbf{Did I say what our primary problem of interest is in this paper?} In each design, the planned design is specified and the first stage sample size varies from planned, while maintaining the original total sample size. We compare attained methods characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. \\
+\indent Table 6.1 displays a planned Admissible design with varying first stage sample size $\pm$ 10. We notice that under low $p_0$ and $p_1$, $s_1$ will vary between each method. Though, power and type I error tend to be similar between and within each attained method, while expected sample size also tends to be consistent. The Likelihood and Chang method are at risk of low probability of early termination, especially when the sample size is lower than planned. Table 6.2 shows an Optimal design when $p_0$ is 0.5. Between attained designs, particularly when there is overaccrual, $s_1$ is inconsistent. We particularly see a large difference when $n_1^{\ast\ast} = n_1 + 10$ between the Likelihood and Adaptation of Chang designs and the Chang design. When there are large deviations from the planned sample size, the $\mbox{PET}_0$ from Chang's design can stray from the planned design, as large as 0.667, while the adaptation to Chang's and the Likelihood design remain relatively close to the original. Because of this, Chang's design can also results in a large drop in expected sample size. The Likelihood design is anticonservative in type I error and conservative in type II error here, displaying a $\alpha^{\ast\ast} > \alpha$ and $1-\beta^{\ast\ast} > 1-\beta$. The Chang designs both have a conservative type I error for all sample size deviations and power that is close, but greater than the planned design. The Chang designs display a clear weakness here, which is that when these redesign methods are used when the attained sample size is the same as planned, different stopping rules can result. Because the required sample size is large in this case, we do not see a difference in $\mbox{PET}_0$ or $\mbox{EN}_0$ to three decimal places, though.\\
+\indent Table 6.3 displays results from a planned Minimax design when $p_0$ is larger than 0.5. Here, the Likelihood design has desireable properties with type I error and power consistently closed to the planned design for all deviations in sample size. Though, when the sample size is severely underaccrued, the probability of early termination nearly halves. The expected sample size is consistent between designs. The Chang designs stray from the planned nominal type I and type II errors when there is overaccrual. The $\mbox{PET}_0$ for the original Chang design varies significantly between deviations. \\
+\indent Table 6.4 through 6.6 display results for planned designs when $\alpha = \beta = 0.1$. Table 6.4 displays attained design characteristics for deviations in sample size when the planned first stage sample size is low. In all three attained designs, we see that as the attained sample size is lower than planned, there is a significant drop in power and a moderate to severe drop in type I error. The probability of early termination almost occurs with probability 1 when the attained sample size is $n_1^{\ast\ast} = 1$. In practice, though, accrual lower than planned here is not practical. When there is overaccrual, attained design characteristics are not concerning. 
+Table 6.5 illistrates the similarity between attained designs when $p_0$ = 0.3. All designs and their deviations are relatively consistent in type I error, power, and $\mbox{PET}_0$. Though, the adaptation of Chang's design is most consistent in the probability of early termination with the planned design, but we see a conservative deviation in type I error for large overaccrual. Table 6.6 displays similar results as table 5.3. \\
 
 \begin{landscape}
 
@@ -932,8 +912,8 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 \end{landscape}
 
-\indent Figures 5.1 and 5.2 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang methos are conservative in type I error for all sample size deviations, but are more likely to suffer in power. \\
-\indent Figures 5.3 and 5.4 illistrate that it is more desirable to redesign trials using the planned total sample size rather than accruing the planned stage II sample size in the second stage. The type I error rate and power greatly depend on which direction the deviation occurs and the results are often undesirable. Average type I error rate for underaccrual is well above the planned nominal type I error rate and power for overaccrual is well below the planned nominal power. 
+\indent Figures 6.1 and 6.2 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang methos are conservative in type I error for all sample size deviations, but are more likely to suffer in power. \\
+\indent Figures 6.3 and 6.4 illistrate that it is more desirable to redesign trials using the planned total sample size rather than accruing the planned stage II sample size in the second stage. The type I error rate and power greatly depend on which direction the deviation occurs and the results are often undesirable. Average type I error rate for underaccrual is well above the planned nominal type I error rate and power for overaccrual is well below the planned nominal power. 
 <<echo=FALSE, cache = TRUE>>=
 ## this will use error.sim.many to plot the simulated error rates averaged
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/varyN1.R")
@@ -1059,14 +1039,19 @@ ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() +
 
 
 
-<<echo = FALSE, eval = FALSE>>=
-  error.matChang2 <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,48,40,49,70,55,49,39),
+<<echo = FALSE, results = "hide">>=
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/varyN1.R")
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.many.R")
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.one.R")
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.R")
+source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changDesCompare.R")
+  error.matChang <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,48,40,49,70,55,49,39),
                                    n1v = c(15,21,35,31,25,17,20,18,19,26,28,18,19,13,22,21,42,31,23,22),
                                    r1v = c(1 ,3, 17,16,17,12,16, 2, 3,12,15,12,14,10, 2,3, 19,20,16,15),
                                    rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
                                    p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
                                    p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
-                                   sim = 10000,
+                                   sim = 10,
                                    des = "Chang",
                                    alpha = 0.05, 
                                    beta = 0.8,
@@ -1097,7 +1082,7 @@ error.matAlter <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,
                                  rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
                                  p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
                                  p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
-                                 sim = 10000,
+                                 sim = 10,
                                  des = "Alter",
                                  alpha = 0.05, 
                                  beta = 0.8,
@@ -1128,7 +1113,7 @@ error.matLik <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,48
                                rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
                                p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
                                p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
-                               sim = 10000,
+                               sim = 10,
                                des = "Likelihood",
                                alpha = 0.05, 
                                beta = 0.8,
@@ -1155,14 +1140,13 @@ plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], average
 #################
 df <- rbind(plot.dfAlter, plot.dfChang, plot.dfLik)
 
-df <- rbind(plot.dfAlter, plot.dfChang, plot.dfLik)
-plot <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
+plotpow <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
   xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", values = c("Chang Adaptation" = "skyblue2",
                                                                                              "Chang"     = "dodgerblue3",
                                                                                              "Likelihood"   = "dodgerblue4"))
-plot
+#plot
 
-ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() + ylab("Average Type I Error") + 
+plott1 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() + ylab("Average Type I Error") + 
   xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", values = c("Chang Adaptation" = "skyblue2",
                                                                                              "Chang"     = "dodgerblue3",
                                                                                              "Likelihood"   = "dodgerblue4"))
@@ -1172,48 +1156,33 @@ ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() +
 \begin{figure}[]
 \caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$)}
 \centering
-\includegraphics[height = 3in]{averagePowern2.png}
+<<echo = FALSE>>=
+plotpow
+@
 \end{figure}
 
 
 \begin{figure}[]
 \caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$)}
 \centering
-\includegraphics[height = 3in]{averageT1errn2.png}
+<<echo=FALSE>>=
+plott1
+@
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------Discussion--------------------------------%
+\newpage
+\chapter{Discussion and Conclusion}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion and Conclusion}
 Deviations from the planned second stage sample size has been better studied than deviations from the planned first stage sample size. Many methods have been proposed on decision rules, and Koyama et al. had introduced a redesign when the first stage sample size is as planned. Here, we focused our investigation and results on deviations from the planned first stage sample size. A numerical study suggested that it is desireable to redesign trials using the planned total sample size because it better controls type I error and power. Assuming that redesigns use the planned total sample size in the redesign, results from different Simon-like designs were presented.  Chang and the adaptation of Chang methods primarily differ when there are extreme sample size shifts. This is most likely due to the nature of their methods and their primary goals of maintaining type II error spending or probability of early termination. In recommending the use of these designs in practice will depend on the desire of statistical approach of the researcher. If the researcher prefers to use a Frequentist approach in hypothesis testing, it may be recommended that the adaptation of Chang's approach is used because it results in higher average power across deviations. Because it may be of concern that researchers take advantage of the ability to deviate from the planned design, the adaptation to Chang's method also penalizes deviation by resulting in a higher probability of early termination when there is underaccrual than Chang's method. \\
 \indent We do not consider redesigns when both the first and second stage accrual are not as planned because if one is interested in prespecifying stopping criteria for sample size deviations, the number of combinations needed to be specified in order to prespecify the exact combination that will occur is unreasonable. Though, these attained designs are able to accomodate if this is desired. One advantage to the Likelihood design is that it is able to add cohorts of patients at the end of the second stage if weak evidence is obtained without threatening Frequentist properties such as type I error. 
+\indent Another advantage to the Likelihood approach is that inference is more straightforward because one is not concerned with error rates or p-values. Though we don't consider calculating p-values when stage I differs from planned, it would be complicated if one wished to do so, whereas Likelihood methods would not require this. Likelihood designs are also more generalizable. The Likelihood two-stage approach could be generalized easily to three stages, whereas the Chang designs would not be able to generalize. 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%-----------------Appendix-------------------------------%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix}
-Maybe put the chang design here that goes beyond stage 2 sample size being origianl total and original second stage?
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%------------------Questions------------------------------%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Questions}
-
-\begin{itemize}
-  \item Particularly when describing other peoples' methods, how do you cite?
-  \item If likelihood design can translate into simon's design and have better properties - can that be used as a tool to come up with these designs instead of using Chang's method? Or are they different because you're operating under frequentist vs likelihood inference? 
-  \item Why do we choose PET closest to the original? - consider choosing closest PET, being conservative. mention that there are two ways to think about it. one is conservative and one is closest and they're pretty close to each other. 
-  \item Likelihood type I error - why do we choose 1/3.375. if we picked a higher threshold, we'd have lower T1err?
-\end{itemize}
-
-\section{Notes}
-\begin{itemize}
-  \item inference from likelihood is more straightforward. the authors in koyama have shown that the p-value depends on the design. p-value's in multistage designs depend on the p-value. first stage is more complex. 
-\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %------------------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

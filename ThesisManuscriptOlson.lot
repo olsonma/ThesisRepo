@@ -1,9 +1,9 @@
 \vspace {0.2in} \hspace {0.13in} \ Table \hfill Page\endgraf 
-\contentsline {table}{\numberline {5.1}{\ignorespaces Stopping rules for deviations from first stage planned sample size concrete example\relax }}{15}{table.caption.1}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.1, $p_1$ = 0.25, $\alpha $ = 0.05, $\beta $ = 0.20)\relax }}{18}{table.caption.2}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.5, $p_1$ = 0.65, $\alpha $ = 0.05, $\beta $ = 0.2)\relax }}{18}{table.caption.3}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.9, $\alpha $ = 0.05, $\beta $ = 0.2)\relax }}{19}{table.caption.4}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.05, $p_1$ = 0.25, $\alpha $ = 0.1, $\beta $ = 0.1)\relax }}{19}{table.caption.5}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.3, $p_1$ = 0.45, $\alpha $ = 0.1, $\beta $ = 0.1)\relax }}{20}{table.caption.6}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.9, $\alpha $ = 0.1, $\beta $ = 0.1)\relax }}{20}{table.caption.7}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Stopping rules for deviations from first stage planned sample size concrete example\relax }}{13}{table.caption.1}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.1, $p_1$ = 0.25, $\alpha $ = 0.05, $\beta $ = 0.20)\relax }}{16}{table.caption.2}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.5, $p_1$ = 0.65, $\alpha $ = 0.05, $\beta $ = 0.2)\relax }}{16}{table.caption.3}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.9, $\alpha $ = 0.05, $\beta $ = 0.2)\relax }}{17}{table.caption.4}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.05, $p_1$ = 0.25, $\alpha $ = 0.1, $\beta $ = 0.1)\relax }}{17}{table.caption.5}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.3, $p_1$ = 0.45, $\alpha $ = 0.1, $\beta $ = 0.1)\relax }}{18}{table.caption.6}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.9, $\alpha $ = 0.1, $\beta $ = 0.1)\relax }}{18}{table.caption.7}
 \contentsfinish 

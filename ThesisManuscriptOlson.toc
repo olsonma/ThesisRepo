@@ -26,15 +26,14 @@
 \contentsline {section}{\numberline {4.1}\textit {Chang et al.} Alternative Designs and Adaptation}{8}{section.4.1}
 \contentsline {section}{\numberline {4.2}Likelihood Design}{10}{section.4.2}
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{14}{chapter.5}
+\contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{12}{chapter.5}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{16}{chapter.6}
+\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{14}{chapter.6}
 \vspace {\li }
-\contentsline {section}{\numberline {6.1}Discussion and Conclusion}{23}{section.6.1}
-\contentsline {section}{\numberline {6.2}Appendix}{24}{section.6.2}
-\contentsline {section}{\numberline {6.3}Questions}{24}{section.6.3}
-\contentsline {section}{\numberline {6.4}Notes}{25}{section.6.4}
 \addvspace {\li }
-\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{26}{section.6.4}
+\contentsline {chapter}{\hbox to\@tempdima {7\hfil }Discussion and Conclusion}{22}{chapter.7}
+\vspace {\li }
+\addvspace {\li }
+\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{24}{chapter.7}
 \contentsfinish 

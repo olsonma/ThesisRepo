@@ -18,19 +18,22 @@ S.-H. Jung, Y.~Lee, K.~Kim, and S.~L. George, ``Admissible two-stage designs
   pp.~561--569, 2004.
 
 \bibitem{Green}
-``Planned versus attained design in phase ii clinical trials,'' {\em Statistics
-  in Medicine}, vol.~11, pp.~853--862, 1992.
+S.~Green and S.~Dahlberg, ``Planned versus attained design in phase ii clinical
+  trials,'' {\em Statistics in Medicine}, vol.~11, pp.~853--862, 1992.
 
 \bibitem{Chen}
 T.~Chen and T.~Ng, ``Optimal flexible designs in phase ii clinical trials,''
   {\em Statistics in Medicine}, vol.~17, pp.~2301--2312, 1998.
 
 \bibitem{Li}
-``A bayesian approach for unplanned sample sizes in phase ii clinical trials,''
-  {\em Clinical Trials}, vol.~9, pp.~293--302, 2012.
+Y.~Li, R.~Mick, and D.~Heitjan, ``A bayesian approach for unplanned sample
+  sizes in phase ii clinical trials,'' {\em Clinical Trials}, vol.~9,
+  pp.~293--302, 2012.
 
 \bibitem{Chang}
-
+M.~Chang, Y.~Li, and Q.~An, ``Alternative designs for phase ii clinical trials
+  when attained sample sizes are different from planned sample sizes,'' {\em
+  Biometrics and Biostatistics}, vol.~6, p.~229, 2015.
 
 \bibitem{Blume}
 J.~Blume and D.~Ayers
