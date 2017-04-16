@@ -18,7 +18,7 @@ changDesCompare <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
                      n1  = 17,  nt = 41, 
                      n1a = 17, nta = 41,
                      p0  = 0.4, p1 = 0.6, 
-                     sim = TRUE){
+                     sim = FALSE){
                      	
 	Design    <- matrix(c("Chang","Chang Alter","Likelihood"), nrow=3)
 	chang     <-     as.matrix(changDes(r1   = r1,   rt  = rt, beta = beta, alpha = alpha,

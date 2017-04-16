@@ -15,6 +15,7 @@ changDes <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
                      n1a = 17, nta = 41,
                      p0  = 0.4, p1 = 0.6, 
                      sim = TRUE){
+  #print(paste0("HERE nta ", nta))
   R <- function(x){
     round(x, 3)
   }
@@ -69,13 +70,19 @@ changDes <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
   
   for(i in r1star:nta){	## do we want nt?? or nta-n1a????		
     #cp0 <- 1-pbinom(i-x1, nt-n1, p0)  ## conditional type I error
+    #print(paste0("rep ",i, " in changdes"))
+    #print(paste0("nta = ", nta, "n1a = ",n1a))
     cp0 <- 1-pbinom(i-x1, nta-n1a, p0)
+    #print(paste0("cp0",cp0))
     cp0[x1 <= r1star] <- 0 
     cp0[x1 > i]      <- 1  
+    #print(paste0("cp0",cp0))
+    
     
     type1 <- sum( cp0 * y0) #sum[P(Y2* > rt*-y1*) * P(Y1* = y1*)]
     
-    
+    #print(type1)
+    #print(alpha)
     if(type1 < alpha){
       rtstar <- i
       break
