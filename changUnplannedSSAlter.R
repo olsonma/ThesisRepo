@@ -14,9 +14,13 @@
 
 changDesAlter <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
                      n1  = 17,  nt = 41, 
-                     n1a = 17, nta = 41,
+                     n1a = 17, ntaMeth = "nt",
                      p0  = 0.4, p1 = 0.6,
                      sim = TRUE){
+  nta <- nt
+  if(ntaMeth == "n2"){
+    nta <- n1a + (nt-n1)
+  }
   R <- function(x){
     round(x, 3)
   }

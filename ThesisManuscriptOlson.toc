@@ -18,22 +18,23 @@
 \contentsline {chapter}{\hbox to\@tempdima {2\hfil }Background}{3}{chapter.2}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {3\hfil }Deviation from Planned Sample Sizes}{5}{chapter.3}
-\vspace {\li }
-\contentsline {section}{\numberline {3.1}Deviation from Planned Sample Sizes in Second Stage}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Deviation from Planned Sample Sizes in First Stage}{6}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}\textit {Chang et al.} Alternative Designs and Adaptation}{7}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Likelihood Design}{9}{subsection.3.2.2}
-\addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {4\hfil }Example}{13}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {3\hfil }Deviation from Planned Sample Sizes In Second Stage}{5}{chapter.3}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {5\hfil }Results}{16}{chapter.5}
+\contentsline {chapter}{\hbox to\@tempdima {4\hfil }Deviation from Planned Sample Sizes in First Stage}{7}{chapter.4}
 \vspace {\li }
-\contentsline {section}{\numberline {5.1}Discussion}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Appendix}{19}{section.5.2}
-\contentsline {section}{\numberline {5.3}Questions}{19}{section.5.3}
-\contentsline {section}{\numberline {5.4}Notes}{20}{section.5.4}
+\contentsline {section}{\numberline {4.1}\textit {Chang et al.} Alternative Designs and Adaptation}{8}{section.4.1}
+\contentsline {section}{\numberline {4.2}Likelihood Design}{10}{section.4.2}
 \addvspace {\li }
-\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{21}{section.5.4}
+\contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{14}{chapter.5}
+\vspace {\li }
+\addvspace {\li }
+\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{16}{chapter.6}
+\vspace {\li }
+\contentsline {section}{\numberline {6.1}Discussion and Conclusion}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Appendix}{24}{section.6.2}
+\contentsline {section}{\numberline {6.3}Questions}{24}{section.6.3}
+\contentsline {section}{\numberline {6.4}Notes}{25}{section.6.4}
+\addvspace {\li }
+\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{26}{section.6.4}
 \contentsfinish 

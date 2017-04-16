@@ -16,22 +16,22 @@ source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changUnplannedSS.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/changUnplannedSSAlter.R")
 changDesCompare <- function(r1   = 7,   rt  = 21, beta = 0.2, alpha = 0.05,
                      n1  = 17,  nt = 41, 
-                     n1a = 17, nta = 41,
+                     n1a = 17, ntaMeth = "nt",
                      p0  = 0.4, p1 = 0.6, 
                      sim = FALSE){
                      	
 	Design    <- matrix(c("Chang","Chang Alter","Likelihood"), nrow=3)
 	chang     <-     as.matrix(changDes(r1   = r1,   rt  = rt, beta = beta, alpha = alpha,
             				   n1  = n1,   nt = nt, 
-            				   n1a = n1a, nta = nta,
+            				   n1a = n1a, ntaMeth = ntaMeth,
               				   p0  = p0,   p1 = p1, sim = sim))
  	changAlter<- as.matrix(changDesAlter(r1   = r1,    rt  = rt, beta = beta, alpha = alpha,
             				   n1  = n1,   nt = nt, 
-            			       n1a = n1a, nta = nta,
+            			       n1a = n1a, ntaMeth = ntaMeth,
               			   	   p0  = p0,   p1 = p1, sim = sim)  )  
  	like.2s <- as.matrix(like.2s.Simon(r1   = r1,    rt  = rt, beta = beta, alpha = alpha,
  	                                   n1  = n1,   nt = nt, 
- 	                                   n1a = n1a, nta = nta,
+ 	                                   n1a = n1a, ntaMeth = ntaMeth,
  	                                   p0  = p0,   p1 = p1, sim = sim))
               					 
 	#dfCompare <- rbind(chang, changAlter,like.2s, rep("", dim(chang)[2]))

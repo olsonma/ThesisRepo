@@ -1,6 +1,10 @@
 like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41, 
-                         r1 = 7, rt = 21, n1a = 17, nta = 41, 
+                         r1 = 7, rt = 21, n1a = 17, ntaMeth = "nt", 
                          beta = 0.2, alpha = 0.05, sim = TRUE){
+  nta <- nt
+  if(ntaMeth == "n2"){
+    nta <- n1a + (nt-n1)
+  }
   ######################################
   ## Author: Molly Olson
   ## Date:   April 2017
@@ -27,7 +31,13 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   R <- function(x){
     round(x, 3)
   }
-  
+
+  # r1   = 1;   rt  = 7; beta = 0.05; alpha = 0.2
+  #        n1  = 15;  nt = 41 
+  #        n1a = 5
+  #        nta = 41;
+  #        p0  = 0.1; p1 = 0.25 
+  #        
   
   ## returns odds ratio
   or=(p1*(1-p0))/((p0)*(1-p1))
@@ -69,9 +79,9 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   ## under attained conditions
   ###########################
   
-  ka.i=1/3.375 #(or^(r1))*((1-p1)/(1-p0))^(n1)
+  ka.i= (or^(r1))*((1-p1)/(1-p0))^(n1) #1/3.375 
   kb.i=Inf
-  ka=1.5         #(or^(rt))*((1-p1)/(1-p0))^(nt)
+  ka= (or^(rt))*((1-p1)/(1-p0))^(nt)
   kb=Inf
   
   
@@ -80,7 +90,9 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   #######################################	
   
   top.i=round((log(kb.i)-n1a*log((1-p1)/(1-p0)))/log(or),10)
+  if(top.i < 0){top.i = 0 }
   bot.i=round((log(ka.i)-n1a*log((1-p1)/(1-p0)))/log(or),10)
+  if(bot.i < 0){bot.i = 0}
   
   ## if our r1 (bot.i) isn't an integer, change accordingly. The LR will then change, so change that too. 
   if(floor(bot.i) < bot.i & bot.i < ceiling(bot.i)){

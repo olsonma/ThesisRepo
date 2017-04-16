@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  15 APR 2017 21:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  16 APR 2017 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -875,29 +875,29 @@ Package: abstract 2009/06/08 v1.2a configurable abstracts
 (./ThesisManuscriptOlson.aux)
 \openout1 = `ThesisManuscriptOlson.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 326.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 326.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 327.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 327.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 326.
-LaTeX Font Info:    ... okay on input line 326.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 326.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 327.
+LaTeX Font Info:    ... okay on input line 327.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 327.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -978,70 +978,70 @@ Package tocstyle Warning: Usage of `tocstyle' with `titletoc' detected.
 (tocstyle)                but not both of them together. I expect even
 (tocstyle)                error messages because of this combination.
 
-Package tocstyle Info: prepare \l@part for redefinition on input line 326.
+Package tocstyle Info: prepare \l@part for redefinition on input line 327.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 32
-6.
+7.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 32
-6.
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 32
-6.
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 32
-6.
+7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 326.
+LaTeX Font Info:    Try loading font information for U+msa on input line 327.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 326.
+LaTeX Font Info:    Try loading font information for U+msb on input line 327.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 326.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 327.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 327.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 327.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
-Package tocstyle Info: prepare \l@chapter for redefinition on input line 326.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 327.
+Package tocstyle Info: prepare \l@chapter for redefinition on input line 327.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 327.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 327.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 326.
-Package tocstyle Info: prepare \l@section for redefinition on input line 326.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 326
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 327.
+Package tocstyle Info: prepare \l@section for redefinition on input line 327.
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 327
 .
 Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 
-326.
-Package tocstyle Info: prepare \l@paragraph for redefinition on input line 326.
+327.
+Package tocstyle Info: prepare \l@paragraph for redefinition on input line 327.
 
 Package tocstyle Info: prepare \l@subparagraph for redefinition on input line 3
-26.
-Package tocstyle Info: prepare \l@table for redefinition on input line 326.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 326.
+27.
+Package tocstyle Info: prepare \l@table for redefinition on input line 327.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 327.
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 326.
+Package hyperref Info: Link coloring OFF on input line 327.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1051,9 +1051,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count198
 )
-LaTeX Info: Redefining \ref on input line 326.
-LaTeX Info: Redefining \pageref on input line 326.
-LaTeX Info: Redefining \nameref on input line 326.
+LaTeX Info: Redefining \ref on input line 327.
+LaTeX Info: Redefining \pageref on input line 327.
+LaTeX Info: Redefining \nameref on input line 327.
 
 (./ThesisManuscriptOlson.out) (./ThesisManuscriptOlson.out)
 \@outlinefile=\write6
@@ -1110,6 +1110,11 @@ text indent by \l@... (toc, 0):  17.62482pt
 number indent by parent (toc, 0):  0.0pt
 text indent calculated (toc, 0): 17.62482pt
 number indent calculated (toc, 0): 0.0pt
+number indent by \l@... (toc, 0):  0.0pt
+text indent by \l@... (toc, 0):  17.62482pt
+number indent by parent (toc, 0):  0.0pt
+text indent calculated (toc, 0): 17.62482pt
+number indent calculated (toc, 0): 0.0pt
 number indent by \l@... (toc, 1):  17.62482pt
 text indent by \l@... (toc, 1):  27.02475pt
 number indent by parent (toc, 1):  17.62482pt
@@ -1120,16 +1125,6 @@ text indent by \l@... (toc, 1):  27.02475pt
 number indent by parent (toc, 1):  17.62482pt
 text indent calculated (toc, 1): 21.0pt
 number indent calculated (toc, 1): 17.62482pt
-number indent by \l@... (toc, 2):  44.64957pt
-text indent by \l@... (toc, 2):  37.59956pt
-number indent by parent (toc, 2):  38.62482pt
-text indent calculated (toc, 2): 30.0pt
-number indent calculated (toc, 2): 44.64957pt
-number indent by \l@... (toc, 2):  44.64957pt
-text indent by \l@... (toc, 2):  37.59956pt
-number indent by parent (toc, 2):  38.62482pt
-text indent calculated (toc, 2): 30.0pt
-number indent calculated (toc, 2): 44.64957pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  17.62482pt
 number indent by parent (toc, 0):  0.0pt
@@ -1182,6 +1177,31 @@ text indent by \l@... (lot, 1):  27.02475pt
 number indent by parent (lot, 1):  17.62482pt
 text indent calculated (lot, 1): 21.0pt
 number indent calculated (lot, 1): 17.62482pt
+number indent by \l@... (lot, 1):  17.62482pt
+text indent by \l@... (lot, 1):  27.02475pt
+number indent by parent (lot, 1):  17.62482pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 17.62482pt
+number indent by \l@... (lot, 1):  17.62482pt
+text indent by \l@... (lot, 1):  27.02475pt
+number indent by parent (lot, 1):  17.62482pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 17.62482pt
+number indent by \l@... (lot, 1):  17.62482pt
+text indent by \l@... (lot, 1):  27.02475pt
+number indent by parent (lot, 1):  17.62482pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 17.62482pt
+number indent by \l@... (lot, 1):  17.62482pt
+text indent by \l@... (lot, 1):  27.02475pt
+number indent by parent (lot, 1):  17.62482pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 17.62482pt
+number indent by \l@... (lot, 1):  17.62482pt
+text indent by \l@... (lot, 1):  27.02475pt
+number indent by parent (lot, 1):  17.62482pt
+text indent calculated (lot, 1): 21.0pt
+number indent calculated (lot, 1): 17.62482pt
 )
 \tf@lot=\write8
 \openout8 = `ThesisManuscriptOlson.lot'.
@@ -1189,6 +1209,16 @@ number indent calculated (lot, 1): 17.62482pt
  [4
 
 ] (./ThesisManuscriptOlson.lof
+number indent by \l@... (lof, 1):  17.62482pt
+text indent by \l@... (lof, 1):  27.02475pt
+number indent by parent (lof, 1):  17.62482pt
+text indent calculated (lof, 1): 21.0pt
+number indent calculated (lof, 1): 17.62482pt
+number indent by \l@... (lof, 1):  17.62482pt
+text indent by \l@... (lof, 1):  27.02475pt
+number indent by parent (lof, 1):  17.62482pt
+text indent calculated (lof, 1): 21.0pt
+number indent calculated (lof, 1): 17.62482pt
 number indent by \l@... (lof, 1):  17.62482pt
 text indent by \l@... (lof, 1):  27.02475pt
 number indent by parent (lof, 1):  17.62482pt
@@ -1209,17 +1239,17 @@ number indent calculated (lof, 1): 17.62482pt
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OT1+qcs on input line 458.
+LaTeX Font Info:    Try loading font information for OT1+qcs on input line 459.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tex-gyre/ot1qcs.fd
 File: ot1qcs.fd 2009/09/25 v1.2 font definition file for OT1/qcs
 )
-Underfull \hbox (badness 10000) in paragraph at lines 460--463
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--463
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
@@ -1228,12 +1258,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 460--463
 ] [2]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--487
+Underfull \hbox (badness 10000) in paragraph at lines 476--485
 
  []
 
 
-Overfull \hbox (32.01866pt too wide) in paragraph at lines 478--487
+Overfull \hbox (32.01866pt too wide) in paragraph at lines 476--485
 [] \OT1/ztmcm/m/n/12 = [][] [] \OML/ztmcm/m/it/12 b\OT1/ztmcm/m/n/12 (\OML/ztmc
 m/m/it/12 x[]; p; n[]\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 ,
  []
@@ -1241,7 +1271,7 @@ m/m/it/12 x[]; p; n[]\OT1/ztmcm/m/n/12 )$\OT1/ptm/m/n/12 ,
 [3
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 489.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 487.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1249,72 +1279,135 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 Chapter 3.
 [5
 
-]
+] [6]
+Chapter 4.
+
 Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
 
-[6] [7] [8]
+[7
+
+] [8] [9]
 Underfull \hbox (badness 10000) in paragraph at lines 571--577
 
  []
 
-[9] [10] [11]
+[10] [11] [12]
 Overfull \hbox (60.97237pt too wide) in paragraph at lines 595--605
 [] []$ 
  []
 
-[12]
-Chapter 4.
+[13]
+Chapter 5.
 
-Overfull \hbox (56.0249pt too wide) in paragraph at lines 630--657
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 629.
+
+
+Overfull \hbox (56.0249pt too wide) in paragraph at lines 632--659
  []|  [] 
  []
 
-[13
+[14
 
-] [14] [15]
-Chapter 5.
-[16
+] [15]
+Chapter 6.
 
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 665.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 665.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 665.
- [17
-
-] <unnamed-chunk-6-1.pdf, id=241, 289.08pt x 216.81pt>
-File: unnamed-chunk-6-1.pdf Graphic file (type pdf)
-
-<use unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: unnamed-chunk-6-1.pdf used on input line 717.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-<unnamed-chunk-7-1.pdf, id=242, 289.08pt x 216.81pt>
-File: unnamed-chunk-7-1.pdf Graphic file (type pdf)
-
-<use unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: unnamed-chunk-7-1.pdf used on input line 727.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 734--740
+Underfull \hbox (badness 10000) in paragraph at lines 665--670
 
  []
 
-[18
+[16
 
- <./unnamed-chunk-6-1.pdf> <./unnamed-chunk-7-1.pdf>] [19]
-(./ThesisManuscriptOlson.bbl [20])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 789.
+] [17]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 676.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 677.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 677.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 677.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 706.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 736.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 766.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 795.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 835.
+
+[18] [19] [20]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 870.
+
+<unnamed-chunk-11-1.pdf, id=273, 289.08pt x 216.81pt>
+File: unnamed-chunk-11-1.pdf Graphic file (type pdf)
+
+<use unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: unnamed-chunk-11-1.pdf used on input line 875.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 880.
+
+<unnamed-chunk-12-1.pdf, id=274, 289.08pt x 216.81pt>
+File: unnamed-chunk-12-1.pdf Graphic file (type pdf)
+
+<use unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: unnamed-chunk-12-1.pdf used on input line 885.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 894.
+
+<averagePowern2.png, id=275, 452.69125pt x 456.70625pt>
+File: averagePowern2.png Graphic file (type png)
+
+<use averagePowern2.png>
+Package pdftex.def Info: averagePowern2.png used on input line 897.
+(pdftex.def)             Requested size: 214.89932pt x 216.81pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 901.
+
+<averageT1errn2.png, id=277, 452.69125pt x 456.70625pt>
+File: averageT1errn2.png Graphic file (type png)
+
+<use averageT1errn2.png>
+Package pdftex.def Info: averageT1errn2.png used on input line 904.
+(pdftex.def)             Requested size: 214.89932pt x 216.81pt.
  [21
 
+
+ <./unnamed-chunk-11-1.pdf>] [22 <./unnamed-chunk-12-1.pdf> <./averagePowern2.p
+ng>] [23 <./averageT1errn2.png>] [24]
+(./ThesisManuscriptOlson.bbl [25])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 952.
+ [26
+
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 789.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 952.
  (./ThesisManuscriptOlson.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 789.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 952.
 
 
  *File List*
@@ -1451,24 +1544,26 @@ ThesisManuscriptOlson.out
 ThesisManuscriptOlson.out
   ot1qcs.fd    2009/09/25 v1.2 font definition file for OT1/qcs
   ts1ptm.fd    2001/06/04 font definitions for TS1/ptm.
-unnamed-chunk-6-1.pdf    Graphic file (type pdf)
-unnamed-chunk-7-1.pdf    Graphic file (type pdf)
+unnamed-chunk-11-1.pdf    Graphic file (type pdf)
+unnamed-chunk-12-1.pdf    Graphic file (type pdf)
+averagePowern2.png    Graphic file (type png)
+averageT1errn2.png    Graphic file (type png)
 ThesisManuscriptOlson.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 789.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 952.
 Package rerunfilecheck Info: File `ThesisManuscriptOlson.out' has not changed.
-(rerunfilecheck)             Checksum: AF70A6EE0E346997DEC8CC0E39A7A38E;1075.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 789.
+(rerunfilecheck)             Checksum: 32E209D297A70024FA7D21B2A8F2AE67;983.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 952.
  ) 
 Here is how much of TeX's memory you used:
- 15133 strings out of 493014
- 225780 string characters out of 6133351
- 425583 words of memory out of 5000000
- 18217 multiletter control sequences out of 15000+600000
- 81560 words of font info for 182 fonts, out of 8000000 for 9000
+ 15134 strings out of 493014
+ 225399 string characters out of 6133351
+ 511753 words of memory out of 5000000
+ 18198 multiletter control sequences out of 15000+600000
+ 84176 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,77p,2413b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,77p,2413b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}{/usr/l
 ocal/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/201
@@ -1481,10 +1576,10 @@ nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ThesisManuscriptOlson.pdf (27 pages, 181038 bytes).
+Output written on ThesisManuscriptOlson.pdf (32 pages, 230979 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
