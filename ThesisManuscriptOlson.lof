@@ -1,6 +1,6 @@
 \vspace {0.2in} \hspace {0.13in} \ Figure \hfill Page\endgraf 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_t$)\relax }}{19}{figure.caption.8}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_t$)\relax }}{20}{figure.caption.9}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_1^{\ast \ast } + n_2$)\relax }}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_1^{\ast \ast } + n_2$)\relax }}{21}{figure.caption.11}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_1^{\ast \ast } + n_2$)\relax }}{16}{figure.caption.2}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_1^{\ast \ast } + n_2$)\relax }}{16}{figure.caption.3}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_t$)\relax }}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast \ast } = n_t$)\relax }}{23}{figure.caption.11}
 \contentsfinish 

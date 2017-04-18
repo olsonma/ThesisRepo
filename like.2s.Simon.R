@@ -27,7 +27,7 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   ##
   ## LR and FDR computations assume flat prior
   #######################################	
-  #p1=0.60;p0=0.40;n1a=16;nta=41;ka.i=(1/4);kb.i=4;ka=(1/4);kb=4;r1=7;r=21
+ # p1=0.60;p0=0.40;n1a=16;nta=41;ka.i=(1/4);kb.i=4;ka=(1/4);kb=4;r1=7;rt=21; n1=16; nt=41
   R <- function(x){
     round(x, 3)
   }
