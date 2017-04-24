@@ -2,7 +2,7 @@
 ## for deviations. returns a matrix with n.diff separations and type 1 error and power for each 
 error.sim.one <- function(ntplan = 53, n1plan = 27, r1plan = 1, rtplan = 5, 
                           p0plan = 0.05, p1plan = 0.15, ntaMeth = "nt",
-                          sim = NULL, des = "Chang", alpha = 0.05, beta = 0.8){
+                          sim = 10000, des = "Chang", alpha = 0.05, beta = 0.8){
 
     #ntplan = 53; n1plan = 27; r1plan = 1; rtplan = 5 
     #p0plan = 0.05; p1plan = 0.15
@@ -13,9 +13,12 @@ error.sim.one <- function(ntplan = 53, n1plan = 27, r1plan = 1, rtplan = 5,
                    ntaMeth = ntaMeth, sim = FALSE, vary = 10, char = FALSE)
     
 
-    print(temp)
+    #print(temp)
+    ntplanvec <- rep(ntplan,length(temp$n1star))
+    n1planvec <- rep(n1plan,length(temp$n1star))
     n1 <- temp$n1star
-    nt <- rep(ntplan,length(temp$n1star))
+    if(ntaMeth == "n2"){nt <- ntplanvec - n1planvec + n1 }
+    if(ntaMeth == "nt"){nt <- rep(ntplan,length(temp$n1star)) }
     if(des == "Chang"){r1 <- temp$r1star.Chang} 
     if(des == "Likelihood"){r1 <- temp$r1star.Likelihood}
     if(des == "Alter"){r1 <- temp$`r1star.Chang Alter`}
@@ -24,7 +27,7 @@ error.sim.one <- function(ntplan = 53, n1plan = 27, r1plan = 1, rtplan = 5,
     if(des == "Alter"){rt <- temp$`rtstar.Chang Alter`}
     p0 <- rep(p0plan, length(temp$n1star))
     p1 <- rep(p1plan, length(temp$n1star))
-
+    
     sim.results <- error.sim(n1v = n1, ntv = nt, r1v = r1, rtv = rt, p0v = p0, p1v = p1, sim = sim)
     n.diff <- n1-rep(n1plan,length(n1))
     rbind(n.diff, sim.results)

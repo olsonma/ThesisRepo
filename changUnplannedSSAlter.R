@@ -103,7 +103,7 @@ if(sim == TRUE){
   ## type I error simulation
   ###########################
   r1sim <- r1star
-  rtsim <- r1star
+  rtsim <- rtstar
   n1sim <- n1a
   ntsim <- nta
   p0 <- p0

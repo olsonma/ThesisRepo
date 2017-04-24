@@ -102,6 +102,10 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   
   top=round((log(kb)-nta*log((1-p1)/(1-p0)))/log(or),10)
   bot=round((log(ka)-nta*log((1-p1)/(1-p0)))/log(or),10)
+  if(floor(bot) < bot & bot < ceiling(bot)){
+    bot <- floor(bot)
+    ka.i  <- (or^(bot))*((1-p1)/(1-p0))^(nt)
+  }
   #print(c(top.i,bot.i,top,bot))
   #######################################	
   ## Interim Stage 

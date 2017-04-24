@@ -2,7 +2,7 @@
 ## takes vectors and returns a matrix with type1 error and power for each design
 
 error.sim <- function(ntv = c(NA), n1v = c(NA), r1v = c(NA), rtv = c(NA), p0v = c(NA), p1v = c(NA),
-                      sim = NULL){
+                      sim = 100){
 
     #ntv = c(53,54); n1v = c(27,25); r1v = c(1,1); rtv = c(5,5); p0v = c(0.05,0.05); p1v = c(0.15,.15); sim = 1000
     type1 <- NULL
