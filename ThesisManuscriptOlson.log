@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 APR 2017 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 MAY 2017 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1237,6 +1237,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 475.
+
 [3
 
 ]
@@ -1531,7 +1536,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 963.
 Here is how much of TeX's memory you used:
  15105 strings out of 493014
  225008 string characters out of 6133351
- 511842 words of memory out of 5000000
+ 511823 words of memory out of 5000000
  18176 multiletter control sequences out of 15000+600000
  83862 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1548,7 +1553,7 @@ nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ThesisManuscriptOlson.pdf (33 pages, 207231 bytes).
+Output written on ThesisManuscriptOlson.pdf (33 pages, 208192 bytes).
 PDF statistics:
  370 PDF objects out of 1000 (max. 8388607)
  312 compressed objects within 4 object streams
