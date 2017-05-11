@@ -699,7 +699,7 @@ This example illustrates the comprability of the three adapted design methods. G
 
 \chapter{Results}
 
-We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood by first selecting either an Admissible, Minimax, or Optimal two-stage design. We apply each method to deviation in first stage sample size of $\pm 10$. We suggest keeping the original total planned sample size or the original planned second stage sample size the same when utilizing Chang \textit{et al.}'s and Olson and Koyama's methods. We choose to keep total sample size the same in our investigation because it results in a more similar design in terms of error rates than maintaining the original second stage sample size. Likelihood methods can result in increased type I error, which may be a concern in this constrained setting. We also see a parabolic decrease in power in Chang's method, which is not a fruitful result (Figure 6.1 and 6.2). We also suggest setting $n_t^{\ast\ast}=n_t$ because this inhibits the ability to stray extremely far from the planned design. If one employs Chang \textit{et al.}'s method, it can be radical in the first stage, and if the resulting probability of continuing is less than 0.05, it will be impossible to make a type I error. This will then reduce the two-stage design to a one-stage design.    
+We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood by first selecting either an Admissible, Minimax, or Optimal two-stage design. We apply each method to deviation in first stage sample size of $\pm 10$. We suggest keeping the original total planned sample size or the original planned second stage sample size the same when utilizing Chang \textit{et al.}'s and Olson and Koyama's methods. We choose to keep total sample size the same in our investigation because it results in a more similar design in terms of error rates than maintaining the original second stage sample size. Second stage critical values can be quite different than the original design, also. Likelihood methods can result in increased type I error, which may be a concern in this constrained setting. We also see a parabolic decrease in power in Chang's method, which is not a fruitful result (Figure 6.1 and 6.2). We also suggest setting $n_t^{\ast\ast}=n_t$ because this inhibits the ability to stray extremely far from the planned design. If one employs Chang \textit{et al.}'s method, it can be radical in the first stage, and if the resulting probability of continuing is less than 0.05, it will be impossible to make a type I error. This will then reduce the two-stage design to a one-stage design.    
 
 
 
@@ -806,15 +806,21 @@ plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], average
 df <- rbind(plot.dfAlter, plot.dfChang, plot.dfLik)
 
 plotpow <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
-  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", values = c("Olson and Koyama" = "skyblue2",
-                                                                                             "Chang et al."     = "dodgerblue3",
-                                                                                             "Likelihood"   = "dodgerblue4"))
+  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
+                                                                   values = c("Chang Adaptation" = "red",
+                                                                                                    "Chang"     = "dodgerblue3",
+                                                                                                    "Likelihood"   = "green4"),
+                                                                   breaks = c("Chang Adaptation", "Chang", "Likelihood"),
+                                                                   labels = c("Olson and Koyama", "Chang et al.", "Likelihood"))
 #plot
 
 plott1 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() + ylab("Average Type I Error") + 
-  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", values = c("Olson and Koyama" = "skyblue2",
-                                                                                             "Chang et al."     = "dodgerblue3",
-                                                                                             "Likelihood"   = "dodgerblue4"))
+  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
+                                                                   values = c("Chang Adaptation" = "red",
+                                                                                                    "Chang"     = "dodgerblue3",
+                                                                                                    "Likelihood"   = "green4"),
+                                                                   breaks = c("Chang Adaptation", "Chang", "Likelihood"),
+                                                                   labels = c("Olson and Koyama", "Chang et al.", "Likelihood"))
 
 @
 
@@ -1202,9 +1208,12 @@ plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], average
 #################
 df <- rbind(plot.dfAlter, plot.dfChang, plot.dfLik)
 plot <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
-  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", values = c("Olson and Koyama" = "skyblue2",
-                                                                                                    "Chang et al."     = "dodgerblue3",
-                                                                                                    "Likelihood"   = "dodgerblue4"))
+  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
+                                                                   values = c("Chang Adaptation" = "red",
+                                                                                                    "Chang"     = "dodgerblue3",
+                                                                                                    "Likelihood"   = "green4"),
+                                                                   breaks = c("Chang Adaptation", "Chang", "Likelihood"),
+                                                                   labels = c("Olson and Koyama", "Chang et al.", "Likelihood"))
 @
 
 \begin{figure}[]
@@ -1218,9 +1227,14 @@ plot
 \caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
 <<echo=FALSE>>=
 ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() + ylab("Average Type I Error") + 
-  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", values = c("Olson and Koyama" = "skyblue2",
-                                                                                                    "Chang et al."     = "dodgerblue3",
-                                                                                                    "Likelihood"   = "dodgerblue4"))
+  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
+                                                                   values = c("Chang Adaptation" = "red",
+                                                                                                    "Chang"     = "dodgerblue3",
+                                                                                                    "Likelihood"   = "green4"),
+                                                                   breaks = c("Chang Adaptation", "Chang", "Likelihood"),
+                                                                   labels = c("Olson and Koyama", "Chang et al.", "Likelihood"))
+
+
 @
 \end{figure}
 

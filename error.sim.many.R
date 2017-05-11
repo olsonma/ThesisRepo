@@ -2,7 +2,7 @@
 ## takes vectors of different designs
 
 error.sim.many <- function(ntv = c(53,54), n1v = c(27,25), r1v = c(1,1), rtv = c(5,5), p0v = c(0.05,0.05), p1v = c(0.15, 0.15),
-                           sim = NULL, ntaMeth = "nt", des = "blah", alpha = 0.05, beta = 0.8){
+                           sim = NULL, ntaMeth = "nt", des = "Likelihood", alpha = 0.05, beta = 0.8){
   #ntv = c(53,54); n1v = c(27,25); r1v = c(1,1); rtv = c(5,5); p0v = c(0.05,0.05); p1v = c(0.15,.15); sim = 1000
   #alpha = 0.05
   #beta = 0.8

@@ -2,7 +2,7 @@
 ## for deviations. returns a matrix with n.diff separations and type 1 error and power for each 
 error.sim.one <- function(ntplan = 53, n1plan = 27, r1plan = 1, rtplan = 5, 
                           p0plan = 0.05, p1plan = 0.15, ntaMeth = "nt",
-                          sim = 10000, des = "Chang", alpha = 0.05, beta = 0.8){
+                          sim = 100, des = "Chang", alpha = 0.05, beta = 0.8){
 
     #ntplan = 53; n1plan = 27; r1plan = 1; rtplan = 5 
     #p0plan = 0.05; p1plan = 0.15
