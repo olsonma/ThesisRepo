@@ -4,17 +4,17 @@
 ## defined as "unplanned" parameters in `changDes`. i.e the parameters are
 ## probably renamed in the function. 
 ## this was used for trial and error purposes. 
-sim <- 100000
+sim <- 10000
 ###########################	
 ## type I error simulation
 ###########################
 #varyN1(nt = 41, n1=15, r1 = 1, rt = 7, p0 = 0.1, p1 = .25, ntaMeth = "n2")
-p1 = .25#.6#.9
-p0 = .1#.4 #.75
-n1 = 5#100#32 ## originally 22
-r1 = 0#41 #26 
-rt = 6#59#41
-nt = n1 + 41-15#n1 + (41-17)#n1 + 39-22
+p1 = .4#.6#.9
+p0 = .25#.4 #.75
+n1 = 35#100#32 ## originally 22
+r1 = 9#41 #26 
+rt = 24#59#41
+nt = n1 + 63-25#n1 + (41-17)#n1 + 39-22
 #0.4 0.6 17 41  7 21  0.05   0.8 0.641 0.092 25.628    100   124     41     59  
 
 ## under null

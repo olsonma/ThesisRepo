@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Porcher}
 R.~Porcher and K.~Desseaux, ``What inference for two stage phase {II}
@@ -16,6 +16,11 @@ T.~Koyama and H.~Chen, ``Proper inference from simon's two-stage designs,''
 S.-H. Jung, Y.~Lee, K.~Kim, and S.~L. George, ``Admissible two-stage designs
   for phase ii cancer clinical trials,'' {\em Statistics In Medicine}, vol.~23,
   pp.~561--569, 2004.
+
+\bibitem{Zeng}
+D.~Zeng, F.~Gao, K.~Hu, C.~Jia, and J.~Ibrahim, ``Hypothesis testing for
+  two-stage designs with over or under enrollment,'' {\em Statistics in
+  Medicine}, vol.~34, pp.~2417--2426, 2015.
 
 \bibitem{Green}
 S.~Green and S.~Dahlberg, ``Planned versus attained design in phase ii clinical
@@ -35,7 +40,19 @@ M.~Chang, Y.~Li, and Q.~An, ``Alternative designs for phase ii clinical trials
   when attained sample sizes are different from planned sample sizes,'' {\em
   Biometrics and Biostatistics}, vol.~6, p.~229, 2015.
 
-\bibitem{Blume}
-J.~Blume and D.~Ayers
+\bibitem{Ayers}
+D.~Ayers and J.~Blume
+
+\bibitem{BlumeNotes}
+J.~Blume, ``Personal communication,'' Spring 2016.
+
+\bibitem{Blume08}
+J.~Blume, ``How often likelihood ratios are misleading in sequential trials,''
+  {\em Communications in Statistics - Theory and Methods}, vol.~37, no.~8,
+  pp.~1193--1206, 2008.
+
+\bibitem{Paul}
+P.~A. Murtaugh, ``In defense of p-values,'' {\em Ecology}, vol.~95,
+  pp.~617--621, 2014.
 
 \end{thebibliography}

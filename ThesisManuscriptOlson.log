@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 MAY 2017 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 MAY 2017 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,140 +1253,153 @@ Underfull \hbox (badness 10000) in paragraph at lines 482--484
 Chapter 3.
 [5
 
-] [6]
+]
+Overfull \hbox (17.43532pt too wide) detected at line 505
+[] [][] \OMS/ztmcm/m/n/12 ^^@ []\OML/ztmcm/m/it/12 r[] \OT1/ztmcm/m/n/12 + [] \
+OMS/ztmcm/m/n/12 ^^@ \OT1/ztmcm/m/n/12 2\OML/ztmcm/m/it/12 n[]log []
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 505--507
+
+ []
+
+[7]
 Chapter 4.
-[7
+[8
 
-] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 566--568
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 
  []
 
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 587--589
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
 [12]
+Underfull \hbox (badness 10000) in paragraph at lines 601--603
+
+ []
+
+[13] [14]
 Chapter 5.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 644.
+               Default added (so using `tbp') on input line 658.
 
 
-Overfull \hbox (56.0249pt too wide) in paragraph at lines 647--674
+Overfull \hbox (56.0249pt too wide) in paragraph at lines 661--688
  []|  [] 
- []
-
-[13
-
-] [14]
-Chapter 6.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 687.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 688.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 688.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 688.
-<unnamed-chunk-5-1.pdf, id=236, 289.08pt x 216.81pt>
-File: unnamed-chunk-5-1.pdf Graphic file (type pdf)
-
-<use unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: unnamed-chunk-5-1.pdf used on input line 693.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 697.
-
-<unnamed-chunk-6-1.pdf, id=237, 289.08pt x 216.81pt>
-File: unnamed-chunk-6-1.pdf Graphic file (type pdf)
-
-<use unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: unnamed-chunk-6-1.pdf used on input line 703.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 707--712
-
  []
 
 [15
 
-] [16 <./unnamed-chunk-5-1.pdf> <./unnamed-chunk-6-1.pdf>] [17] [18]
+] [16] [17]
+Chapter 6.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 721.
+               Default added (so using `tbp') on input line 701.
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 702.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 702.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 702.
+<unnamed-chunk-5-1.pdf, id=259, 289.08pt x 216.81pt>
+File: unnamed-chunk-5-1.pdf Graphic file (type pdf)
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 751.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 781.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 811.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 840.
+<use unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: unnamed-chunk-5-1.pdf used on input line 707.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 880.
+               Default added (so using `tbp') on input line 711.
 
-[19] [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
+<unnamed-chunk-6-1.pdf, id=260, 289.08pt x 216.81pt>
+File: unnamed-chunk-6-1.pdf Graphic file (type pdf)
+
+<use unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: unnamed-chunk-6-1.pdf used on input line 717.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--726
+
+ []
+
+[18
+
+] [19 <./unnamed-chunk-5-1.pdf> <./unnamed-chunk-6-1.pdf>] [20] [21]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 735.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 765.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 795.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 825.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 854.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 894.
+
+[22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 925--926
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 914.
+               Default added (so using `tbp') on input line 928.
 
-<unnamed-chunk-14-1.pdf, id=278, 289.08pt x 216.81pt>
+<unnamed-chunk-14-1.pdf, id=301, 289.08pt x 216.81pt>
 File: unnamed-chunk-14-1.pdf Graphic file (type pdf)
 
 <use unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: unnamed-chunk-14-1.pdf used on input line 919.
+Package pdftex.def Info: unnamed-chunk-14-1.pdf used on input line 933.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 924.
+               Default added (so using `tbp') on input line 938.
 
-<unnamed-chunk-15-1.pdf, id=279, 289.08pt x 216.81pt>
+<unnamed-chunk-15-1.pdf, id=302, 289.08pt x 216.81pt>
 File: unnamed-chunk-15-1.pdf Graphic file (type pdf)
 
 <use unnamed-chunk-15-1.pdf>
-Package pdftex.def Info: unnamed-chunk-15-1.pdf used on input line 929.
+Package pdftex.def Info: unnamed-chunk-15-1.pdf used on input line 943.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
- [22
+ [25
 
 
- <./unnamed-chunk-14-1.pdf>] [23 <./unnamed-chunk-15-1.pdf>]
+ <./unnamed-chunk-14-1.pdf>] [26 <./unnamed-chunk-15-1.pdf>]
 Chapter 7.
-[24
+[27
 
-] [25] (./ThesisManuscriptOlson.bbl [26])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 963.
- [27
+] [28] (./ThesisManuscriptOlson.bbl [29] [30
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 963.
- (./ThesisManuscriptOlson.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 963.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 978.
+ [31]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 978.
+
+(./ThesisManuscriptOlson.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 978.
+
 
  *File List*
   report.cls    2014/09/29 v1.4h Standard LaTeX document class
@@ -1528,21 +1541,21 @@ unnamed-chunk-15-1.pdf    Graphic file (type pdf)
 ThesisManuscriptOlson.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 963.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 978.
 Package rerunfilecheck Info: File `ThesisManuscriptOlson.out' has not changed.
 (rerunfilecheck)             Checksum: 4593CAD125547D27B9F8015B25142F5D;807.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 963.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 978.
  ) 
 Here is how much of TeX's memory you used:
- 15105 strings out of 493014
- 225008 string characters out of 6133351
- 511823 words of memory out of 5000000
- 18176 multiletter control sequences out of 15000+600000
+ 15121 strings out of 493014
+ 225147 string characters out of 6133351
+ 511936 words of memory out of 5000000
+ 18184 multiletter control sequences out of 15000+600000
  83862 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,77p,2492b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}{/usr/l
-ocal/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/20
+ 41i,14n,77p,3572b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
+exlive/2016/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}</usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/201
 6/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/t
@@ -1553,10 +1566,10 @@ nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ThesisManuscriptOlson.pdf (33 pages, 208192 bytes).
+Output written on ThesisManuscriptOlson.pdf (37 pages, 213909 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

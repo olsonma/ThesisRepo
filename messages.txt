@@ -21,3 +21,7 @@
 ## The following objects are masked from 'package:Hmisc':
 ## 
 ##     label, label<-
+Warning: Removed 22 rows containing missing values (geom_point).
+Warning: Removed 22 rows containing missing values (geom_point).
+Warning: Removed 22 rows containing missing values (geom_point).
+Warning: Removed 22 rows containing missing values (geom_point).
