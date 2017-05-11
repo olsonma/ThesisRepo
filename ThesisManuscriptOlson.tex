@@ -692,14 +692,14 @@ This example illustrates the comprability of the three adapted design methods. G
 
 \chapter{Results}
 
-We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood by first selecting either an Admissible, Minimax, or Optimal two-stage design. We apply each method to deviation in first stage sample size of $\pm 10$. We suggest keeping the original total planned sample size or the original planned second stage sample size the same when utilizing Chang \textit{et al.}'s and Olson and Koyama's methods. We choose to keep total sample size the same in our investigation because it results in a more similar design in terms of error rates than maintaining the original second stage sample size. Likelihood methods can result in increased type I error, which may be a concern in this constrained setting. We also see a parabolic decrease in power in Chang's method, which is not a fruitful result (Figure 6.1 and 6.2). We also suggest setting $n_t^{\ast\ast}=n_t$ because this inhibits the ability to stray extremely far from the planned design. If one employs Chang \textit{et al.}'s method, it can be radical in the first stage, and if the resulting probability of continuing is less than 0.05, it will be impossible to make a type I error. This will then reduce the two-stage design to a one-stage design.    
+We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood by first selecting either an Admissible, Minimax, or Optimal two-stage design. We apply each method to deviation in first stage sample size of $\pm 10$. We suggest keeping the original total planned sample size or the original planned second stage sample size the same when utilizing Chang \textit{et al.}'s and Olson and Koyama's methods. We choose to keep total sample size the same in our investigation because it results in a more similar design in terms of error rates than maintaining the original second stage sample size. Second stage critical values can be quite different than the original design, also. Likelihood methods can result in increased type I error, which may be a concern in this constrained setting. We also see a parabolic decrease in power in Chang's method, which is not a fruitful result (Figure 6.1 and 6.2). We also suggest setting $n_t^{\ast\ast}=n_t$ because this inhibits the ability to stray extremely far from the planned design. If one employs Chang \textit{et al.}'s method, it can be radical in the first stage, and if the resulting probability of continuing is less than 0.05, it will be impossible to make a type I error. This will then reduce the two-stage design to a one-stage design.    
 
 
 
 
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = 10.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = 1000.}
 \centering
 \begin{Schunk}
 
@@ -709,7 +709,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 \end{Schunk}
 \end{figure}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 10.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 1000.}
 \centering
 \begin{Schunk}
 
@@ -922,11 +922,11 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 \end{landscape}
 
-\indent Figures 6.3 and 6.4 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang's and Olson and Koyama's methods are conservative in type I error for all sample size deviations, but are more likely to suffer in power. \\
+\indent Figures 6.3 and 6.4 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang's and Olson and Koyama's methods are conservative in type I error for all sample size deviations, but are more likely to suffer in power. Figure 6.5 shows a simular Monte Carlo simulation, though it displays the average of the average type I error rate and the average type II error rate. The simulation confirms that the Likelihood design minimizes the average of the error rates, while Chang \textit{et al.}'s method performs better in this sense when there is under-enrollment, while Olson and Koyama performs better when there is over-enrollment.\\
 
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 1000.}
 \begin{Schunk}
 
 
@@ -936,7 +936,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 \end{figure}
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 1000.}
 \begin{Schunk}
 
 
@@ -945,7 +945,15 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 \end{Schunk}
 \end{figure}
 
+\begin{figure}[]
+\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 1000.}
+\begin{Schunk}
 
+
+\centerline{\includegraphics{unnamed-chunk-16-1} }
+
+\end{Schunk}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------Discussion--------------------------------%

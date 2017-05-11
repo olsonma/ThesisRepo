@@ -704,7 +704,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 
 
 <<echo = FALSE, results = "hide", cache = TRUE>>=
-n.sim = 10
+n.sim = 1000
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/varyN1.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.many.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.one.R")
@@ -1105,10 +1105,10 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 \end{landscape}
 
-\indent Figures 6.3 and 6.4 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang's and Olson and Koyama's methods are conservative in type I error for all sample size deviations, but are more likely to suffer in power. \\
+\indent Figures 6.3 and 6.4 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang's and Olson and Koyama's methods are conservative in type I error for all sample size deviations, but are more likely to suffer in power. Figure 6.5 shows a simular Monte Carlo simulation, though it displays the average of the average type I error rate and the average type II error rate. The simulation confirms that the Likelihood design minimizes the average of the error rates, while Chang \textit{et al.}'s method performs better in this sense when there is under-enrollment, while Olson and Koyama performs better when there is over-enrollment.\\
 <<echo=FALSE, cache = TRUE, results = "hide">>=
 ## this will use error.sim.many to plot the simulated error rates averaged
-n.sim = 10
+n.sim = 1000
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/varyN1.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.many.R")
 source("~/Documents/Vanderbilt/Masters_Thesis/ThesisRepo/error.sim.one.R")
@@ -1127,19 +1127,24 @@ error.matChang <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,
                             beta = 0.8
                             )
 powerMatChang <- error.matChang[c(1,seq(3,nrow(error.matChang),2)),]
+type2MatChang <- 1-powerMatChang
 type1MatChang <- error.matChang[c(1,seq(2,nrow(error.matChang),2)),]
+aveErrorMat.Chang <- (type2MatChang+type1MatChang)/2
 
 #mean(type1Mat[2:nrow(mat),])
 
 averagetype1Chang <- c()
 averagepowerChang <- c()
+averageerrorChang <- c()
 
 for(i in 1:ncol(error.matChang)){
   averagetype1Chang[i] <- mean(type1MatChang[2:nrow(type1MatChang),i])
   averagepowerChang[i] <- mean(powerMatChang[2:nrow(powerMatChang),i])
+  averageerrorChang[i] <- mean(aveErrorMat.Chang[2:nrow(aveErrorMat.Chang),i])
 }
 
-plot.dfChang <- data.frame(design = "Chang",n.diff = error.matChang[1,], averagetype1 = averagetype1Chang, averagepower = averagepowerChang)
+plot.dfChang <- data.frame(design = "Chang",n.diff = error.matChang[1,], averagetype1 = averagetype1Chang, averagepower = averagepowerChang,
+                           averageerror = averageerrorChang)
 
 
 #########################
@@ -1157,49 +1162,59 @@ error.matAlter <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,
                                  beta = 0.8
 )
 powerMatAlter <- error.matAlter[c(1,seq(3,nrow(error.matAlter),2)),]
+type2MatAlter <- 1-powerMatAlter
 type1MatAlter <- error.matAlter[c(1,seq(2,nrow(error.matAlter),2)),]
+aveErrorMat.Alter <- (type2MatAlter+type1MatAlter)/2
 
 #mean(type1Mat[2:nrow(mat),])
 
 averagetype1Alter <- c()
 averagepowerAlter <- c()
+averageerrorAlter <- c()
 
 for(i in 1:ncol(error.matAlter)){
   averagetype1Alter[i] <- mean(type1MatAlter[2:nrow(type1MatAlter),i])
   averagepowerAlter[i] <- mean(powerMatAlter[2:nrow(powerMatAlter),i])
+  averageerrorAlter[i] <- mean(aveErrorMat.Alter[2:nrow(aveErrorMat.Alter),i])
 }
 
-plot.dfAlter <- data.frame(design = "Chang Adaptation",n.diff = error.matAlter[1,], averagetype1 = averagetype1Alter, averagepower = averagepowerAlter)
+plot.dfAlter <- data.frame(design = "Chang Adaptation",n.diff = error.matAlter[1,], averagetype1 = averagetype1Alter, averagepower = averagepowerAlter,
+                           averageerror = averageerrorAlter)
 
 ##################
 ## Likelihood
 ##################
 
-error.matLik <- error.sim.many(ntv = c(41,49,75,73,61,52,43,43,55,77,83,67,59,48,40,49,70,55,49,39),
-                               n1v = c(15,21,35,31,25,17,20,18,19,26,28,18,19,13,22,21,42,31,23,22),
-                               r1v = c(1 ,3, 17,16,17,12,16, 2, 3,12,15,12,14,10, 2,3, 19,20,16,15),
-                               rtv = c(7, 11,40,43,45,41,36, 7,12,41,48,49,46,40, 7,11,38,41,39,33),
-                               p0v = c(.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.65,.7,.75,.1,.15,.45,.5,.7,.75),
-                               p1v = c(.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.65,.8,.85,.9,.25,.3,.6,.8,.85,.9),
+error.matLik <- error.sim.many(ntv = c(41.00,49.00,75.00,73.00,61.00,52.00,43.00,43.00,55.00,77.00,83.00,67.00,59.00,48.00,40.00,49.00,70.00,55.00,49.00,39.00),
+                               n1v = c(15.00,21.00,35.00,31.00,25.00,17.00,20.00,18.00,19.00,26.00,28.00,18.00,19.00,13.00,22.00,21.00,42.00,31.00,23.00,22.00),
+                               r1v = c(1.00 ,3.00, 17.00,16.00,17.00,12.00,16.00, 2.00, 3.00,12.00,15.00,12.00,14.00,10.00, 2.00,3.00, 19.00,20.00,16.00,15.00),
+                               rtv = c(7.00, 11.00,40.00,43.00,45.00,41.00,36.00, 7.00,12.00,41.00,48.00,49.00,46.00,40.00, 7.00,11.00,38.00,41.00,39.00,33.00),
+                               p0v = c(.10,.15,.45,.50,.65,.70,.75,.10,.15,.45,.50,.65,.70,.75,.10,.15,.45,.50,.70,.75),
+                               p1v = c(.25,.30,.60,.65,.80,.85,.90,.25,.30,.60,.65,.80,.85,.90,.25,.30,.60,.80,.85,.90),
                                sim = n.sim,
                                des = "Likelihood",
                                alpha = 0.05, 
-                               beta = 0.8
+                               beta = 0.80
 )
 powerMatLik <- error.matLik[c(1,seq(3,nrow(error.matLik),2)),]
+type2MatLik <- 1-powerMatLik
 type1MatLik <- error.matLik[c(1,seq(2,nrow(error.matLik),2)),]
+aveErrorMat.lik <- (type2MatLik+type1MatLik)/2
 
 #mean(type1Mat[2:nrow(mat),])
 
 averagetype1Lik <- c()
 averagepowerLik <- c()
+averageerrorLik <- c()
 
 for(i in 1:ncol(error.matLik)){
   averagetype1Lik[i] <- mean(type1MatLik[2:nrow(type1MatLik),i])
   averagepowerLik[i] <- mean(powerMatLik[2:nrow(powerMatLik),i])
+  averageerrorLik[i] <- mean(aveErrorMat.lik[2:nrow(aveErrorMat.lik),i])
 }
 
-plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], averagetype1 = averagetype1Lik, averagepower = averagepowerLik)
+plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], averagetype1 = averagetype1Lik, averagepower = averagepowerLik,
+                         averageerror = averageerrorLik)
 
 
 
@@ -1207,6 +1222,7 @@ plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], average
 ## plot
 #################
 df <- rbind(plot.dfAlter, plot.dfChang, plot.dfLik)
+
 plot <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
   xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
                                                                    values = c("Chang Adaptation" = "red",
@@ -1238,7 +1254,20 @@ ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() +
 @
 \end{figure}
 
+\begin{figure}[]
+\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
+<<echo=FALSE>>=
+ggplot(data = df, aes(x=n.diff,y=averageerror, color = design)) + geom_point() + ylab("Average of the Average Type I and Type II Error") + 
+  xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
+                                                                   values = c("Chang Adaptation" = "red",
+                                                                                                    "Chang"     = "dodgerblue3",
+                                                                                                    "Likelihood"   = "green4"),
+                                                                   breaks = c("Chang Adaptation", "Chang", "Likelihood"),
+                                                                   labels = c("Olson and Koyama", "Chang et al.", "Likelihood"))
 
+
+@
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------Discussion--------------------------------%
