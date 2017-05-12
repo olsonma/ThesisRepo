@@ -32,11 +32,11 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
     round(x, 3)
   }
 
-  # r1   = 1;   rt  = 7; beta = 0.05; alpha = 0.2
-  #        n1  = 15;  nt = 41 
-  #        n1a = 5
-  #        nta = 41;
-  #        p0  = 0.1; p1 = 0.25 
+   # r1   = 7;   rt  = 21; beta = 0.05; alpha = 0.2
+          # n1  = 17;  nt = 41 
+          # n1a = 17
+          # nta = 41;
+          # p0  = 0.4; p1 = .6 
   #        
   
   ## returns odds ratio
@@ -131,12 +131,12 @@ like.2s.Simon = function(p0 = 0.4, p1 = 0.6, n1 = 17, nt = 41,
   x=floor((bot.i+1)):min(n1a,top.i)  
   
   pwek.0=sum(dbinom(x,size=n1a,prob=p0)*(pbinom((top-x),size=(nta-n1a),prob=p0)-pbinom((bot-x),size=(nta-n1a),prob=p0)))
-  pet0 <- 1-pwek.0
+  #pet0 <- 1-pwek.0
   pstr.0=pstr.i0+sum(dbinom(x,size=n1a,prob=p0)*(pbinom((bot-x),size=(nta-n1a),prob=p0)))
   pmis.0=pmis.i0+sum(dbinom(x,size=n1a,prob=p0)*(1-pbinom((top-x),size=(nta-n1a),prob=p0)))
   
   pwek.1=sum(dbinom(x,size=n1a,prob=p1)*(pbinom((top-x),size=(nta-n1a),prob=p1)-pbinom((bot-x),size=(nta-n1a),prob=p1)))
-  pet1 <- 1-pwek.1
+  #pet1 <- 1-pwek.1
   pstr.1=pstr.i1+sum(dbinom(x,size=n1a,prob=p1)*(1-pbinom((top-x),size=(nta-n1a),prob=p1)))
   pmis.1=pmis.i1+sum(dbinom(x,size=n1a,prob=p1)*(pbinom((bot-x),size=(nta-n1a),prob=p1)))
   

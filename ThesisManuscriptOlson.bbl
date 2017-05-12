@@ -17,6 +17,35 @@ S.-H. Jung, Y.~Lee, K.~Kim, and S.~L. George, ``Admissible two-stage designs
   for phase ii cancer clinical trials,'' {\em Statistics In Medicine}, vol.~23,
   pp.~561--569, 2004.
 
+\bibitem{Whitehead}
+J.~Whitehead, ``On the bias of maximum likelihood estimation following a
+  sequential test,'' {\em Biometrika}, vol.~73, pp.~573--581, 1986.
+
+\bibitem{Changpoint}
+M.~Chang, H.~Wieand, and V.~Chang, ``The bias of the sample proportion
+  following a group sequential phase ii trial,'' {\em Statistics in Medicine},
+  vol.~24, pp.~1009--1027, 1989.
+
+\bibitem{Guo}
+H.~Guo and A.~Liu, ``a simple and efficient bias-reduced estimator of response
+  probability following a group sequential phase ii trial,'' {\em J Biopharm
+  Stat}, vol.~15, pp.~773--781, 2005.
+
+\bibitem{Jungest}
+S.~Jung and K.~Kim, ``On the estimation of the binomial probability in
+  multistage clinical trials,'' {\em Statistics in Medicine}, vol.~23,
+  pp.~881--896, 2004.
+
+\bibitem{Tsai}
+W.~Tsai, Y.~Chi, and C.~Chen, ``Interval estimation of binomial proportion in
+  clinical trials with a two-stage design,'' {\em Statistics in Medicine},
+  vol.~23, pp.~15--35, 2008.
+
+\bibitem{Jungpvalue}
+S.~Jung, K.~Owzar, S.~George, and T.~Lee, ``P-value calculation for multistage
+  phase ii cancer clinical trials,'' {\em J Biopharm Stat}, vol.~16,
+  pp.~765--775, 2006.
+
 \bibitem{Zeng}
 D.~Zeng, F.~Gao, K.~Hu, C.~Jia, and J.~Ibrahim, ``Hypothesis testing for
   two-stage designs with over or under enrollment,'' {\em Statistics in
