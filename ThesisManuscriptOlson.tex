@@ -354,7 +354,7 @@
 	\MakeUppercase{MASTER OF SCIENCE} \\[.1in]
 	in \\[.1in]
 	{Biostatistics} \\[.25in]
-	May, 2017 \\[.25in]
+	June 30, 2017 \\[.25in]
 	Nashville, Tennessee
 	\vskip .5in
 %\end{center}
@@ -372,7 +372,7 @@
 %%%%%%%%%%%%%%
 %%%%%%Uncomment  for Approved Names%%%%%%
 \begin{doublespace}
-Approved (in progress):\\
+Approved:\\
 Tatsuki Koyama, Ph.D. \\
 Jeffrey Blume, Ph.D. \\
 \end{doublespace}
@@ -459,7 +459,7 @@ Oncology phase II clinical trials are often used to evaluate the initial effect 
 \chapter{Introduction}
 \vspace{-7mm}
 Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if further study is warranted in a phase III clinical trial \cite{Porcher, Simon, Koyama}. Simon's two-stage design \cite{Simon} is a commonly used design in phase II oncology clinical trials. Koyama and Chen \cite{Koyama} point out that it is common for actual sample sizes of these phase II trials to differ from the planned, pre-specified sample sizes. This happens due to unanticipated accruement speed or drop-out rates, and multi-center trials can be delayed in communication of enrollment and response information causing over enrollement. Currently, when attained sample sizes differ from planned, common practice is to treat the attained sample sizes as planned. Though, when acheived sample sizes differ from planned, testing the attained sample sizes as planned leads to invalid inference and hypothesis testing in these cases is not straightforward \cite{Porcher, Koyama}. Therefore, extensions of two-stage designs for hypothesis testing with unplanned sample size changes is essential. \\
-\indent Many Frequentist methods have been proposed to that handle unplanned sample sizes in the second stage while using the planned stage I sample size; however, our literature review found that only a few Frequentist methods handle unplanned sample sizes in stage I. Moreover, when focusing on deviations in sample sizes in the second stage, many proposed methods are adjusting inference procedures rather than proposing a redesign. Likelihood based designs, can be used to extend Simon's design, offer a nice solution to this problem because these designs offer flexibility in sample size without inflation of type I error rate. Because calculations of p-values are complicated when attained sample sizes are different from planned \cite{Koyama}, we focus on methods that offer redesigns of a planned two-stage design that will be prespecified along with the planned design.\\
+\indent Many Frequentist methods have been proposed to handle unplanned sample sizes in the second stage while using the planned stage I sample size; however, our literature review found that only a few Frequentist methods handle unplanned sample sizes in stage I. Moreover, when focusing on deviations in sample sizes in the second stage, many proposed methods are adjusting inference procedures rather than proposing a redesign. Likelihood based designs, can be used to extend Simon's design, offer a nice solution to this problem because these designs offer flexibility in sample size without inflation of type I error rate. Because calculations of p-values are complicated when attained sample sizes are different from planned \cite{Koyama}, we focus on methods that offer redesigns of a planned two-stage design that will be prespecified along with the planned design.\\
 \indent In this paper, we discuss the different methods for Simon's design when the attained stage II sample size is different from planned and when attained sample sizes in both stages are different from planned. We review Simon-like designs in chapter 2 and illustrate redesign methods in chapters 3 and 4. In chapter 5, we review a concrete example from a Likelihood-based clinical trial, and in chapter 6, we present results of a numerical and theoretical study comparing Frequentist properties of approaches in the setting where stage I sample size differs from planned are presented.    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-------------Background-------------------------------------%
@@ -470,17 +470,22 @@ Oncology phase II clinical trials are often used to evaluate the initial effect 
 %------------------------------------------------------------%
 %----------- Background on Simon's design -------------------%
 %------------------------------------------------------------%
-\indent Simon's two stage designs for clinical trials are common designs for phase II oncology clinical trials \cite{Simon}. In Simon's designs, the null hypothesis $\mbox{H}_0: p \leq p_0$ is tested against the alternative $\mbox{H}_1: p > p_1$, where $p$ is the true response probability, $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrants further investigation. Under these hypotheses, it is required that the type I error rate be less than $\alpha$ and power be greater than $1-\beta$. The general framework of Simon's design includes a sample size and critical value in each of the two stages. Let $n_1$ denote the first stage sample size, $n_t$ the sample size at the end of the second stage, and let $n_t$ be the sample size for the second stage; $n_2 = n_t-n_1$. Let $r_1$ be the first stage critical value, and $r_t$ the critical value for the end of the second stage. Let $X_1$ be the number of successes observed in the first stage and $X_2$ be the number of additional success in the second stage so that $Z_1 \sim \mbox{Binomial}(n_1,p$ and $X_2 \sim \mbox{Binomial}(n_2,p)$. Also, let $X_t = X_1 + X_2$. In the first stage, $n_1$ subjects are enrolled. If $r_1$ or fewer subjects ($X_1 \leq r_1$) are successes, then the regimen is rejected and the trial is stopped for futility. If $r_1 + 1$ or more subjects are successful, then the trial continues to the second stage by enrolling $n_2$ additional subjects. If $r_t$ or fewer out of the $n_t$ subjects are successful ($X_t = X_1 + X_2 \leq r_t$), the treatment is considered to be futile, otherwise if $X_t \geq r_t + 1$ subjects succeed, the treatment is considered to be effective and will warrant further study.  \\
+\indent Two-stage designs for clinical trials are common designs for phase II oncology clinical trials \cite{Simon}. In two-stage designs, the null hypothesis $\mbox{H}_0: p \leq p_0$ is tested against the alternative $\mbox{H}_1: p > p_1$, where $p$ is the true response probability, $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrants further investigation. Under these hypotheses, it is required that the type I error rate be less than $\alpha$ and power be greater than $1-\beta$. The general framework of Simon's design includes a sample size and critical value in each of the two stages. Let $n_1$ denote the first stage sample size, $n_t$ the sample size at the end of the second stage, and let $n_t$ be the sample size for the second stage; $n_2 = n_t-n_1$. Let $r_1$ be the first stage critical value, and $r_t$ the critical value for the end of the second stage. Let $X_1$ be the number of successes observed in the first stage and $X_2$ be the number of additional success in the second stage so that $Z_1 \sim \mbox{Binomial}(n_1,p)$ and $X_2 \sim \mbox{Binomial}(n_2,p)$. Also, let $X_t = X_1 + X_2$. In the first stage, $n_1$ subjects are enrolled. If $r_1$ or fewer subjects ($X_1 \leq r_1$) are successes, then the regimen is rejected and the trial is stopped for futility. If $r_1 + 1$ or more subjects are successful, then the trial continues to the second stage by enrolling $n_2$ additional subjects. If $r_t$ or fewer out of the $n_t$ subjects are successful ($X_t = X_1 + X_2 \leq r_t$), the treatment is considered to be futile, otherwise if $X_t \geq r_t + 1$ subjects succeed, the treatment is considered to be effective and will warrant further study.  \\
 
-\indent Let $b$ denote the binoial proability mass function,${n \choose x} p^x(1-p)^{n-x}$ for $x =  1,2,..,n$, and $B$ denote the cumulative binomial distribution function $\sum_{i=0}^x {n \choose i} p^i(1-p)^{n-i}$. The probability of early termination (PET) with a given probability $p$ in two-stage designs is given by PET = $B(r_1, p, n_1) = P_p[X_1 \leq r_1]$. The expected sample size for a given $p$ is then $\mbox{EN} = n_1 + (1-\mbox{PET})n_2$, and the conditional power is then  
-$$CP(p) = \sum_{x_2 = r_t-x_1+1}^{n_2} b(x_2, p, n_2)$$ It then follows that unconditional power, $UCP(p)$, given probability $p$, is given by 
+\indent Let $b$ denote the binomial proability mass function,${n \choose x} p^x(1-p)^{n-x}$ for $x =  1,2,..,n$, and $B$ denote the cumulative binomial distribution function $\sum_{i=0}^x {n \choose i} p^i(1-p)^{n-i}$. The probability of early termination (PET) with a given probability $p$ in two-stage designs is given by PET = $B(r_1, p, n_1) = P_p[X_1 \leq r_1]$. The expected sample size for a given $p$ is then $\mbox{EN} = n_1 + (1-\mbox{PET})n_2$, and the conditional power is then  
+\begin{equation}
+\begin{aligned}
+CP(p) = \sum_{x_2 = r_t-x_1+1}^{n_2} b(x_2, p, n_2)
+\end{aligned}
+\end{equation}
+It then follows that unconditional power, $UCP(p)$, given probability $p$, is given by 
 
-\begin{equation*}
+\begin{equation}
 \begin{aligned}
 1-PR(p) &= 1 - \left( B(r_1, p, n_1) + \sum_{x=r_1+1}^{min[n_1,{r_t}]} b(x, p, n_1) B(r_t-x,p,n_2) \right) \\
 &= \sum_{r_1+1}^{n_1} \left\{\sum_{x_2 = r_t-x_1+1}^{n_2} b(x_2, p, n_2) \right\} b(x_1, p, n_1)
 \end{aligned}
-\end{equation*}
+\end{equation}
 and $UCP(p_1) \geq 1-\beta$ and $UCP(p_0) \leq \alpha$ \\
 
 
@@ -498,12 +503,33 @@ and $UCP(p_1) \geq 1-\beta$ and $UCP(p_0) \leq \alpha$ \\
 
 When over-enrollment occurs in the first stage, a straightforward solution is to perform an interim analysis on the planned number of first stage subjects, and adjust the testing procedure for a sample size in the second stage that may be different than planned. Likewise, it is also straightforward to simply wait for the appropriate enrollment for the first stage when under-enrollment occurs in the first stage. When over- or under-enrollment occurs in the second stage, it is also possible to adjust the testing procedure for the attained enrollment in the second stage.  This is possible under the assumption of non-informative dropouts; stage I is concluded when the number of non-missing subjects is equal to the planned stage I sample size, and if over enrollment occurs in the first stage, those subjects will only be considered for the second stage analysis \cite{Koyama}. Literature exists describing point estimation of the response rate and p-values for hypothesis testing when stage two sample size is modified \cite{Whitehead}\cite{Changpoint}\cite{Guo}\cite{Jungest}\cite{Tsai}\cite{Jungpvalue}\cite{Koyama}. A review of these methods can be found by Porcher \textit{et al}. \cite{Porcher}. Among them is Koyama and Chen who have shown that the p-value in two-stage trials will depend on the design in addition to the attained data and is complicated in the setting of unplanned sample sizes \cite{Koyama}, we only focus on methods that recalculate critical values for hypothesis testing, or redesigns, and will not focus on p-value calculations. Koyama \textit{et al}. propose a method for inference when stage II sample sizes deviate from the planned stage II sample size \cite{Koyama}. Let $n_1, n_t, r_1, r_t, \alpha$ and $\beta$ be the original design parameters as defined earlier. The authors let the first stage remain as planned and propose a redesign of the second stage. The authors first define conditional power, $\mbox{A}(x_1, n_2, p) = P_p[X_2 \geq r_t | X_1 = x_1].$ Using conditional power evaluated at $p_0$, they calculate a new critical value, $r_t^\ast$, by finding the maximum integer, $r_t^\ast$, such that $\mbox{A}^\ast(x_1, n_2^\ast, p_0) \leq \mbox{A}(x_1, n_2, p_0) \equiv P_{p_0}[X_2^\ast \geq r_t^\ast | X_1 = x_1] \leq P_{p_0}[X_2 \geq r_t | X_1 = x_1]$, where $X_2^\ast \sim \mbox{Binomial}(n_2^\ast, p_0)$ and $n_2^\ast$ is the attained stage II sample size. This method will result in a controlled unconditional type I error rate because the new critical value gives a conditional type I error rate that is more conservative than the original conditional type I error rate, regardless of the observed stage II sample size. The authors comment that with the new critical value, $r_t^\ast$, the total number of positive responses required to reject the null hypothesis may be different because it is conditional on the result of the first stage. \\
 \indent Zeng \textit{et al.} \cite{Zeng} proposed methodology that attempts to maximize the unconditional power while controlling for the type I error to calculate the stage II critical value for the attained second stage sample size. The authors define $r_2^\ast(x_1)$ to be the new second stage critical value when $x_1 \geq r_1$ and $r_t^\ast \equiv r_2^\ast(x_1) + x_1$. The second stage critical value will be the integer that maximizes 
-$$ \mbox{Power} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1 - x_1} \sum_{r_2^\ast(x_1)}^{n_2^\ast} {n_2^\ast \choose x_2} p_1^{x_2} (1-p_1)^{{n_2^\ast}-x_2}$$
+
+\begin{equation}
+\begin{aligned}
+\mbox{Power} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1 - x_1} \sum_{r_2^\ast(x_1)}^{n_2^\ast} {n_2^\ast \choose x_2} p_1^{x_2} (1-p_1)^{{n_2^\ast}-x_2}
+\end{aligned}
+\end{equation}
+
 while subject to 
-$$ \mbox{Type I error} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1 - x_1} \sum_{r_2^\ast(x_1)}^{n_2^\ast} {n_2^\ast \choose x_2} p_0^{x_2}(1-p_0)^{{n_2^\ast}-x_2} \leq \alpha$$ Though it is theoretically possible to find $r_2^\ast$, this problem doesn't have a closed form solution and the computation is exhaustive. Instead, the authors propose a normal approximation for the binomial random variable to ease the computation of power. That is, 
-$$ \sum_{x_2 = r_2^\ast(x_1)}^{n_2^\ast} {n_2^\ast \choose x_2} p^{x_2} (1-p)^{n_2^\ast - x_2} \approx 1-\Phi \left(\frac{r_2^\ast(x_1) - n_2^\ast p}{\sqrt{n_2^\ast p(1-p)}} \right)$$ 
+\begin{equation}
+\begin{aligned}
+ \mbox{Type I error} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1 - x_1} \sum_{r_2^\ast(x_1)}^{n_2^\ast} {n_2^\ast \choose x_2} p_0^{x_2}(1-p_0)^{{n_2^\ast}-x_2} \leq \alpha
+\end{aligned}
+\end{equation}
+Though it is theoretically possible to find $r_2^\ast$, this problem doesn't have a closed form solution and the computation is exhaustive. Instead, the authors propose a normal approximation for the binomial random variable to ease the computation of power. That is, 
+\begin{equation}
+\begin{aligned}
+\sum_{x_2 = r_2^\ast(x_1)}^{n_2^\ast} {n_2^\ast \choose x_2} p^{x_2} (1-p)^{n_2^\ast - x_2} \approx 1-\Phi \left(\frac{r_2^\ast(x_1) - n_2^\ast p}{\sqrt{n_2^\ast p(1-p)}} \right)
+\end{aligned}
+\end{equation}
+
 Substituting the above equation in for power and type I error, and using Lagrange multipliers and differentiating with respect to $r_2^\ast$, the problem is then equivalent to solving the equation 
-$$\left(\frac{1}{p_0(1-p_0)} - \frac{1}{p_1(1-p_1)} \right) {r_2^\ast}^2 - \frac{2 n_2^\ast (p_0 - p_1)}{(1-p_0)(1-p_1)}r_2^\ast + \frac{{n_2^\ast}^2(p_0-p_1)}{(1-p_0)(1-p_1)}-2n_2^\ast log \left(\frac{\lambda a(x_1)}{b(x_1)}\right)$$ 
+\begin{equation}
+\begin{aligned}
+\left(\frac{1}{p_0(1-p_0)} - \frac{1}{p_1(1-p_1)} \right) {r_2^\ast}^2 - \frac{2 n_2^\ast (p_0 - p_1)}{(1-p_0)(1-p_1)}r_2^\ast + \frac{{n_2^\ast}^2(p_0-p_1)}{(1-p_0)(1-p_1)}-2n_2^\ast log \left(\frac{\lambda a(x_1)}{b(x_1)}\right)
+\end{aligned}
+\end{equation}
+
 where $a(x_1) = {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1-x_1}$, $b(x_1) = {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1-x_1}$, and $\lambda$ is the Lagrange multiplier. The new critical value, $r_2^\ast$, is then max$\left(0, min\left(r_2^\ast, n_2^\ast \right) \right)$. The authors suggest searching over a reasonable range of $\lambda$ to find a $\lambda$ such that the type I error is as closed to $\alpha$ as possible. \\
 
 \indent The authors performed a numerical study to compare their method to Koyama and Chen's. They find that, in almost all scenerios that were considered, Zeng \textit{et al.}'s method had more power than Koyama and Chen and this is mostly because Koyama and Chen's method most often results in a lower type I error rate due to controlling of conditional type I error. 
@@ -524,27 +550,37 @@ where $a(x_1) = {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1-x_1}$, $b(x_1) = {n_1 \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Chang \textit{et al.} \cite{Chang} proposed an alternative design that is an extension of two-stage designs in order to handle unplanned sample sizes in both the first and second stages, though we only consider this extension for over- and under-enrollment in the first stage. This method calculates new critical values for attained sample sizes a priori, and thus one is able to create and pre-specify a new design based on a preferred Simon or Admissible design in defense of the events of unplanned sample sizes. We use this method to pre-specify new designs; that is, we calculate new critical values for different combinations of possible deviations in sample sizes pre-attainment. Because it is desired to stay as closely to the original design as possible for financial and resource planning reasons, we investigate this method while maintaining the original second stage sample size ($n_2$) or original total sample size ($n_t$). Again, let $n_1$, $n_t$, $r_1$, $r_t$, $p_0$, $p_1$, $\alpha$, and $\beta$ be the original, planned design parameters. Now, let $n_1^{\ast \ast}$ be the attained sample size for the first stage and $n_2^{\ast\ast} = n_t - n_1^{\ast\ast}$. Then, the two situations we consider are 1. $n_2^{\ast\ast} = n_t + n_1^{\ast\ast}$ and 2. $n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$. \\
 \indent Chang \textit{et al.} proposes a method for updating the stage I critical value based on the following $\beta$-spending function, where m is the attained sample size in the first stage.
-$$
+\begin{equation}
+\begin{aligned}
 \beta(m) = \left\{
         \begin{array}{ll}
             \beta_1 m/n_1 & \quad \text{if } m\leq n_1 \\
             \beta_1 + (\beta - \beta_1)(m - n_1)/n_2 & \quad \text{if } m > n_1
         \end{array}
     \right.
-$$
+\end{aligned}
+\end{equation}
 Where $\beta_1 = \mbox{P}(X_1 \leq r_1 \vert n_1, p = p_1)$ is the stage I type II error probability.
 We then find a new stage one critical value, $s_1$, using this probability spending function such that $P(X_1 \leq s_1 | n_1^{\ast\ast}) \approx \beta(n_1^{\ast\ast})$, where $\approx$ means ``closest to." After $s_1$ is selected, we then search for an integer for the second stage critical value, $s_t$, that satisfies
-\begin{equation*}
+\begin{equation}
 \begin{aligned}
 & P(X_1 > s_1, X_t > s_t | n_1^{\ast\ast}, m_2, p_0) \\
 = & \sum_{s_1}^{n_1^{\ast\ast}} P(X_2 > s_t - X_1 | X_1 = x_1) P(X_1 > s_1) \\
  \leq & \alpha \\
 \end{aligned}
-\end{equation*}
+\end{equation}
 where $m_2 = n_2$ or $n_2^{\ast\ast}$. 
 Chang \textit{et al.}'s design can be used for any $\alpha$-level and is flexible, close to the original design, and preserves the desired Frequentist type I error rate. \\
 %Wu \textit{et al} \cite{Wu} also proposed an adjustment to Simon’s design based on attained sample sizes in both the first and second stages. Because Wu's methods don't work very well \textbf{wording}, we won't consider their method for the remainder of this paper. 
-We modify Chang \textit{et al.}'s method because we prefer to be conservative when straying from a desired Simon or Admissible design. We modify the design by selecting $s_1$ such that the new design's probability of early termination under the null ($\mbox{PET}_0^{\ast\ast}$) that is closest to the planned probability of early termination under the null, rather than using a type II error probability spending function. This is conservative because when the attained sample size gets further from the planned sample size, the $\mbox{PET}_0^{\ast\ast}$ can get further from the original design's. By selecting the closest integer such that the $\mbox{PET}_0^{\ast\ast}$ is closest to planned, the probability of early termination is greater under large deviations and this method is consistent with Chang \textit{et al.}'s. We select $s_1$ such that $$P(X_1 \leq s_1 | n_1^{\ast\ast}, p_0) \approx P(X_1 \leq r_1 | n_1, p_0)$$ We then select the stage two critical value, $s_t$, in the same fashion as Chang's design. Another option would be to be choose $s_1$ such that the probability of early termination under the null with the redesign is greater than or equal to the original design. In either case, the designs tend to be close when the attained sample size is close to the original, so we consider the case where the probability of early termination is closest to the original. We call this adaptation to Chang \textit{et al.}'s design ``Olson and Koyama's design"  
+We modify Chang \textit{et al.}'s method because we prefer to be conservative when straying from a desired Simon or Admissible design. We modify the design by selecting $s_1$ such that the new design's probability of early termination under the null ($\mbox{PET}_0^{\ast\ast}$) that is closest to the planned probability of early termination under the null, rather than using a type II error probability spending function. This is conservative because when the attained sample size gets further from the planned sample size, the $\mbox{PET}_0^{\ast\ast}$ can get further from the original design's. By selecting the closest integer such that the $\mbox{PET}_0^{\ast\ast}$ is closest to planned, the probability of early termination is greater under large deviations and this method is consistent with Chang \textit{et al.}'s. We select $s_1$ such that 
+
+\begin{equation}
+\begin{aligned}
+P(X_1 \leq s_1 | n_1^{\ast\ast}, p_0) \approx P(X_1 \leq r_1 | n_1, p_0)
+\end{aligned}
+\end{equation}
+
+We then select the stage two critical value, $s_t$, in the same fashion as Chang's design. Another option would be to be choose $s_1$ such that the probability of early termination under the null with the redesign is greater than or equal to the original design. In either case, the designs tend to be close when the attained sample size is close to the original, so we consider the case where the probability of early termination is closest to the original. We call this adaptation to Chang \textit{et al.}'s design ``Olson and Koyama's design"  
 
 %------------------------------------------------------------%
 %----------- Background on likelihood design ----------------%
@@ -553,59 +589,99 @@ We modify Chang \textit{et al.}'s method because we prefer to be conservative wh
 %\vspace{-5mm}
 
 Briefly, Likelihood methods in phase II designs use the likelihood ratio as a measure of evidence \cite{Ayers}. Define $L_n(p) \sim$ Binomial(n,p) to be $\mbox{L}_n(p) = P(X \vert p, n) = {n \choose x} p^x (1-p)^{n-x} \propto p^x (1-p)^{n-x}$. Here, the likelihood ratio is 
-\begin{equation*}
+\begin{equation}
 \begin{aligned}
 \mbox{LR}_n & = \frac{\mbox{L}_n(p_1)}{\mbox{L}_n(p_0)} \\
 &= \frac{p_1^{x_t}(1-p_1)^{n_t-x_t}}{p_0^{x_1}(1-p_0)^{n_t-x_t}} \\
 & \in \left\{[0, 1/k], [1/k,k], [k, \infty)\right\}
 \end{aligned}
-\end{equation*}
+\end{equation}
 We make the following decision at the conclusion of the study. If the $\mbox{LR}_n \in [0, 1/k]$, there is evidence for the null hypothesis, if $\mbox{LR}_n \in [1/k,k]$, there is weak evidence for either hypothesis, and if $\mbox{LR}_n \in [k,\infty]$, there is evidence for the alternative hypothesis. The probability of observing weak evidence is $\mbox{PW}_i = P(k_a \leq LR_n \leq k_b | H_i), k_a \leq 1 \leq k_b$, i=0 for null hypothesis and i=1 for alternative hypothesis, where $k_a$ and $k_b$ are benchmarks for description of evidence, the probability of observing strong evidence is 
-$$
+\begin{equation}
+\begin{aligned}
 \mbox{PS}_i = \left\{
         \begin{array}{ll}
             P(LR_n > k_b|H_i) & \quad \text{if } i = 1 \\
             P(LR_n < k_b|H_i) & \quad \text{if } i = 0
         \end{array}
     \right.
-$$
+\end{aligned}
+\end{equation}
 and the probability of obseving misleading evidence is 
-$$
+\begin{equation}
+\begin{aligned}
 \mbox{PM}_i = \left\{
         \begin{array}{ll}
             P(LR_n > k_b|H_i) & \quad \text{if } i = 0 \\
             P(LR_n < k_b|H_i) & \quad \text{if } i = 1
         \end{array}
     \right.
-$$
+\end{aligned}
+\end{equation}
 One advantage of a likelihood sequential design is that the universal bound of misleading evidence under the null hypothesis is $P(LR_n > k_b|H_0) \leq \frac{1}{k_b}$ for any $\mbox{n} \geq 1$ when $\frac{1}{k_a} = k_b = k > 1$. This is advantageous because the change that the trial is stopped with misleading evidence under the null hypothesis at any point in time is less than or equal to $\frac{1}{k_b}$. As data accumulates, the probability of misleading evidence converges to 0, and this probability is often much less than $\frac{1}{k_b}$ \cite{BlumeNotes} \cite{Blume08}. \\
 
 \indent Ayers and Blume \cite{Ayers} consider a phase II two-stage design based on the likelihood. The Likelihood two stage design will enroll $n_1$ observations into the first stage. If we observe a likelihood ratio that is $k_{a_1} < LR_{n_1} < k_{b_1}$, where $k_{a_1}$ and $k_{b_1}$ are benchmarks for description of evidence in the first stage, we continue to the second stage. If we observe $\mbox{LR}_{n_1} \leq k_{a_1}$, the study will stop for futility and if we observe $\mbox{LR}_{n_1} \geq k_{b_1}$, the study will stop for efficacy. In stage II, $n_2$ subjects are enrolled. If the $\mbox{LR}_{n_t} = \mbox{LR}_{n_1}\mbox{LR}_{n_2}$ is $k_{a_t} < \mbox{LR}_{n_t} < k_{b_t}$, where $k_{a_t}$ and $k_{b_t}$ are benchmarks at the end of stage II, then the study will conclude with weak evidence. The study will conclude with evidence for the alternative hypothesis if $\mbox{LR}_{n_t} \geq k_{b_t}$ and evidence for the null hypothesis if $\mbox{LR}_{n_t} \leq k_{a_t}$. Because these designs are not restricted by error rates, this method offers favorable flexibility for unplanned sample sizes in the first stage. Likewise, one is able to add cohorts and the end of the second stage when there proves to be weak evidence without penalization. \\
 
 \indent We compare Frequentist and Likelihood two-stage designs by adapting the Likelihood two-stage design to emulate conventional two-stage designs such as Optimal, Minimax, or Admissible designs with binary evidential zones: reject the null or fail to reject the null. In order to do this, one can start with a Simon-like design and redesign with a likelihood ratio approach by setting
-\begin{equation*}
+\begin{equation}
 \begin{aligned}
 k_{a_1} &= \left(\frac{p_1(1-p_0)}{p_0(1-p_1)}\right)^{r_1} \left(\frac{1-p_1}{1-p_0}\right)^{n_1} = \left(\frac{1-p_0}{1-p_1}\right)^{r_1-n_1} \left(\frac{p_1}{p_0}\right)^{r_1},\\ 
 k_{a_t}  &= \left(\frac{p_1(1-p_0)}{p_0(1-p_1)}\right)^{r_t} \left(\frac{1-p_1}{1-p_0}\right)^{n_t} = \left(\frac{1-p_0}{1-p_1}\right)^{r_t-n_t} \left(\frac{p_1}{p_0}\right)^{r_t},\\ k_{b_1} &= \infty, \\
 k_{b_t} &= \infty,
 \end{aligned}
-\end{equation*}
+\end{equation}
 
 where $n_1, n_t, r_1, r_2$ are two-stage design parameters. Then, using $k_{a_j}$ and $k_{b_j}$, we recalculate the critical values, $s_1$ and $s_t$, using
-\begin{equation*}
+\begin{equation}
 \begin{aligned}
 s_1 &= \frac{log(k_{a_1}) - n_1^{\ast\ast} log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{p_0(1-p_1)})} \\
 s_t &= \frac{log(k_{a_t}) - n_t log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{p_0(1-p_1)})}
 \end{aligned}
-\end{equation*}
+\end{equation}
 
 If $s_1$ or $s_t$ $<$ 0, they are set equal to zero. It is possible for these critical values to be less than 0 when the study design has low sample sizes and deviation from the planned sample size is extreme. Under the restricted conditions and using these critical values, we can calulate design characteristics for any attained $n_1$ and $n_t$ for a given $p$. The probability of weak evidence for a probability $p$ at the end of the first stage is 
 \textbf{(I don't know if I like this notation)}
-$$\mbox{P(Weak}_{1,p}) = 1 - B(s_1, n_1, p)$$ and the probability of strong evidence for a given $p$ at the end of stage one is 
-$$\mbox{P(Strong}_{1,p}) = B(s_1, n_1, p_0)$$ At the end of the second stage, the probability of weak evidence is 
-$$\mbox{P(Weak}_{t,p}) \sum_{x=s_1+1}^{n_1} b(x, n_1, p) - B(s_1 - x, n - n_1, p)$$ and the probability of strong evidence is 
-$$ \mbox{P(Strong}_{t,p}) = \mbox{P(Strong}_{1,p}) + \sum_{x=s_1+1}^{n_1} \left( b(x,n_1,p) \times B(s_1 - x, n-n_1, p) \right)$$
-The probability of early termination under the null hypothesis is then $$\mbox{PET}_0 = \mbox{P(Strong}_{1,p_0})$$ and the expected sample size under the null hypothesis is $$\mbox{EN}_0 = n_1 + \mbox{P(Weak}_{1,p_0})\times (n_t - n_1)$$
+\begin{equation}
+\begin{aligned}
+\mbox{P(Weak}_{1,p}) = 1 - B(s_1, n_1, p)
+\end{aligned}
+\end{equation}
+and the probability of strong evidence for a given $p$ at the end of stage one is 
+\begin{equation}
+\begin{aligned}
+\mbox{P(Strong}_{1,p}) = B(s_1, n_1, p_0)
+\end{aligned}
+\end{equation}
+At the end of the second stage, the probability of weak evidence is 
+
+\begin{equation}
+\begin{aligned}
+\mbox{P(Weak}_{t,p}) \sum_{x=s_1+1}^{n_1} b(x, n_1, p) - B(s_1 - x, n - n_1, p)
+\end{aligned}
+\end{equation}
+
+and the probability of strong evidence is 
+
+\begin{equation}
+\begin{aligned}
+\mbox{P(Strong}_{t,p}) = \mbox{P(Strong}_{1,p}) + \sum_{x=s_1+1}^{n_1} \left( b(x,n_1,p) \times B(s_1 - x, n-n_1, p) \right)
+\end{aligned}
+\end{equation}
+
+The probability of early termination under the null hypothesis is then 
+\begin{equation}
+\begin{aligned}
+\mbox{PET}_0 = \mbox{P(Strong}_{1,p_0})
+\end{aligned}
+\end{equation}
+
+and the expected sample size under the null hypothesis is 
+\begin{equation}
+\begin{aligned}
+\mbox{EN}_0 = n_1 + \mbox{P(Weak}_{1,p_0})\times (n_t - n_1)
+\end{aligned}
+\end{equation}
+
  
 \indent Ayers and Blume \cite{Ayers} show that the Likelihood designs preserve type I error rate and are bounded by $\frac{1}{k_{b_t}}$ and are equal to $O_{p_i}\left({n}^{-1/2}\right)$. Under the likelihood design, error rates tend to be less of an issue because the average of the error rates, $\frac{\alpha + \beta}{2}$, is minimized with the likelihood approach \cite{Ayers}. For the purpose of comparing methods, we do not consider the cases in which cohorts can be added after the second stage and let the total sample size or the second stage sample size remain as planned similar to the Frequentist approach. We also only consider Likelihood redesign methods to emulate Frequentist designs -- to calculate new critical values -- and do not consider pure Likelihood method two-stage design as formerly introduced. 
 
@@ -705,7 +781,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power and Type I error of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = 1000.}
+\caption{Monte Carlo Simulation of Average Power and Type I error of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = 10000.}
 \centering
 \begin{Schunk}
 
@@ -715,7 +791,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 \end{Schunk}
 \end{figure}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 1000.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 10000.}
 \centering
 \begin{Schunk}
 
@@ -932,7 +1008,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 1000.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
 \begin{Schunk}
 
 
@@ -942,7 +1018,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 \end{figure}
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 1000.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
 \begin{Schunk}
 
 
@@ -952,7 +1028,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 \end{figure}
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 1000.}
+\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
 \begin{Schunk}
 
 
