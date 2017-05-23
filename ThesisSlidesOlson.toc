@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Background and Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Motivation}{6}{0}{2}
+\beamer@sectionintoc {3}{Deviation from Planned Sample Sizes in Second Stage}{8}{0}{3}
