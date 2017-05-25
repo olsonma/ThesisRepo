@@ -423,7 +423,7 @@ Jeffrey Blume, Ph.D. \\
 \chapter*{ABSTRACT}
 
 \vspace{7mm}
-Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if there is warrant further study in a phase III clinical trial. Simon's two-stage design is a commonly used design in specifying sample sizes and critical values in phase II oncology clinical trials. It is common, however, for attained sample sizes in these trials to be different than planned. In this thesis, we examine the problems in hypothesis testing for two stage phase II clinical trial designs when attained sample sizes differ from the planned design. We describe methods for redesigning trials when attained sample sizes that differ from planned and introduce a new method for redesigning a two stage clinical trial when the first stage sample sizes deviates from planned. These methods would primarily be used for prespecifying redesigns for the cases when the Simon-like design does not have planned accrual. We find that the Likelihood approach has more desireable characteristics for deviations from the planned design, though if one wishes to remain with a Frequentist approach, Olson and Koyama's method,an adaptation of a method that Chang \textit{et al.} proposed, may also be appropriate.  
+Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if there is warrant further study in a phase III clinical trial. Simon's two-stage design is a commonly used design in specifying sample sizes and critical values in phase II oncology clinical trials. It is common, however, for attained sample sizes in these trials to be different than planned. In this thesis, we examine the problems in hypothesis testing for two stage phase II clinical trial designs when attained sample sizes differ from the planned design. We describe methods for redesigning trials when attained sample sizes that differ from planned and introduce a new method for redesigning a two stage clinical trial when the first stage sample sizes deviates from planned. These methods would primarily be used for prespecifying redesigns for the cases when the Simon-like design does not have planned accrual. We find that the Likelihood approach has more desireable characteristics for deviations from the planned design, though if one wishes to remain with a traditional Frequentist approach, Olson and Koyama's method,an adaptation of a method that Chang \textit{et al.} proposed, may also be appropriate.  
 \newpage
 
 \normalsize
@@ -459,8 +459,8 @@ Oncology phase II clinical trials are often used to evaluate the initial effect 
 \chapter{Introduction}
 \vspace{-7mm}
 Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if further study is warranted in a phase III clinical trial \cite{Porcher, Simon, Koyama}. Simon's two-stage design \cite{Simon} is a commonly used design in phase II oncology clinical trials. Koyama and Chen \cite{Koyama} point out that it is common for actual sample sizes of these phase II trials to differ from the planned, pre-specified sample sizes. This happens due to unanticipated accruement speed or drop-out rates, and multi-center trials can be delayed in communication of enrollment and response information causing over enrollement. Currently, when attained sample sizes differ from planned, common practice is to treat the attained sample sizes as planned. Though, when acheived sample sizes differ from planned, testing the attained sample sizes as planned leads to invalid inference and hypothesis testing in these cases is not straightforward \cite{Porcher, Koyama}. Therefore, extensions of two-stage designs for hypothesis testing with unplanned sample size changes is essential. \\
-\indent Many Frequentist methods have been proposed to handle unplanned sample sizes in the second stage while using the planned stage I sample size; however, our literature review found that only a few Frequentist methods handle unplanned sample sizes in stage I. Moreover, when focusing on deviations in sample sizes in the second stage, many proposed methods are adjusting inference procedures rather than proposing a redesign. Likelihood based designs, can be used to extend Simon's design, offer a nice solution to this problem because these designs offer flexibility in sample size without inflation of type I error rate. Because calculations of p-values are complicated when attained sample sizes are different from planned \cite{Koyama}, we focus on methods that offer redesigns of a planned two-stage design that will be prespecified along with the planned design.\\
-\indent In this paper, we discuss the different methods for Simon's design when the attained stage II sample size is different from planned and when attained sample sizes in both stages are different from planned. We review Simon-like designs in chapter 2 and illustrate redesign methods in chapters 3 and 4. In chapter 5, we review a concrete example from a Likelihood-based clinical trial, and in chapter 6, we present results of a numerical and theoretical study comparing Frequentist properties of approaches in the setting where stage I sample size differs from planned are presented.    
+\indent Many traditional Frequentist methods have been proposed to handle unplanned sample sizes in the second stage while using the planned stage I sample size; however, our literature review found that only a few traditional Frequentist methods handle unplanned sample sizes in stage I. Moreover, when focusing on deviations in sample sizes in the second stage, many proposed methods are adjusting inference procedures rather than proposing a redesign. Likelihood based designs, can be used to extend Simon's design, offer a nice solution to this problem because these designs offer flexibility in sample size without inflation of type I error rate. Because calculations of p-values are complicated when attained sample sizes are different from planned \cite{Koyama}, we focus on methods that offer redesigns of a planned two-stage design that will be prespecified along with the planned design.\\
+\indent In this paper, we discuss the different methods for Simon's design when the attained stage II sample size is different from planned and when attained sample sizes in both stages are different from planned. We review Simon-like designs in chapter 2 and illustrate redesign methods in chapters 3 and 4. In chapter 5, we review a concrete example from a Likelihood-based clinical trial, and in chapter 6, we present results of a numerical and theoretical study comparing traditional Frequentist properties of approaches in the setting where stage I sample size differs from planned are presented.    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-------------Background-------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -542,7 +542,7 @@ where $a(x_1) = {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1-x_1}$, $b(x_1) = {n_1 \
 \chapter{Deviation from Planned Sample Sizes in First Stage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\indent A straightforward solution to under-enrollment in the first stage is to simply wait until the appropriate enrollment has been reached, hence, why there is little research for this problem. Because accruement of subjects can be unexpected in the first stage, and some situations require early evaluation of the first stage, it is imperative that methods are available to handle situations with attained sample sizes that differ from the planned sample size in stage I. Green and Dahlberg \cite{Green} and Chen and Ng \cite{Chen} propose methods for inference when first stage sample sizes differ from those planned. Recall that $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrants further investigation. The Southwest Oncology Group's standard approach is to use two-stage designs with a type I error rate of 5\% and power of 90\%. Southwest Oncology Group's inference method by suggesting to perform a hypothesis test on $H_0: p=p_1$ versus $H_1: p < p_1$ in the first stage with type I error rate of 2\% and concluding futility if the p-value for this test is $\leq 0.02$. They then suggest testing $H_0: p=p_0$ versus $H_1: p < p_0$ in the second stage at the 0.05 level. The type I error rate of 2\% corresponds to intuition regarding what constitutes evidence in favor of a hypothesis when the sample size is half of the planned total \cite{Green}. Green and Dahlberg extend the SWOG approach by applying this testing method on the attained design, but performing an unadjusted 0.055 level test of $H_0$ based on the attained total sample size at the second stage. The 0.055 level was chosen because of the discreteness of the binomial distribution and to acheive a type I error rate closer to 0.05. The authors demonstrated that this approach controls type I error and acheives desired power only in the limited situation when an overall $\alpha$-level is 0.05, and it is unclear how this method would generalize to any $\alpha$-level \cite{Li}. Li \textit{et al.} also indicates that this limited approach, and particularly testing a hypothesis in the first stage with a type I error rate of 2\%, is arbitrary and lacks theoretical justification. Chang \textit{et al}. \cite{Chang} also point out that Green and Dahlberg's designs can possibly be quite different than the planned design. Chen and Ng \cite{Chen} suggest an approach to unplanned sample sizes by considering a range of sample sizes in both the first and second stages. They search these ranges for the Minimax and Optimal designs that satisfy error constraints using the average probability of termination for all possible first stage sample sizes and average expected sample size for all possible stage I and stage II sample size combinations that they consider \cite{Chen}. Some limitations of this approach are that attained sample sizes may fall outside of the specified ranges, and only the average error probabilities are controlled rather than the actual error probabilities corresponding to the attained sample sizes. Thus, we consider new approaches to unplanned sample sizes in the first stage in both the Frequentist and Likelihood settings. In the interest of prespecifying designs, we focus on deviation from the planned sample size only in the first stage. It is impractical to prespecify limitless combinations of unplanned sample sizes in both the first and second stages.   
+\indent A straightforward solution to under-enrollment in the first stage is to simply wait until the appropriate enrollment has been reached, hence, why there is little research for this problem. Because accruement of subjects can be unexpected in the first stage, and some situations require early evaluation of the first stage, it is imperative that methods are available to handle situations with attained sample sizes that differ from the planned sample size in stage I. Green and Dahlberg \cite{Green} and Chen and Ng \cite{Chen} propose methods for inference when first stage sample sizes differ from those planned. Recall that $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrants further investigation. The Southwest Oncology Group's standard approach is to use two-stage designs with a type I error rate of 5\% and power of 90\%. Southwest Oncology Group's inference method by suggesting to perform a hypothesis test on $H_0: p=p_1$ versus $H_1: p < p_1$ in the first stage with type I error rate of 2\% and concluding futility if the p-value for this test is $\leq 0.02$. They then suggest testing $H_0: p=p_0$ versus $H_1: p < p_0$ in the second stage at the 0.05 level. The type I error rate of 2\% corresponds to intuition regarding what constitutes evidence in favor of a hypothesis when the sample size is half of the planned total \cite{Green}. Green and Dahlberg extend the SWOG approach by applying this testing method on the attained design, but performing an unadjusted 0.055 level test of $H_0$ based on the attained total sample size at the second stage. The 0.055 level was chosen because of the discreteness of the binomial distribution and to acheive a type I error rate closer to 0.05. The authors demonstrated that this approach controls type I error and acheives desired power only in the limited situation when an overall $\alpha$-level is 0.05, and it is unclear how this method would generalize to any $\alpha$-level \cite{Li}. Li \textit{et al.} also indicates that this limited approach, and particularly testing a hypothesis in the first stage with a type I error rate of 2\%, is arbitrary and lacks theoretical justification. Chang \textit{et al}. \cite{Chang} also point out that Green and Dahlberg's designs can possibly be quite different than the planned design. Chen and Ng \cite{Chen} suggest an approach to unplanned sample sizes by considering a range of sample sizes in both the first and second stages. They search these ranges for the Minimax and Optimal designs that satisfy error constraints using the average probability of termination for all possible first stage sample sizes and average expected sample size for all possible stage I and stage II sample size combinations that they consider \cite{Chen}. Some limitations of this approach are that attained sample sizes may fall outside of the specified ranges, and only the average error probabilities are controlled rather than the actual error probabilities corresponding to the attained sample sizes. Thus, we consider new approaches to unplanned sample sizes in the first stage in both the traditional Frequentist and Likelihood settings. In the interest of prespecifying designs, we focus on deviation from the planned sample size only in the first stage. It is impractical to prespecify limitless combinations of unplanned sample sizes in both the first and second stages.   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--------------------Chang et al method----------------------%
@@ -570,7 +570,7 @@ We then find a new stage one critical value, $s_1$, using this probability spend
 \end{aligned}
 \end{equation}
 where $m_2 = n_2$ or $n_2^{\ast\ast}$. 
-Chang \textit{et al.}'s design can be used for any $\alpha$-level and is flexible, close to the original design, and preserves the desired Frequentist type I error rate. \\
+Chang \textit{et al.}'s design can be used for any $\alpha$-level and is flexible, close to the original design, and preserves the desired traditional Frequentist type I error rate. \\
 %Wu \textit{et al} \cite{Wu} also proposed an adjustment to Simon’s design based on attained sample sizes in both the first and second stages. Because Wu's methods don't work very well \textbf{wording}, we won't consider their method for the remainder of this paper. 
 We modify Chang \textit{et al.}'s method because we prefer to be conservative when straying from a desired Simon or Admissible design. We modify the design by selecting $s_1$ such that the new design's probability of early termination under the null ($\mbox{PET}_0^{\ast\ast}$) that is closest to the planned probability of early termination under the null, rather than using a type II error probability spending function. This is conservative because when the attained sample size gets further from the planned sample size, the $\mbox{PET}_0^{\ast\ast}$ can get further from the original design's. By selecting the closest integer such that the $\mbox{PET}_0^{\ast\ast}$ is closest to planned, the probability of early termination is greater under large deviations and this method is consistent with Chang \textit{et al.}'s. We select $s_1$ such that 
 
@@ -588,18 +588,51 @@ We then select the stage two critical value, $s_t$, in the same fashion as Chang
 \section{Likelihood Design}
 %\vspace{-5mm}
 
-Briefly, Likelihood methods in phase II designs use the likelihood ratio as a measure of evidence \cite{Ayers}. Define $L_n(p) \sim$ Binomial(n,p) to be $\mbox{L}_n(p) = P(X \vert p, n) = {n \choose x} p^x (1-p)^{n-x} \propto p^x (1-p)^{n-x}$. Here, the likelihood ratio is 
+Briefly, Likelihood methods in phase II designs use the likelihood ratio as a measure of evidence \cite{Ayers}. The Law of Likelihood states that ``if the first hypothesis, $H_1$, implies that the probability that a random variable $X$ take sthe value $x$ is $P_1(X)$, while the second hypothesis, $H_2$, implies that the probability is $P_2(x)$, then the observation $X=x$ is evidence supporting $H_1$ over $H_2$ if and only if $P_1(x) > P_2(x)$, and the likelihood ratio measures the strength of evidence" \cite{Blume2002}. Define $\mbox{L}_n(p) \sim$ Binomial(n,p) to be 
 \begin{equation}
 \begin{aligned}
-\mbox{LR}_n & = \frac{\mbox{L}_n(p_1)}{\mbox{L}_n(p_0)} \\
-&= \frac{p_1^{x_t}(1-p_1)^{n_t-x_t}}{p_0^{x_1}(1-p_0)^{n_t-x_t}} \\
-& \in \left\{[0, 1/k], [1/k,k], [k, \infty)\right\}
+\mbox{L}_n(p) &= P(X \vert p, n) \\
+&= {n \choose x} p^x (1-p)^{n-x} \\
+& \propto p^x (1-p)^{n-x}
 \end{aligned}
 \end{equation}
-We make the following decision at the conclusion of the study. If the $\mbox{LR}_n \in [0, 1/k]$, there is evidence for the null hypothesis, if $\mbox{LR}_n \in [1/k,k]$, there is weak evidence for either hypothesis, and if $\mbox{LR}_n \in [k,\infty]$, there is evidence for the alternative hypothesis. The probability of observing weak evidence is $\mbox{PW}_i = P(k_a \leq LR_n \leq k_b | H_i), k_a \leq 1 \leq k_b$, i=0 for null hypothesis and i=1 for alternative hypothesis, where $k_a$ and $k_b$ are benchmarks for description of evidence, the probability of observing strong evidence is 
+Here, the likelihood ratio is 
 \begin{equation}
 \begin{aligned}
-\mbox{PS}_i = \left\{
+\mbox{LR}_n & = \frac{\mbox{L}_n(p_0)}{\mbox{L}_n(p_1)} \\
+&= \frac{p_0^{x_t}(1-p_0)^{n_t-x_t}}{p_1^{x_t}(1-p_1)^{n_t-x_t}} \\
+\end{aligned}
+\end{equation}
+The hypothesis that is better supported is the hypothesis that ssigns a higher probability to the observed events \cite{Blume2002}. If the likelihood ratio is greater than 1, the evidence favors $H_1$ over $H_2$, and if the likelihood ratio is less than 1, the evidence favors $H_2$ over $H_1$. The likelihood ratio is continuous on the scale of (0,$\infty$) and this scale can be broken up into categories such as `weak' and `strong' evidence \cite{Blume2002}. We make the following decision at the conclusion of the study. If the $\mbox{LR}_n \in [0, 1/k]$, there is evidence for the null hypothesis, if $\mbox{LR}_n \in [1/k,k]$, there is weak evidence for either hypothesis, and if $\mbox{LR}_n \in [k,\infty]$, there is evidence for the alternative hypothesis, where $k$ is a value that is a benchmark for distinguishing strength of evidence. \\
+
+To illistrate the use of the likelihood ratio as a measure of evidence, consider a study that is interested in the response rate of patients. Suppose a researcher is interested in looking at the response (yes/no) of 50 patients, while testing the null hypothesis, $H_0: p = 0.3$, versus $H_1: p = 0.45$. Because the response of each patient is independent and binary, the probability model is binomial, as in equation (4.4), where $p$ is the unknown probability of response. Suppose 17 responses were observed. Then equation (4.5) gives us the likelihood ratio     
+\begin{equation}
+\begin{aligned}
+\frac{0.3^{17}(1-0.3)^{50-17}}{0.45^{17}(1-0.45)^{50-17}} = 2.90 \\
+\end{aligned}
+\end{equation}
+The likelihood ratio means that the data support $H_0$ over $H_1$ by a factor of 2.90. If we used a benchmark of $k=8$, this would mean the evidence in favor of $H-0$ over $H_1$ is weak because $2.90 < 8$. Figure 4.1 is the standardized likelihood function and gives a visual representation of the evidence about $p$. We see that the null hypothesis value is represented by the circle on the likelihood function $x$-axis where the alternative hypothesis is represented by the square. The ratio of their $y$-axis values is the likelihood ratio. The maximum occurs at the peak of the likelihood function with a value of 0.34, and this is called the maximum likelihood estimator (MLE). A $1/8$ support interval, shown by the red line, is (0.21, 0.48) and a $1/32$ support interval, shown by the blue line, is (0.18,0.52). A support interval identifies all parameter values for $p$ that are consistent with the data at a certain level (k), and the values that are most consistent with the data occur at the crest of the likelihood function - near the MLE \cite{Blume2002}. 
+
+\begin{figure}
+\caption{Likelihood function for probability of response}
+\begin{Schunk}
+
+
+\centerline{\includegraphics{like_curve-1} }
+
+\end{Schunk}
+\centering
+\begin{minipage}{0.6\textwidth} % choose width suitably
+{\scriptsize SI means support interval. Red line represents the $1/8$ support interval where blue line represents the $1/32$ support interval. Circle represents the value of the null hypothesis where square respresents the value of the alternative hypothesis.\par}
+\end{minipage}
+\end{figure}
+
+
+
+The probability of observing weak evidence is $\gamma_i = P(k_a \leq LR_n \leq k_b | H_i), k_a \leq 1 \leq k_b$, i=0 for null hypothesis and i=1 for alternative hypothesis, where $k_a$ and $k_b$ are benchmarks for description of evidence, the probability of observing strong evidence is 
+\begin{equation}
+\begin{aligned}
+\tau_i = \left\{
         \begin{array}{ll}
             P(LR_n > k_b|H_i) & \quad \text{if } i = 1 \\
             P(LR_n < k_b|H_i) & \quad \text{if } i = 0
@@ -610,7 +643,7 @@ We make the following decision at the conclusion of the study. If the $\mbox{LR}
 and the probability of obseving misleading evidence is 
 \begin{equation}
 \begin{aligned}
-\mbox{PM}_i = \left\{
+\lambda_i = \left\{
         \begin{array}{ll}
             P(LR_n > k_b|H_i) & \quad \text{if } i = 0 \\
             P(LR_n < k_b|H_i) & \quad \text{if } i = 1
@@ -622,7 +655,7 @@ One advantage of a likelihood sequential design is that the universal bound of m
 
 \indent Ayers and Blume \cite{Ayers} consider a phase II two-stage design based on the likelihood. The Likelihood two stage design will enroll $n_1$ observations into the first stage. If we observe a likelihood ratio that is $k_{a_1} < LR_{n_1} < k_{b_1}$, where $k_{a_1}$ and $k_{b_1}$ are benchmarks for description of evidence in the first stage, we continue to the second stage. If we observe $\mbox{LR}_{n_1} \leq k_{a_1}$, the study will stop for futility and if we observe $\mbox{LR}_{n_1} \geq k_{b_1}$, the study will stop for efficacy. In stage II, $n_2$ subjects are enrolled. If the $\mbox{LR}_{n_t} = \mbox{LR}_{n_1}\mbox{LR}_{n_2}$ is $k_{a_t} < \mbox{LR}_{n_t} < k_{b_t}$, where $k_{a_t}$ and $k_{b_t}$ are benchmarks at the end of stage II, then the study will conclude with weak evidence. The study will conclude with evidence for the alternative hypothesis if $\mbox{LR}_{n_t} \geq k_{b_t}$ and evidence for the null hypothesis if $\mbox{LR}_{n_t} \leq k_{a_t}$. Because these designs are not restricted by error rates, this method offers favorable flexibility for unplanned sample sizes in the first stage. Likewise, one is able to add cohorts and the end of the second stage when there proves to be weak evidence without penalization. \\
 
-\indent We compare Frequentist and Likelihood two-stage designs by adapting the Likelihood two-stage design to emulate conventional two-stage designs such as Optimal, Minimax, or Admissible designs with binary evidential zones: reject the null or fail to reject the null. In order to do this, one can start with a Simon-like design and redesign with a likelihood ratio approach by setting
+\indent We compare traditional Frequentist and Likelihood two-stage designs by adapting the Likelihood two-stage design to emulate conventional two-stage designs such as Optimal, Minimax, or Admissible designs with binary evidential zones: reject the null or fail to reject the null. In order to do this, one can start with a Simon-like design and redesign with a likelihood ratio approach by setting
 \begin{equation}
 \begin{aligned}
 k_{a_1} &= \left(\frac{p_1(1-p_0)}{p_0(1-p_1)}\right)^{r_1} \left(\frac{1-p_1}{1-p_0}\right)^{n_1} = \left(\frac{1-p_0}{1-p_1}\right)^{r_1-n_1} \left(\frac{p_1}{p_0}\right)^{r_1},\\ 
@@ -640,23 +673,22 @@ s_t &= \frac{log(k_{a_t}) - n_t log(\frac{1-p_1}{1-p_0})}{log(\frac{p_1(1-p_0)}{
 \end{equation}
 
 If $s_1$ or $s_t$ $<$ 0, they are set equal to zero. It is possible for these critical values to be less than 0 when the study design has low sample sizes and deviation from the planned sample size is extreme. Under the restricted conditions and using these critical values, we can calulate design characteristics for any attained $n_1$ and $n_t$ for a given $p$. The probability of weak evidence for a probability $p$ at the end of the first stage is 
-\textbf{(I don't know if I like this notation)}
 \begin{equation}
 \begin{aligned}
-\mbox{P(Weak}_{1,p}) = 1 - B(s_1, n_1, p)
+\gamma_{1,p} = 1 - B(s_1, n_1, p)
 \end{aligned}
 \end{equation}
 and the probability of strong evidence for a given $p$ at the end of stage one is 
 \begin{equation}
 \begin{aligned}
-\mbox{P(Strong}_{1,p}) = B(s_1, n_1, p_0)
+\tau_{1,p} = B(s_1, n_1, p_0)
 \end{aligned}
 \end{equation}
 At the end of the second stage, the probability of weak evidence is 
 
 \begin{equation}
 \begin{aligned}
-\mbox{P(Weak}_{t,p}) \sum_{x=s_1+1}^{n_1} b(x, n_1, p) - B(s_1 - x, n - n_1, p)
+\gamma_{t,p} \sum_{x=s_1+1}^{n_1} b(x, n_1, p) - B(s_1 - x, n - n_1, p)
 \end{aligned}
 \end{equation}
 
@@ -664,26 +696,26 @@ and the probability of strong evidence is
 
 \begin{equation}
 \begin{aligned}
-\mbox{P(Strong}_{t,p}) = \mbox{P(Strong}_{1,p}) + \sum_{x=s_1+1}^{n_1} \left( b(x,n_1,p) \times B(s_1 - x, n-n_1, p) \right)
+\tau_{t,p} = \tau_{1,p} + \sum_{x=s_1+1}^{n_1} \left( b(x,n_1,p) \times B(s_1 - x, n-n_1, p) \right)
 \end{aligned}
 \end{equation}
 
 The probability of early termination under the null hypothesis is then 
 \begin{equation}
 \begin{aligned}
-\mbox{PET}_0 = \mbox{P(Strong}_{1,p_0})
+\mbox{PET}_0 = \tau_{1,p_0}
 \end{aligned}
 \end{equation}
 
 and the expected sample size under the null hypothesis is 
 \begin{equation}
 \begin{aligned}
-\mbox{EN}_0 = n_1 + \mbox{P(Weak}_{1,p_0})\times (n_t - n_1)
+\mbox{EN}_0 = n_1 + \gamma_{1,p_0} \times (n_t - n_1)
 \end{aligned}
 \end{equation}
 
  
-\indent Ayers and Blume \cite{Ayers} show that the Likelihood designs preserve type I error rate and are bounded by $\frac{1}{k_{b_t}}$ and are equal to $O_{p_i}\left({n}^{-1/2}\right)$. Under the likelihood design, error rates tend to be less of an issue because the average of the error rates, $\frac{\alpha + \beta}{2}$, is minimized with the likelihood approach \cite{Ayers}. For the purpose of comparing methods, we do not consider the cases in which cohorts can be added after the second stage and let the total sample size or the second stage sample size remain as planned similar to the Frequentist approach. We also only consider Likelihood redesign methods to emulate Frequentist designs -- to calculate new critical values -- and do not consider pure Likelihood method two-stage design as formerly introduced. 
+\indent Ayers and Blume \cite{Ayers} show that the Likelihood designs preserve type I error rate and are bounded by $\frac{1}{k_{b_t}}$ and are equal to $O_{p_i}\left({n}^{-1/2}\right)$. Under the likelihood design, error rates tend to be less of an issue because the average of the error rates, $\frac{\alpha + \beta}{2}$, is minimized with the likelihood approach \cite{Ayers}. For the purpose of comparing methods, we do not consider the cases in which cohorts can be added after the second stage and let the total sample size or the second stage sample size remain as planned similar to the traditional Frequentist approach. We also only consider Likelihood redesign methods to emulate traditional Frequentist designs -- to calculate new critical values -- and do not consider pure Likelihood method two-stage design as formerly introduced. 
 
 % \newline
 % Interim: Translating to successes. This is the region in which we move to stage 2\\
@@ -731,7 +763,7 @@ and the expected sample size under the null hypothesis is
 %% example
 %%%%%%%%%%%%%%%%%%%
 \chapter{Example}
-In order to compare these new Frequentist and Likelihood methods for deviation of sample size in the first stage, we first introduce an example. An actual phase II cancer clinical trial was designed using a Likelihood two-stage design. In order to stick to convention, the trial would only stop early for futility. The planned design parameters are $n_1 = 17$, $n_t = 41$, $r_1 = 7$, $r_t = 21$, $p_0 \leq 0.4$, and $p_1 \geq 0.6$. This study design has an expected sample size of 25.6 and a probability of early termination of 64\% under the null hypothesis. This is considered an Admissible design and meets the nominal type I error rate, $\alpha = 0.05$, and type II error rate, $\beta = 0.2$ where the actual type I error rate is 0.047. The authors provide alternative interim stopping rules for sample sizes that deviate from the planned design using the Likelihood approach to be shown in Table 5.1. These new designs have a probability of early termination under the null that exceed 50\% and preserve type I and type II error rates. Using the original likelihood design, but varying $n_1$, one can use Chang \textit{et al.}'s method and Olson and Koyama's method, which uses probability of early termination criteria, to obtain similar results. The total sample size is equal to the planned total sample size, $n_t^{\ast\ast}=n_t$ in this case. We compare attained methods' characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. We refer to the Likelihood redesign, Chang and Olson and Koyama redesigns as ``attained methods." 
+In order to compare these new traditional Frequentist and Likelihood methods for deviation of sample size in the first stage, we first introduce an example. An actual phase II cancer clinical trial was designed using a Likelihood two-stage design. In order to stick to convention, the trial would only stop early for futility. The planned design parameters are $n_1 = 17$, $n_t = 41$, $r_1 = 7$, $r_t = 21$, $p_0 \leq 0.4$, and $p_1 \geq 0.6$. This study design has an expected sample size of 25.6 and a probability of early termination of 64\% under the null hypothesis. This is considered an Admissible design and meets the nominal type I error rate, $\alpha = 0.05$, and type II error rate, $\beta = 0.2$ where the actual type I error rate is 0.047. The authors provide alternative interim stopping rules for sample sizes that deviate from the planned design using the Likelihood approach to be shown in Table 5.1. These new designs have a probability of early termination under the null that exceed 50\% and preserve type I and type II error rates. Using the original likelihood design, but varying $n_1$, one can use Chang \textit{et al.}'s method and Olson and Koyama's method, which uses probability of early termination criteria, to obtain similar results. The total sample size is equal to the planned total sample size, $n_t^{\ast\ast}=n_t$ in this case. We compare attained methods' characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. We refer to the Likelihood redesign, Chang and Olson and Koyama redesigns as ``attained methods." 
 
 
 
@@ -781,7 +813,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power and Type I error of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of Average Power and Type I error of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = 10.}
 \centering
 \begin{Schunk}
 
@@ -791,7 +823,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 \end{Schunk}
 \end{figure}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 10.}
 \centering
 \begin{Schunk}
 
@@ -1008,7 +1040,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
 \begin{Schunk}
 
 
@@ -1018,7 +1050,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 \end{figure}
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
 \begin{Schunk}
 
 
@@ -1028,7 +1060,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 \end{figure}
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
 \begin{Schunk}
 
 
@@ -1044,9 +1076,9 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 This is perhaps surprising, because the two approaches use apparently different yardsticks in comparing models: a P value from an F test is a probability based on a specific distribution that the test statistic will follow if the null hypothesis is true, while DAIC is simply based on the relative likelihood of the data under two different models, penalized by the disparity in model complexity. Nonetheless, deciding how small a P value is needed for us to prefer the more complicated model is equivalent to deciding how large a ratio of likelihoods indicates a convincing difference between models.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Deviations from the planned second stage sample size has been better studied than deviations from the planned first stage sample size. Many methods have been proposed on decision rules, and Koyama \textit{et al}. had introduced a redesign when the first stage sample size is as planned. Because the calculation of a p-value in this case is more straightforward than when stage I differs, there may be less literature proposing redesigns. \textbf{NEW - Talk to Jeffrey. Tatsuki doesn't see the connection between AIC and our design. If we calculate a conventional p-value, it'd just be like calculating a p-value as if it was a one stage design and we could get an incorrect result} One could calculate a p-value ignoring the sample paths for deviations in either the first or second stage, though. The p-value can be related to Akaike's Information Criterion and is then $P = \mbox{Pr}\left(\chi^2_k > -2 log\left(\frac{L(\hat{\theta_0})}{L(\hat{\theta})}\right)\right)$, where k is the number of parameters set equal to zero \cite{Paul}. AIC and p-values use different yardsticks for measure of evidence, where the p-value is from an F test with the AIC is based on the likelihood of the data. Murtaugh \cite{Paul} states that deciding how small the p-value is needed to determine statistical significance is similar to deciding how large of a likelihood ratio is required for a convincing difference. \textbf{End new} Here, we focused our investigation and results on deviations from the planned first stage sample size. One argument against redesigning these trials in the first place could be that researchers always have the option to simply wait until stage I sample size is met. In practice, though, some ethical matters may arise that would give the researcher incentive to evaluate the first stage prematurely. For instance, if a new regimen appears to be more beneficial than historical treatments, but statistical requirements prevent new subjects from being enrolled until all currently enrolled subjects record responses, a researcher may consider this unethical. In this case, $n_1^{\ast\ast} < n_1$ where $n_1^{\ast\ast}$ would be subjects who have recorded responses. Having a decision rule for a case such as this would alleviate some discomfort from both the researcher and statistician, though abuse of new decision rules would be discouraged. \\
-\indent A numerical study suggested that it may be desireable to redesign trials using the planned total sample size because it better controls type I error for all attained methods and power is closer to the nominal power, on average. Assuming that redesigns use the planned total sample size in the redesign, results from different Simon-like designs were presented.  Chang and the Olson and Koyama methods primarily differ when there are extreme sample size shifts. This is most likely due to the nature of their methods and their primary goals of maintaining type II error spending or probability of early termination. Recommending the use of these designs in practice will depend on the desire of statistical approach of the researcher. If the researcher prefers to use a Frequentist approach in hypothesis testing, it may be recommended that the Olson and Koyama's approach is used because it results in higher average power across deviations. Because it may be of concern that researchers take advantage of the ability to deviate from the planned design, Olson and Koyama's method also penalizes deviation by resulting in a higher probability of early termination when there is underaccrual than Chang's method. \\
-\indent We do not consider redesigns when both the first and second stage accrual are not as planned because if one is interested in prespecifying stopping criteria for sample size deviations, the number of combinations needed to be specified in order to prespecify the exact combination that will occur is unreasonable. Though, these attained designs are able to accomodate if this is desired. One advantage to the Likelihood design is that it is able to add cohorts of subjects at the end of the second stage if weak evidence is obtained without threatening Frequentist properties such as type I error. Another advantage to the Likelihood approach is that inference is more straightforward because one is not concerned with error rates or p-values. Though we don't consider calculating p-values when stage I differs from planned, it would be complicated if one wished to do so, whereas Likelihood methods would not require this. Likelihood designs are also more generalizable. The Likelihood two-stage approach could be generalized easily to three stages, whereas the Chang designs would not be able to generalize. In this paper, though, we are very much constraining the Likelihood design and not taking full advantage of its natural characteristics. One could simply use a pure Likelihood design and avoid Frequentist issues altogether. \\
+Deviations from the planned second stage sample size has been better studied than deviations from the planned first stage sample size. Many methods have been proposed on decision rules, and Koyama \textit{et al}. had introduced a redesign when the first stage sample size is as planned. Because the calculation of a p-value in this case is more straightforward than when stage I differs, there may be less literature proposing redesigns. One could calculate a p-value ignoring the sample paths for deviations in either the first or second stage, though, as if the two-stage design was a single stage with attained values. If this was done, the decision could be different than the p-value considering sample paths and how to decide how small the p-value is needed in order to determine statistical significance is unclear. Here, we focused our investigation and results on deviations from the planned first stage sample size. One argument against redesigning these trials in the first place could be that researchers always have the option to simply wait until stage I sample size is met. In practice, though, some ethical matters may arise that would give the researcher incentive to evaluate the first stage prematurely. For instance, if a new regimen appears to be more beneficial than historical treatments, but statistical requirements prevent new subjects from being enrolled until all currently enrolled subjects record responses, a researcher may consider this unethical. In this case, $n_1^{\ast\ast} < n_1$ where $n_1^{\ast\ast}$ would be subjects who have recorded responses. Having a decision rule for a case such as this would alleviate some discomfort from both the researcher and statistician, though abuse of new decision rules would be discouraged. \\
+\indent A numerical study suggested that it may be desireable to redesign trials using the planned total sample size because it better controls type I error for all attained methods and power is closer to the nominal power, on average. Assuming that redesigns use the planned total sample size in the redesign, results from different Simon-like designs were presented.  Chang and the Olson and Koyama methods primarily differ when there are extreme sample size shifts. This is most likely due to the nature of their methods and their primary goals of maintaining type II error spending or probability of early termination. Recommending the use of these designs in practice will depend on the desire of statistical approach of the researcher. If the researcher prefers to use a traditional Frequentist approach in hypothesis testing, it may be recommended that the Olson and Koyama's approach is used because it results in higher average power across deviations. Because it may be of concern that researchers take advantage of the ability to deviate from the planned design, Olson and Koyama's method also penalizes deviation by resulting in a higher probability of early termination when there is underaccrual than Chang's method. \\
+\indent We do not consider redesigns when both the first and second stage accrual are not as planned because if one is interested in prespecifying stopping criteria for sample size deviations, the number of combinations needed to be specified in order to prespecify the exact combination that will occur is unreasonable. Though, these attained designs are able to accomodate if this is desired. One advantage to the Likelihood design is that it is able to add cohorts of subjects at the end of the second stage if weak evidence is obtained without threatening traditional Frequentist properties such as type I error. Another advantage to the Likelihood approach is that inference is more straightforward because one is not concerned with error rates or p-values. Though we don't consider calculating p-values when stage I differs from planned, it would be complicated if one wished to do so, whereas Likelihood methods would not require this. Likelihood designs are also more generalizable. The Likelihood two-stage approach could be generalized easily to three stages, whereas the Chang designs would not be able to generalize. In this paper, though, we are very much constraining the Likelihood design and not taking full advantage of its natural characteristics. One could simply use a pure Likelihood design and avoid traditional Frequentist issues altogether. \\
 \indent A main concern that we have with redesigning trials for unplanned sample sizes is that researchers could take advantage of the these new stopping criteria and stray from the planned design too often. It is for this reason that one may consider adapting Chang's design using a very conservative rule in the first stage and have the probability of early termination under the null always be higher than planned. When deviations are extreme, especially where there is underacrrual, evaluating the trial early would be highly penalized by potentially having a very high probability of early termination. Overall, intentional early or late evaluation of the first stage without sound reason is highly discouraged and will not result in optimal statistical properties. 
 
 

@@ -72,6 +72,11 @@ M.~Chang, Y.~Li, and Q.~An, ``Alternative designs for phase ii clinical trials
 \bibitem{Ayers}
 D.~Ayers and J.~Blume
 
+\bibitem{Blume2002}
+J.~Blume, ``Tutorial in biostatistics, likelihood methods for measuring
+  statistical evidence,'' {\em Statistics in Medicine}, vol.~21,
+  pp.~2563--2599, 2002.
+
 \bibitem{BlumeNotes}
 J.~Blume, ``Personal communication,'' Spring 2016.
 
@@ -79,9 +84,5 @@ J.~Blume, ``Personal communication,'' Spring 2016.
 J.~Blume, ``How often likelihood ratios are misleading in sequential trials,''
   {\em Communications in Statistics - Theory and Methods}, vol.~37, no.~8,
   pp.~1193--1206, 2008.
-
-\bibitem{Paul}
-P.~A. Murtaugh, ``In defense of p-values,'' {\em Ecology}, vol.~95,
-  pp.~617--621, 2014.
 
 \end{thebibliography}
