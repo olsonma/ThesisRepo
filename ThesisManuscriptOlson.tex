@@ -423,7 +423,8 @@ Jeffrey Blume, Ph.D. \\[.14in]
 \chapter*{ABSTRACT}
 
 \vspace{7mm}
-Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if there is warrant further study in a phase III clinical trial. Two-stage designs are commonly used designs in these phase II trials specifying sample sizes and critical values in phase II oncology clinical trials. It is common, however, for attained sample sizes in these trials to be different than planned. In this thesis, we examine the problems in hypothesis testing for two stage phase II clinical trial designs when attained sample sizes differ from the planned design. We describe methods for redesigning trials when attained sample sizes that differ from planned and introduce a new method for redesigning a two stage clinical trial when the first stage sample sizes deviates from planned. These methods would primarily be used for prespecifying redesigns for the cases when the Simon-like design does not have planned accrual. We find that the Likelihood approach has more desirable characteristics for deviations from the planned design, though if one wishes to remain with a traditional Frequentist approach, Olson and Koyama's method,an adaptation of a method that Chang \textit{et al.} proposed, may also be appropriate.  
+Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if there warrants further study in a phase III clinical trial, while two-stage designs are commonly used designs in these phase II trials. It is common, however, for attained sample sizes in these trials to be different than the designed sample sizes. Currently, when the attained sample size differ from planned, common practice is to treat the attained sample sizes as planned and this leads to invalid inference. In this thesis, we examine the problems and solutions in hypothesis testing for two-stage phase II clinical trial designs when attained sample sizes differ from the planned design. We describe existing methods for redesigning trials when there is over- or under-enrollment in either the first or second stage and introduce a new method for redesigning a two-stage clinical trial when the first stage sample size deviates from planned. We focus our investigation when there is over- or under-enrollment in the first stage. We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood two-stage design by applying these methods to two-stage designs with deviations in the first stage of $\pm 10$. We examine type I error rates, power, probability of early termination and expected sample size under the null hypothesis in a number of two-stage designs. We also compare error rates in these methods using a Monte Carlo simulation. 
+
 \newpage
 
 \normalsize
@@ -807,7 +808,7 @@ This example illustrates the comparability of the three adapted design methods. 
 
 \chapter{Results}
 
-We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood by first selecting either an Admissible, Minimax, or Optimal two-stage design. Each method is applied to deviations in first stage sample size of $\pm 10$. We suggest keeping the original total planned sample size or the original planned second stage sample size the same when utilizing Chang \textit{et al.}'s and Olson and Koyama's methods to stay close to the original design. We choose to keep total sample size the same in our investigation because error rates are closer to the original design for sample size deviations $\pm 10$ on average when maintaining the original total sample size rather than original second stage sample size according to our simulation study (Figures 6.1, 6.2, 6.3, 6.4). This approach is also more realistic when resources and budget are fixed for the planned total sample size. Second stage critical values can be quite different from the original design, also. Likelihood methods can result in increased type I error, which may be a concern in this constrained setting. We also see a parabolic decrease in power in Chang's method, which is not a fruitful result (Figures 6.1 and 6.2). We also suggest setting $n_t^{\ast\ast}=n_t$ because this inhibits the ability to stray extremely far from the planned design. If one employs Chang \textit{et al.}'s method, it can be radical in the first stage, and if the resulting probability of continuing is less than 0.05, it will be impossible for a type I error to occur. This will then reduce the two-stage design to a one-stage design.    
+We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood by first selecting either an Admissible, Minimax, or Optimal two-stage design. Each method is applied to deviations in first stage sample size of $\pm 10$. We suggest keeping the original total planned sample size or the original planned second stage sample size the same when utilizing Chang \textit{et al.}'s and Olson and Koyama's methods to stay close to the original design. We choose to keep total sample size the same in our investigation because this approach is more realistic when resources and budget are fixed for the planned total sample size and this inhibits the ability to stray radically from the planned design. 
 
 
 
@@ -820,18 +821,7 @@ We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likel
 % plotpow
 % @
 % \end{figure}
-\begin{landscape}
-\begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 10000.}
-\centering
-\begin{Schunk}
 
-
-\centerline{\includegraphics{unnamed-chunk-5-1} }
-
-\end{Schunk}
-\end{figure}
-\end{landscape}
 
 \indent We present results that are limited to our primary problem of interest in Tables 6.1 through 6.6. In each design table, the planned design is specified, and the first stage sample size varies from planned, while maintaining the original total sample size. We compare attained methods characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. \\
 \indent Table 6.1 displays a planned Admissible design with varying first stage sample size $\pm$ 10. We notice that under low $p_0$ and $p_1$, $s_1$ will vary between each method. Though, power and type I error are likely to be similar between and within each attained method, and expected sample size is also consistent. The Likelihood and Chang method are at risk of low probability of early termination, especially when the sample size is lower than planned. Table 6.2 shows an Optimal design when $p_0$ is 0.5. Between attained designs, particularly when there is overaccrual, $s_1$ is inconsistent. We particularly see a large difference when $n_1^{\ast\ast} = n_1 + 10$ or more between the both the Likelihood and Olson and Koyama designs and the Chang \textit{et al.} design.  The Likelihood design is anticonservative in type I error and conservative in type II error here, displaying a $\alpha^{\ast\ast} > \alpha$ and $1-\beta^{\ast\ast} > 1-\beta$. The Chang \textit{et al.} and OK designs both have a conservative type I error for all sample size deviations, though Chang \textit{et al.} and Likelihood designs maintain higher power than Olson and Koyama's. Probability of early termination is closest to the original under Olson and Koyama's and thus have a much lower expected sample size under the null hypothesis, with as much as a difference of approximately 23.\\
@@ -1036,8 +1026,9 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 
 \end{landscape}
+\indent Figures 6.1 and 6.2 display Monte Carlo simulation results for an average of 20 two-stage designs that are Minimax, Optimal, or Admissible with $\alpha = 0.05, \beta = 0.20$ with $n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$ and $n_t^{\ast\ast} = n_t$, respectively. Therefore, each point will be an average of attained type I error or power under different sample size deviations. These simulations further support our choice to keep the planned total sample size as planned because the error rates are closer to the original design for sample size deviations $\pm 10$ on average when maintaining the original total sample size rather than original second stage sample size according to our simulation study (Figures 6.1 and 6.2). In Figure 6.1 we see that the average type I error rate for the Likelihood design is often above 0.05, and we see a parabolic decrease in power in Chang \textit{et al.}'s method and a sharp linear increase in power in the OK method, which is not a fruitful result.    \\
 
-\indent Figures 6.3 and 6.4 display Monte Carlo simulation results for type I error and power, respectively. The results are an average of 20 Simon-like designs with $\alpha = 0.05, \beta = 0.2$ and stage I sample size deviations with $n_t^{\ast\ast} = n_t$ for each attained design method. Therefore, each point will be an average of attained type I error or power under different sample size deviations. We see that, on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang's and Olson and Koyama's methods are conservative in type I error for all sample size deviations, but are more likely to suffer in power. Figure 6.5 shows a similar Monte Carlo simulation, though it displays the average of the average type I error rate and the average type II error rate. The simulation confirms that the Likelihood design minimizes the average of the error rates, while Chang \textit{et al.}'s method performs better in this sense when there is under-enrollment, while Olson and Koyama performs better when there is over-enrollment.\\
+\indent When keeping the original total sample size as planned, Figure 6.2 shows that on average, the Likelihood two-stage design has power above the nominal power and below the nominal alpha level for all sample size deviations $\pm 10$. Both Chang \textit{et al.}'s and Olson and Koyama's methods are conservative in type I error for all sample size deviations, but are more likely to suffer in power. Figure 6.3 shows a similar Monte Carlo simulation, though it displays the average of the average type I error rate and the average type II error rate. The simulation confirms that the Likelihood design minimizes the average of the error rates, while Chang \textit{et al.}'s method performs better in this sense when there is under-enrollment, while Olson and Koyama performs better when there is over-enrollment.\\
 
 % 
 % \begin{figure}[]
@@ -1048,22 +1039,36 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 % \end{figure}
 \begin{landscape}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = 10.}
+\centering
 \begin{Schunk}
 
 
-\centerline{\includegraphics{unnamed-chunk-13-1} }
+\centerline{\includegraphics{plot1-1} }
+
+\end{Schunk}
+\end{figure}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{figure}[]
+\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
+\begin{Schunk}
+
+
+\centerline{\includegraphics{plot2-1} }
 
 \end{Schunk}
 \end{figure}
 \end{landscape}
 
 \begin{figure}[]
-\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10000.}
+\caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = 10.}
 \begin{Schunk}
 
 
-\centerline{\includegraphics{unnamed-chunk-14-1} }
+\centerline{\includegraphics{unnamed-chunk-12-1} }
 
 \end{Schunk}
 \end{figure}
@@ -1075,7 +1080,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Deviations from the planned second stage sample size has been better studied than deviations from the planned first stage sample size. Many methods have been proposed on decision rules, and Koyama \textit{et al}. had introduced a redesign when the first stage sample size is as planned. Because the calculation of a p-value in this case is more straightforward than when stage I differs, there may be less literature proposing redesigns. One could calculate a p-value ignoring the sample paths for deviations in either the first or second stage, though, as if the two-stage design were a single stage with attained values. If this were done, the decision could be different than the p-value considering sample paths and how to decide how small the p-value is needed in order to determine statistical significance is unclear. Here, we focused our investigation and results on deviations from the planned first stage sample size. One argument against redesigning these trials in the first place could be that researchers always have the option to simply wait until stage I sample size is met. In practice, though, some ethical matters may arise that would give the researcher incentive to evaluate the first stage prematurely. For instance, if a new regimen appears to be more beneficial than historical treatments, but statistical requirements prevent new subjects from being enrolled until all currently enrolled subjects record responses, a researcher may consider this unethical. In this case, $n_1^{\ast\ast} < n_1$ where $n_1^{\ast\ast}$ would be subjects who have recorded responses. Having a decision rule for a case such as this would alleviate some discomfort from both the researcher and statistician, though abuse of new decision rules would be discouraged. \\
-\indent A numerical study suggested that it may be desirable to redesign trials using the planned total sample size because it better controls type I error for all attained methods and power is closer to the nominal power, on average. Assuming that redesigns use the planned total sample size in the redesign, results from different Simon-like designs were presented.  Chang and the Olson and Koyama methods primarily differ when there are extreme sample size shifts. This is most likely due to the nature of their methods and their primary goals of maintaining type II error spending or probability of early termination. \\
+\indent We suggest a redesign of a trial for attained sample sizes using the planned total sample size for practical reasons such as resources and inability to stray far from the planned design. A numerical study also suggested that it may be desirable to redesign trials using the planned total sample size because it better controls type I error for all attained methods and power is closer to the nominal power, on average. Furthermore, if one employs Chang \textit{et al.}'s method, if the sample size is radical in the first stage, and if the resulting probability of continuing is less than 0.05, it will be impossible for a type I error to occur. This will then reduce the two-stage design to a one-stage design, and this is further support for using the planned total sample size.  Assuming that redesigns use the planned total sample size in the redesign, results from different two-stage designs were presented.  Chang \textit{et al.} and the Olson and Koyama methods primarily differ when there are extreme sample size shifts. This is most likely due to the nature of their methods and their primary goals of maintaining type II error spending or probability of early termination. \\
 \indent Recommending the use of these designs in practice will depend on the desire of statistical approach of the researcher. Blume states, "Hypothesis testing procedures do not place any interpretation on the numerical value of the likelihood ratio. the extremeness of an observation is measured, not by the magnitude of the likelihood ratio, but by the probability of observing a likelihood ratio that large or larger. It is the tail area, not the likelihood ratio, that is the meaningful quantity in hypothesis testing" \cite{Blume2002}. Thus, the primary argument for using Chang \textit{et al.}'s or the OK method is in the case that the researcher does not want to abandon hypothesis testing.  If the researcher prefers to use a traditional Frequentist approach with hypothesis testing, it may be recommended that the Olson and Koyama's approach is used because it results in higher average power across deviations. Because it may be of concern that researchers take advantage of the ability to deviate from the planned design, Olson and Koyama's method also penalizes deviation by resulting in a higher probability of early termination when there is underaccrual than Chang \textit{et al}'s method. \\
 \indent Overall, there are many advantages to using a Likelihood two-stage design. One advantage to the Likelihood design is that it is able to add cohorts of subjects at the end of the second stage if weak evidence is obtained without threatening frequentist properties such as type I error. Another advantage to the Likelihood approach is that inference is more straightforward because one is not concerned with error rates or p-values. The likelihood is unaffected by the number of looks at the data and the evidence is independent of the probability of observing misleading evidence \cite{Blume2002}. Though we don't consider calculating p-values when stage I differs from planned, it would be complicated if one wished to do so, whereas Likelihood methods would not require this because evidence is represented by a simple calculation of the likelihood ratio.  Likelihood designs are also more generalizable. The Likelihood two-stage approach could be generalized easily to three stages, whereas the Chang \textit{et al.} and OK designs would not be able to generalize in such a way. In this paper, though, we are very much restricting the Likelihood design and not taking full advantage of its natural characteristics. One could simply use a pure Likelihood design and avoid traditional Frequentist issues altogether. \\
 \indent In general, though, if a researcher wanted to design a study using the restricted designs as described in this paper, the OK design and the Likelihood design are highly competitive and achieve similar results when the probability of early termination is reasonable (i.e. above 50\%). One design may be more favorable than the other depending on the hypotheses being tested and the amount of over- or under-enrollment. 
