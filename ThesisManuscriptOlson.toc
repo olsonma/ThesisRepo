@@ -29,7 +29,7 @@
 \contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{18}{chapter.5}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{21}{chapter.6}
+\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{20}{chapter.6}
 \vspace {\li }
 \addvspace {\li }
 \contentsline {chapter}{\hbox to\@tempdima {7\hfil }Discussion and Conclusion}{30}{chapter.7}

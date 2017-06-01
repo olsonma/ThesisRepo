@@ -535,7 +535,7 @@ where $a(x_1) = {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1-x_1}$, $b(x_1) = {n_1 \
 \chapter{Deviation from Planned Sample Sizes in First Stage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\indent A straightforward solution to under-enrollment in the first stage is to simply wait until the appropriate enrollment has been reached. Because accruement of subjects can be unexpected in the first stage, and some situations require early evaluation of the first stage, it is still imperative that methods are available to handle situations with attained sample sizes that differ from the planned sample size in stage I. Green and Dahlberg \cite{Green} and Chen and Ng \cite{Chen} propose methods for inference when first stage sample sizes differ from those planned. Recall that $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrants further investigation. The Southwest Oncology Group's standard approach is to use two-stage designs with a type I error rate of 5\% and power of 90\%. Southwest Oncology Group's inference method by suggesting to perform a hypothesis test on $H_0: p=p_1$ versus $H_1: p < p_1$ in the first stage with type I error rate of 2\% and concluding futility if the p-value for this test is $\leq 0.02$. They then suggest testing $H_0: p=p_0$ versus $H_1: p < p_0$ in the second stage at the 0.05 level. The type I error rate of 2\% corresponds to intuition regarding what constitutes evidence in favor of a hypothesis when the sample size is half of the planned total \cite{Green}. Green and Dahlberg extend the SWOG approach by applying this testing method on the attained design, but performing an unadjusted 0.055 level test of $H_0$ based on the attained total sample size at the second stage. The 0.055 level was chosen because of the discreteness of the binomial distribution and to achieve a type I error rate closer to 0.05. The authors demonstrated that this approach controls type I error and achieves desired power only in the limited situation when an overall $\alpha$-level is 0.05, and it is unclear how this method would generalize to any $\alpha$-level \cite{Li}. Li \textit{et al.} also indicates that this limited approach, and particularly testing a hypothesis in the first stage with a type I error rate of 2\%, is arbitrary and lacks theoretical justification. Chang \textit{et al}. \cite{Chang} also point out that Green and Dahlberg's designs can possibly be quite different than the planned design. Chen and Ng \cite{Chen} suggest an approach to unplanned sample sizes by considering a range of sample sizes in both the first and second stages. They search these ranges for the Minimax and Optimal designs that satisfy error constraints using the average probability of termination for all possible first stage sample sizes and average expected sample size for all possible stage I and stage II sample size combinations that they consider \cite{Chen}. Some limitations of this approach are that attained sample sizes may fall outside of the specified ranges, and only the average error probabilities are controlled rather than the actual error probabilities corresponding to the attained sample sizes.  stages.   
+\indent A straightforward solution to under-enrollment in the first stage is to simply wait until the appropriate enrollment has been reached. Because accruement of subjects can be unexpected in the first stage, and some situations require early evaluation of the first stage, it is still imperative that methods are available to handle situations with attained sample sizes that differ from the planned sample size in stage I. Green and Dahlberg \cite{Green} and Chen and Ng \cite{Chen} propose methods for inference when first stage sample sizes differ from those planned. Recall that $p_0$ is the highest probability of response that would indicate that the research regimen is uninteresting and $p_1$ is the lowest probability of response that would indicate that the research regimen warrants further investigation. Green and Dahlberg extend the Southwest Oncology Group (SWOG) standard approach where the SWOG's standard approach to phase II design is to use only two-stage designs with a type I error rate of 5\% and power of 90\%. Southwest Oncology Group's inference method suggestion is to perform a hypothesis test on $H_0: p=p_1$ versus $H_1: p < p_1$ in the first stage with type I error rate of 2\% and concluding futility if the p-value for this test is $\leq 0.02$. They then suggest testing $H_0: p=p_0$ versus $H_1: p < p_0$ in the second stage at the 0.05 level. The type I error rate of 2\% corresponds to intuition regarding what constitutes evidence in favor of a hypothesis when the sample size is half of the planned total \cite{Green}. Green and Dahlberg extend the SWOG approach by applying this testing method on the attained design, but performing an unadjusted 0.055 level test of $H_0$ based on the attained total sample size at the second stage. The 0.055 level was chosen because of the discreteness of the binomial distribution and to achieve a type I error rate closer to 0.05. The authors demonstrated that this approach controls type I error and achieves desired power only in the limited situation when an overall $\alpha$-level is 0.05, and it is unclear how this method would generalize to any $\alpha$-level \cite{Li}. Li \textit{et al.} also indicates that this limited approach, and particularly testing a hypothesis in the first stage with a type I error rate of 2\%, is arbitrary and lacks theoretical justification. Chang \textit{et al}. \cite{Chang} also point out that Green and Dahlberg's designs can possibly be quite different than the planned design. Chen and Ng \cite{Chen} suggest an approach to unplanned sample sizes by considering a range of sample sizes in both the first and second stages. They search these ranges for the Minimax and Optimal designs that satisfy error constraints using the average probability of termination for all possible first stage sample sizes and average expected sample size for all possible stage I and stage II sample size combinations that they consider \cite{Chen}. Some limitations of this approach are that attained sample sizes may fall outside of the specified ranges, and only the average error probabilities are controlled rather than the actual error probabilities corresponding to the attained sample sizes.  stages.   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %--------------------Chang et al method----------------------%
@@ -976,20 +976,24 @@ plott1 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom
 
 @
 
+% \begin{figure}[]
+% \caption{Monte Carlo Simulation of Average Power and Type I error of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = \Sexpr{n.sim}.}
+% \centering
+% <<echo = FALSE>>=
+% plotpow
+% @
+% \end{figure}
+\begin{landscape}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power and Type I error of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = \Sexpr{n.sim}.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = \Sexpr{n.sim}.}
 \centering
-<<echo = FALSE>>=
-plotpow
+<<echo=FALSE, fig.width=9, fig.height=5>>=
+library(gridExtra)
+grid.arrange(plott1, plotpow, nrow =1)
 @
 \end{figure}
-\begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = \Sexpr{n.sim}.}
-\centering
-<<echo=FALSE>>=
-plott1
-@
-\end{figure}
+\end{landscape}
+
 \indent We present results that are limited to our primary problem of interest in Tables 6.1 through 6.6. In each design table, the planned design is specified, and the first stage sample size varies from planned, while maintaining the original total sample size. We compare attained methods characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. \\
 \indent Table 6.1 displays a planned Admissible design with varying first stage sample size $\pm$ 10. We notice that under low $p_0$ and $p_1$, $s_1$ will vary between each method. Though, power and type I error are likely to be similar between and within each attained method, and expected sample size is also consistent. The Likelihood and Chang method are at risk of low probability of early termination, especially when the sample size is lower than planned. Table 6.2 shows an Optimal design when $p_0$ is 0.5. Between attained designs, particularly when there is overaccrual, $s_1$ is inconsistent. We particularly see a large difference when $n_1^{\ast\ast} = n_1 + 10$ or more between the both the Likelihood and Olson and Koyama designs and the Chang \textit{et al.} design.  The Likelihood design is anticonservative in type I error and conservative in type II error here, displaying a $\alpha^{\ast\ast} > \alpha$ and $1-\beta^{\ast\ast} > 1-\beta$. The Chang \textit{et al.} and OK designs both have a conservative type I error for all sample size deviations, though Chang \textit{et al.} and Likelihood designs maintain higher power than Olson and Koyama's. Probability of early termination is closest to the original under Olson and Koyama's and thus have a much lower expected sample size under the null hypothesis, with as much as a difference of approximately 23.\\
 \indent Table 6.3 displays results from a planned Minimax design when $p_0$ is larger than 0.5. Here, the Likelihood design has desirable properties with type I error and power consistently closed to the planned design for all deviations in sample size. Though, when the sample size is severely underaccrued, the probability of early termination nearly halves. The expected sample size is consistent between designs. The Chang designs stray from the planned nominal type I and type II error rates when there is overaccrual. The $\mbox{PET}_0$ for the original Chang design varies significantly between deviations. \\
@@ -1375,26 +1379,15 @@ plot.dfLik <- data.frame(design ="Likelihood",n.diff = error.matLik[1,], average
 #################
 df <- rbind(plot.dfAlter, plot.dfChang, plot.dfLik)
 
-plot <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
+plotpow2 <- ggplot(data = df, aes(x=n.diff,y=averagepower, color = design)) + geom_point() + ylab("Average Power") + 
   xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
                                                                    values = c("Chang Adaptation" = "red",
                                                                                                     "Chang"     = "dodgerblue3",
                                                                                                     "Likelihood"   = "green4"),
                                                                    breaks = c("Chang Adaptation", "Chang", "Likelihood"),
                                                                    labels = c("Olson and Koyama", "Chang et al.", "Likelihood"))
-@
 
-\begin{figure}[]
-\caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
-<<echo=FALSE>>=
-plot
-@
-\end{figure}
-
-\begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
-<<echo=FALSE>>=
-ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() + ylab("Average Type I Error") + 
+plott12 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() + ylab("Average Type I Error") + 
   xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
                                                                    values = c("Chang Adaptation" = "red",
                                                                                                     "Chang"     = "dodgerblue3",
@@ -1404,7 +1397,22 @@ ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom_point() +
 
 
 @
+% 
+% \begin{figure}[]
+% \caption{Monte Carlo Simulation of Average Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
+% <<echo=FALSE>>=
+% plot
+% @
+% \end{figure}
+\begin{landscape}
+\begin{figure}[]
+\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
+<<echo=FALSE, fig.width=9, fig.height=5>>=
+grid.arrange(plott12, plotpow2, nrow=1)
+
+@
 \end{figure}
+\end{landscape}
 
 \begin{figure}[]
 \caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
