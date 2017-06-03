@@ -18,22 +18,22 @@
 \contentsline {chapter}{\hbox to\@tempdima {2\hfil }Background}{3}{chapter.2}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {3\hfil }Deviation from Planned Sample Sizes In Second Stage}{5}{chapter.3}
+\contentsline {chapter}{\hbox to\@tempdima {3\hfil }Deviation from Planned Sample Sizes In Second Stage}{6}{chapter.3}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {4\hfil }Deviation from Planned Sample Sizes in First Stage}{8}{chapter.4}
+\contentsline {chapter}{\hbox to\@tempdima {4\hfil }Deviation from Planned Sample Sizes in First Stage}{9}{chapter.4}
 \vspace {\li }
-\contentsline {section}{\numberline {4.1}\textit {Chang et al.} Alternative Designs and Adaptation}{9}{section.4.1}
-\contentsline {section}{\numberline {4.2}Likelihood Design}{11}{section.4.2}
+\contentsline {section}{\numberline {4.1}\textit {Chang et al.} Alternative Designs and Adaptation}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Likelihood Design}{12}{section.4.2}
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{18}{chapter.5}
-\vspace {\li }
-\addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{20}{chapter.6}
+\contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{19}{chapter.5}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {7\hfil }Discussion and Conclusion}{29}{chapter.7}
+\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{21}{chapter.6}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{33}{chapter.7}
+\contentsline {chapter}{\hbox to\@tempdima {7\hfil }Discussion and Conclusion}{30}{chapter.7}
+\vspace {\li }
+\addvspace {\li }
+\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{34}{chapter.7}
 \contentsfinish 
