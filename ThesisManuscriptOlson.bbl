@@ -1,11 +1,11 @@
 \begin{thebibliography}{10}
 
 \bibitem{Porcher}
-R.~Porcher and K.~Desseaux, ``What inference for two stage phase {II}
+R.~Porcher and K.~Desseaux, ``What inference for two stage phase {{II}}
   trials?,'' {\em BMC Medical Research Methodology}, vol.~12, p.~117, 2012.
 
 \bibitem{Simon}
-R.~Simon, ``Optimal two-stage designs for phase ii clinical trials,'' {\em
+R.~Simon, ``Optimal two-stage designs for phase {II} clinical trials,'' {\em
   Controlled Clinical Trials}, vol.~10, pp.~1--10, 1989.
 
 \bibitem{Koyama}
@@ -14,8 +14,8 @@ T.~Koyama and H.~Chen, ``Proper inference from simon's two-stage designs,''
 
 \bibitem{Jung}
 S.-H. Jung, Y.~Lee, K.~Kim, and S.~L. George, ``Admissible two-stage designs
-  for phase ii cancer clinical trials,'' {\em Statistics In Medicine}, vol.~23,
-  pp.~561--569, 2004.
+  for phase {II} cancer clinical trials,'' {\em Statistics In Medicine},
+  vol.~23, pp.~561--569, 2004.
 
 \bibitem{Whitehead}
 J.~Whitehead, ``On the bias of maximum likelihood estimation following a
@@ -23,12 +23,12 @@ J.~Whitehead, ``On the bias of maximum likelihood estimation following a
 
 \bibitem{Changpoint}
 M.~Chang, H.~Wieand, and V.~Chang, ``The bias of the sample proportion
-  following a group sequential phase ii trial,'' {\em Statistics in Medicine},
-  vol.~24, pp.~1009--1027, 1989.
+  following a group sequential phase {II} trial,'' {\em Statistics in
+  Medicine}, vol.~24, pp.~1009--1027, 1989.
 
 \bibitem{Guo}
 H.~Guo and A.~Liu, ``a simple and efficient bias-reduced estimator of response
-  probability following a group sequential phase ii trial,'' {\em J Biopharm
+  probability following a group sequential phase {II} trial,'' {\em J Biopharm
   Stat}, vol.~15, pp.~773--781, 2005.
 
 \bibitem{Jungest}
@@ -43,7 +43,7 @@ W.~Tsai, Y.~Chi, and C.~Chen, ``Interval estimation of binomial proportion in
 
 \bibitem{Jungpvalue}
 S.~Jung, K.~Owzar, S.~George, and T.~Lee, ``P-value calculation for multistage
-  phase ii cancer clinical trials,'' {\em J Biopharm Stat}, vol.~16,
+  phase {II} cancer clinical trials,'' {\em J Biopharm Stat}, vol.~16,
   pp.~765--775, 2006.
 
 \bibitem{Zeng}
@@ -52,25 +52,26 @@ D.~Zeng, F.~Gao, K.~Hu, C.~Jia, and J.~Ibrahim, ``Hypothesis testing for
   Medicine}, vol.~34, pp.~2417--2426, 2015.
 
 \bibitem{Green}
-S.~Green and S.~Dahlberg, ``Planned versus attained design in phase ii clinical
-  trials,'' {\em Statistics in Medicine}, vol.~11, pp.~853--862, 1992.
+S.~Green and S.~Dahlberg, ``Planned versus attained design in phase {II}
+  clinical trials,'' {\em Statistics in Medicine}, vol.~11, pp.~853--862, 1992.
 
 \bibitem{Chen}
-T.~Chen and T.~Ng, ``Optimal flexible designs in phase ii clinical trials,''
+T.~Chen and T.~Ng, ``Optimal flexible designs in phase {II} clinical trials,''
   {\em Statistics in Medicine}, vol.~17, pp.~2301--2312, 1998.
 
 \bibitem{Li}
 Y.~Li, R.~Mick, and D.~Heitjan, ``A bayesian approach for unplanned sample
-  sizes in phase ii clinical trials,'' {\em Clinical Trials}, vol.~9,
+  sizes in phase {II} clinical trials,'' {\em Clinical Trials}, vol.~9,
   pp.~293--302, 2012.
 
 \bibitem{Chang}
-M.~Chang, Y.~Li, and Q.~An, ``Alternative designs for phase ii clinical trials
-  when attained sample sizes are different from planned sample sizes,'' {\em
-  Biometrics and Biostatistics}, vol.~6, p.~229, 2015.
+M.~Chang, Y.~Li, and Q.~An, ``Alternative designs for phase {II} clinical
+  trials when attained sample sizes are different from planned sample sizes,''
+  {\em Biometrics and Biostatistics}, vol.~6, p.~229, 2015.
 
 \bibitem{Ayers}
-D.~Ayers and J.~Blume
+D.~Ayers and J.~Blume, ``Likelihood designs for single-arm phase {{II}}
+  clinical trials with a binary endpoint,'' Manuscript in preparation.
 
 \bibitem{Blume2002}
 J.~Blume, ``Tutorial in biostatistics, likelihood methods for measuring
@@ -78,7 +79,7 @@ J.~Blume, ``Tutorial in biostatistics, likelihood methods for measuring
   pp.~2563--2599, 2002.
 
 \bibitem{BlumeNotes}
-J.~Blume, ``Personal communication,'' Spring 2016.
+J.~Blume {\em Personal Communication}, Spring 2016.
 
 \bibitem{Blume08}
 J.~Blume, ``How often likelihood ratios are misleading in sequential trials,''
