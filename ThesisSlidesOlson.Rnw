@@ -7,7 +7,7 @@
 %
 \mode<presentation>
 {
-  \usetheme{Hannover}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usetheme{Montpellier}      % or try Darmstadt, Madrid, Warsaw, ...
   \usecolortheme{default} % or try albatross, beaver, crane, ...
   \usefonttheme{serif}  % or try serif, structurebold, ...
   \setbeamertemplate{navigation symbols}{}
@@ -30,25 +30,25 @@
 \newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 \title[]{A Comparison of Approaches for Unplanned Sample Size Changes in Phase II Clinical Trials}
-\author{Molly Olson \\ \small molly.a.olson@vanderbilt.edu}
-\institute{Vanderbilt University}
+\author{Molly Olson \\ \small molly.a.olson@vanderbilt.edu \\ Advisor: Tatsuki Koyama}
+\institute{Vanderbilt University \\ Department Of Biostatistics}
 \date{June 13, 2017}
 
   \makeatletter
-  \setbeamertemplate{sidebar \beamer@sidebarside}%{sidebar theme}
-  {
-    \beamer@tempdim=\beamer@sidebarwidth%
-    \advance\beamer@tempdim by -6pt%
-    \insertverticalnavigation{\beamer@sidebarwidth}%
-    \vfill
-    \ifx\beamer@sidebarside\beamer@lefttext%
-    \else%
-      \usebeamercolor{normal text}%
-      \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
-      \vskip2pt%
-    \fi%
-  }%
-\makeatother
+%   \setbeamertemplate{sidebar \beamer@sidebarside}%{sidebar theme}
+%   {
+%     \beamer@tempdim=\beamer@sidebarwidth%
+%     \advance\beamer@tempdim by -6pt%
+%     \insertverticalnavigation{\beamer@sidebarwidth}%
+%     \vfill
+%     \ifx\beamer@sidebarside\beamer@lefttext%
+%     \else%
+%       \usebeamercolor{normal text}%
+%       \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+%       \vskip2pt%
+%     \fi%
+%   }%
+% \makeatother
 
 \begin{document}
 
@@ -148,7 +148,7 @@
               \item Similar expected sample size under $H_0$ as Optimal
             \end{itemize}
         \item Suppose $H_0: p_0 \leq 0.25$, $H_1: p_1 > 0.4$, $\alpha = 0.05$, $\beta = 0.2$
-        67	29	8	22	0.0464	0.8003	39.9	0.7125
+
 \begin{table}[]
 \centering
 \begin{tabular}{l|llllll}
@@ -196,10 +196,12 @@ Admissible &  63     &   25    &   6    &   21    &     41.7     &     0.561
 \begin{frame}
 \frametitle{Setting the Scene}
     \begin{itemize}
-        \item Goal is hypothesis testing
+        \item Goal is to make a decision
         \item How do we do this if our attained sample size is different than planned?
         \item P-value calculations are complicated - we don't consider these solutions
         \item Consider prespecified ``redesigns" - recalculating critical values
+        \item Primary focus on deviation in first stage
+        %% so there's a lot of literature about what to do if deviation in second stage
     \end{itemize}
 \end{frame}
 
@@ -211,12 +213,110 @@ Admissible &  63     &   25    &   6    &   21    &     41.7     &     0.561
 %----------------------------------------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
+%%%%%%%  Deviation from Planned Sample Sizes in Second Stage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Deviation from Planned Sample Sizes in Second Stage}
     \begin{itemize}
-        \item Item
+        \item Over-enrollment in first stage: perform interim analysis on the planned number of first stage, adjust testing procedure for attained second stage %% this is the straightforward solution and this is what we use here
+        \item Under-enrollment: just wait
+        \item Literature exists for point estimation, calculation of p-values when stage II differs (Review: Porcher \textit{et al.})
+        \item P-values in two-stage trials depend on planned design and attained data, complicated when attained SS differ than planned [Koyama and Chen] % so, because of this, we don't focus on calculating p-values, but rather redesigns. Koyama and Chen first propose the redesign
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%  Deviation from Planned Sample Sizes in Second Stage - Koyama and Chen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Koyama and Chen}
+    \begin{itemize}
+        \item Koyama and Chen, StatMed, 2008
+        \item Notation: 
+          \begin{itemize}
+            \item Planned design parameters: $n_1, n_t, n_2 = n_t - n_1 r_1, r_t, \alpha, \beta$. 
+            \item Attained design parameters: $n_1, n_t^\ast, n_2^\ast = n_t^\ast - n_1, r_1, r_t^\ast, \alpha^\ast, \beta^\ast$  
+          \end{itemize}
+        \item Let first stage remained as planned and change testing procedure in stage II%if there is overenrollment, we let the first n1 subjects be evaluated 
+        \item Calculate new critical value, $r_t^\ast$, by finding maximum integer s.t. 
+    \end{itemize}
+    \begin{equation*}
+    \begin{aligned}
+    &P[X_2^\ast \geq r_t^\ast \vert X_1 = x_1] \leq P]X_2 \geq r_t \vert X_1 = x_1\\
+    &X_2^\ast \sim \mbox{Binomial}(n_2^\ast, p_0)
+    \end{aligned}
+    \end{equation*}
+    % recall that X_1 is distributed binomial
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Koyama and Chen Con'td
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Koyama and Chen}
+    \begin{itemize}
+        \item Results in controlled unconditional type I error rate - new CV gives more conservative conditional type I error rate
+        \item New critical value depends on number of positive responses
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Zeng et al
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Zeng \textit{et al.}}
+    \begin{itemize}
+        \item Zeng \textit{et al.}, StatMed, 2015
+        \item Attempts to maximize unconditional power while controlling type I error % again, let stage I be as planned
+        \item $r_2^\ast$ new stage II critical value and $r_t^\ast \equiv r_2^\ast + x_1$ % when we move onto the second stage
+        \item Second stage CV is integer that maximizes unconditional power while subject to type I error $\leq \alpha$
+        \item Theoretically possible, computationally difficult. No closed form solution.
+        \item Propose normal approximation to ease computation of power
+        \item Math (Lagrange multipliers, derivatives, substitution, searching over $\lambda$s)
+        \item Solve an ugly equation for $r_2^\ast$
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%  ugly equation for Zeng et al
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Zeng \textit{et al.}}
+%% mention numerical results - their method maximizes power but koyama and chen also have a lower type I error rate. because of what theyre trying to do. 
+\tiny
+\begin{equation}
+\begin{aligned}
+& \left(\frac{1}{p_0(1-p_0)} - \frac{1}{p_1(1-p_1)} \right) {r_2^\ast}^2 - \frac{2 n_2^\ast (p_0 - p_1)}{(1-p_0)(1-p_1)}r_2^\ast + \frac{{n_2^\ast}^2(p_0-p_1)}{(1-p_0)(1-p_1)}-2n_2^\ast log \left(\frac{\lambda a(x_1)}{b(x_1)}\right) = 0 \\
+& a(x_1) = {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1-x_1} \\
+& b(x_1) = {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1-x_1} \\ 
+\end{aligned}
+\end{equation}
+\normalsize
+$\lambda$ is the Lagrange multiplier.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Deviation from planned sample sizes in first stage}
+%%%%%%% Devoatopm from planned sample sizes in first stage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Accreument can be unexpected, some cases require early interim
+\begin{frame}
+\frametitle{Deviation from planned sample sizes in first stage}
+    \begin{itemize}
+        \item SWOG: 
+        \begin{itemize}
+            \item $\alpha$ = 0.05, $\beta$ = 0.1
+            \item Interim: $H_0: p=p_1, H_1: p < p_1$, stop if p-value is significant at 0.02-level
+            \item Stage II: $H_0: p=p_0, H_1: p > p_0$
+        \end{itemize}
+      \item Green and Dahlberg, StatMed, 1992
+        \begin{itemize}
+          \item Use SWOG, but use attained sample size
+          \item Test stage II at 0.055 level %% chosen because of discreteness of binomial distribution and to achieve a type I error rate closer to 0.05
+        \end{itemize}
+      \item Unclear how to generalize
+      \item Arbitrary and lacks theoretical justification [Li \textit{et al.}]
     \end{itemize}
 \end{frame}
 
@@ -224,59 +324,13 @@ Admissible &  63     &   25    &   6    &   21    &     41.7     &     0.561
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Deviation from planned sample sizes in first stage}
     \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
+      \item Chen and Ng, StatMed, 1998
+      \item Consider range of sample sizes
+      \item Search these ranges for the Minimax or Optimal design that satisfy error constraints using the average PET and EN
+      \item Limitation: attained sample sizes may fall outside of ranges
+      \item Limitation: average probabilities rather then actual for attained SS
     \end{itemize}
 \end{frame}
 

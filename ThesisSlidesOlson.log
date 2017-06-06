@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 MAY 2017 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUN 2017 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,23 +717,13 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeHa
-nnover.sty
-Package: beamerthemeHannover 2010/06/17  (rcs-revision d02a7cf4d8ae)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeMo
+ntpellier.sty
+Package: beamerthemeMontpellier 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
-emesidebar.sty
-Package: beamerouterthemesidebar 2010/06/17  (rcs-revision d02a7cf4d8ae)
-\beamer@sidebarwidth=\dimen192
-\beamer@headheight=\dimen193
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
-emeseahorse.sty
-Package: beamercolorthemeseahorse 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
-emecircles.sty
-Package: beamerinnerthemecircles 2010/06/17  (rcs-revision d02a7cf4d8ae)
+emetree.sty
+Package: beamerouterthemetree 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/beamer/themes/font/beamerfontthem
 eserif.sty
@@ -747,7 +737,7 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 (/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count153
-\U@D=\dimen194
+\U@D=\dimen192
 LaTeX Info: Redefining \textlatin on input line 1448.
 )
 \l@canadian = a dialect from \language\l@american 
@@ -778,14 +768,14 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \lst@gtempboxa=\box53
 \lst@token=\toks48
 \lst@length=\count156
-\lst@currlwidth=\dimen195
+\lst@currlwidth=\dimen193
 \lst@column=\count157
 \lst@pos=\count158
-\lst@lostspace=\dimen196
-\lst@width=\dimen197
+\lst@lostspace=\dimen194
+\lst@width=\dimen195
 \lst@newlines=\count159
 \lst@lineno=\count160
-\lst@maxwidth=\dimen198
+\lst@maxwidth=\dimen196
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
@@ -810,21 +800,21 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \c@tracingmulticols=\count164
 \mult@box=\box57
-\multicol@leftmargin=\dimen199
+\multicol@leftmargin=\dimen197
 \c@unbalance=\count165
 \c@collectmore=\count166
 \doublecol@number=\count167
 \multicoltolerance=\count168
 \multicolpretolerance=\count169
-\full@width=\dimen256
-\page@free=\dimen257
-\premulticols=\dimen258
-\postmulticols=\dimen259
+\full@width=\dimen198
+\page@free=\dimen199
+\premulticols=\dimen256
+\postmulticols=\dimen257
 \multicolsep=\skip58
 \multicolbaselineskip=\skip59
 \partial@page=\box58
 \last@line=\box59
-\maxbalancingoverflow=\dimen260
+\maxbalancingoverflow=\dimen258
 \mult@rightbox=\box60
 \mult@grightbox=\box61
 \mult@gfirstbox=\box62
@@ -848,9 +838,9 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \@tempa=\box80
 \c@columnbadness=\count170
 \c@finalcolumnbadness=\count171
-\last@try=\dimen261
-\multicolovershoot=\dimen262
-\multicolundershoot=\dimen263
+\last@try=\dimen259
+\multicolovershoot=\dimen260
+\multicolundershoot=\dimen261
 \mult@nat@firstbox=\box81
 \colbreak@box=\box82
 \mc@col@check@num=\count172
@@ -897,6 +887,10 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 (/usr/local/texlive/2016/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 83.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 83.
@@ -1026,14 +1020,14 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(59.22636pt, 290.74263pt, 14.22636pt)
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=290.74263pt
+* \textwidth=307.28987pt
 * \textheight=244.6939pt
-* \oddsidemargin=-13.04362pt
-* \evensidemargin=-13.04362pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1055,13 +1049,13 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count174
-\scratchdimen=\dimen264
+\scratchdimen=\dimen262
 \scratchbox=\box83
 \nofMPsegments=\count175
 \nofMParguments=\count176
 \everyMPshowfont=\toks51
 \MPscratchCnt=\count177
-\MPscratchDim=\dimen265
+\MPscratchDim=\dimen263
 \MPnumerator=\count178
 \makeMPintoPDFobject=\count179
 \everyMPtoPDFconversion=\toks52
@@ -1132,66 +1126,60 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \c@lstlisting=\count181
 
-(./ThesisSlidesOlson.nav) [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex
-/updmap/pdftex.map}
+(./ThesisSlidesOlson.nav) [1
 
-] (./ThesisSlidesOlson.toc) [2
-
-]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 153.
-
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Thes
+isSlidesOlson.toc) [2
 
 ]
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 179.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 153.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 179
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 153
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 179
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 153
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 179.
+(Font)              <8> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 179.
+(Font)              <6> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 179.
-LaTeX Font Info:    Try loading font information for U+msa on input line 179.
+(Font)              <5> on input line 153.
+LaTeX Font Info:    Try loading font information for U+msa on input line 153.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 179.
+LaTeX Font Info:    Try loading font information for U+msb on input line 153.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [3
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 179.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 179.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 179.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 179.
  [4
 
-] [5
-
 ]
-[6
+[5
+
+] [6
 
 ] [7
 
@@ -1203,7 +1191,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [11
 
-] [12
+]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 346.
+
+
+Overfull \hbox (22.01918pt too wide) detected at line 346
+[] []
+ []
+
+[12
 
 ] [13
 
@@ -1223,8 +1222,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [21
 
-]
-[22
+] [22
 
 ] [23
 
@@ -1234,7 +1232,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [26
 
-] [27
+]
+[27
 
 ] [28
 
@@ -1254,8 +1253,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [36
 
-]
-[37
+] [37
 
 ] [38
 
@@ -1265,7 +1263,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [41
 
-] [42
+]
+[42
 
 ] [43
 
@@ -1287,40 +1286,49 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@snm=\write8
 \openout8 = `ThesisSlidesOlson.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 664.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 664.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 718.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 718.
  (./ThesisSlidesOlson.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 664.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 664.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 718.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 718.
 Package rerunfilecheck Info: File `ThesisSlidesOlson.out' has not changed.
-(rerunfilecheck)             Checksum: B8EBCB0A6B923279C348B05C236A5747;193.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 664.
+(rerunfilecheck)             Checksum: DE0A487FF426DFDB6E5DC2F2F5B30C46;278.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 718.
  ) 
 Here is how much of TeX's memory you used:
- 20098 strings out of 493014
- 372225 string characters out of 6133351
- 556542 words of memory out of 5000000
- 23040 multiletter control sequences out of 15000+600000
- 42919 words of font info for 55 fonts, out of 8000000 for 9000
+ 20020 strings out of 493014
+ 369297 string characters out of 6133351
+ 557521 words of memory out of 5000000
+ 22973 multiletter control sequences out of 15000+600000
+ 43148 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,60p,462b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-16/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2016/texmf-d
-ist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/lm/lmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-lm/lmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi8.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/lm/lmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/l
-m/lmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ThesisSlidesOlson.pdf (47 pages, 209057 bytes).
+ 56i,15n,56p,462b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/lm/lmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/lm/lmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi
+5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/lm/lmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr
+6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/lm/lmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/l
+msy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on ThesisSlidesOlson.pdf (47 pages, 267202 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 423 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 407 compressed objects within 5 object streams
+ 99 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 
