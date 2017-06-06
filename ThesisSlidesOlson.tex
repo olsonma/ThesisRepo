@@ -385,22 +385,45 @@ $\lambda$ is the Lagrange multiplier.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
+%%%%%%% Chang et al
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% prespecify new design 
+%% recalculate p-values
+%% recall tht we are focused on new designs to make a decision, not p-values
 \begin{frame}
-\frametitle{Title}
+\frametitle{Chang \textit{et al.}}
     \begin{itemize}
-        \item Item
+        \item Chang \textit{et al.} Biometrics \& Biostatistics, 2015
+        \item Recall: $n_1, n_t, r_1, r_t, p_0, p_1, \alpha, \beta$
+        \item Notation: $n_1^{\ast\ast}, n_2^{\ast\ast}$ - attained sample sizes
+        \item Notation: $s_1$, $s_t$ - new critical values
+        \item Choose $s_1$ by first using $\beta$-spending function
     \end{itemize}
+\begin{equation*}
+\begin{aligned}
+\beta(m) = \left\{
+        \begin{array}{ll}
+            \beta_1 m/n_1 & \quad \text{if } m\leq n_1 \\
+            \beta_1 + (\beta - \beta_1)(m - n_1)/n_2 & \quad \text{if } m > n_1
+        \end{array}
+    \right.
+\end{aligned}
+\end{equation*}
+  \begin{itemize}
+      \item Integer s.t. type II error probability given $s_1, n_1^{\ast\ast}$ is closest to $\beta(n_1^{\ast\ast})$
+      \item Choose $s_t$ s.t. type I error $\leq \alpha$
+  \end{itemize}
+%% where beta1 is the type II error probability in first stage
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Olson and Koyama}
     \begin{itemize}
-        \item Item
+        \item 
     \end{itemize}
 \end{frame}
 
