@@ -336,7 +336,7 @@
 \begin{titlepage}
 \thispagestyle{empty}\enlargethispage{\the\footskip}%
 \begin{center}
-	{\setstretch{1.66} {Working Title: A Comparison of Approaches for Unplanned Sample Size Changes in Phase II Clinical Trials}\par }%
+	{\setstretch{1.66} {A Comparison of Approaches for Unplanned Sample Size Changes in Phase II Clinical Trials}\par }%
 	\vskip.4in
 	By
 	\vskip .3in
@@ -427,7 +427,7 @@ To be cont'd...
 \chapter*{ABSTRACT}
 
 \vspace{7mm}
-Oncology phase II clinical trials are often used to evaluate the initial effect of a new regimen to determine if there warrants further study in a phase III clinical trial, while two-stage designs are commonly used designs in these phase II trials. It is common, however, for attained sample sizes in these trials to be different than the designed sample sizes. Currently, when the attained sample size differs from planned, common practice is to treat the attained sample sizes as planned and this leads to invalid inference. In this thesis, we examine the problems and solutions in hypothesis testing for two-stage phase II clinical trial designs when attained sample sizes differ from the planned design. We describe existing methods for redesigning trials when there is over- or under-enrollment in either the first or second stage and introduce a new method for redesigning a two-stage clinical trial when the first stage sample size deviates from planned. We focus our investigation when there is over- or under-enrollment in the first stage. We compare the methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood two-stage design by applying these methods to two-stage designs with deviations in the first stage of $\pm 10$. We examine type I error rates, power, probability of early termination and expected sample size under the null hypothesis in a number of two-stage designs. We also compare error rates in these methods using a Monte Carlo simulation. 
+Oncology phase II clinical trials are used to evaluate the initial effect of a new regimen to determine if there warrants further study in a phase III clinical trial. Two-stage designs with an early futility stop are commonly used in these phase II trials. It is common for attained sample sizes in these trials to be different from the designed sample sizes due to over- and under- enrollment. Currently, when the attained sample size differs from that planned, common practice is to treat the attained sample sizes as planned, and this practice leads to invalid inference. In this thesis, we examine the problems and solutions in hypothesis testing for two-stage phase II clinical trial designs when attained sample sizes differ from the planned sample sizes. We describe existing methods for redesigning trials when there is over- or under-enrollment in either the first or second stage and introduce a new method for redesigning a two-stage clinical trial when the first stage sample size deviates from planned. We focus our investigation when there is over- or under-enrollment in the first stage. We compare the frequentist methods of Chang \textit{et al.}, Olson and Koyama, and the Likelihood two-stage design by applying these methods to two-stage designs with deviations in the first stage of $\pm 10$. We examine type I error rates, power, probability of early termination and expected sample size under the null hypothesis in a number of two-stage designs. We also compare error rates in these methods using a Monte Carlo simulation. 
 
 \newpage
 
@@ -511,7 +511,7 @@ It then follows that unconditional power, $UCP(p)$, given probability $p$, is gi
 \begin{equation}
 \begin{aligned}
 UCP(p) &= 1 - \left( B(r_1, n_1, p) + \sum_{x=r_1+1}^{min[n_1,{r_t}]} b(x, p, n_1) B(r_t-x,n_2,p) \right) \\
-&= \sum_{r_1+1}^{n_1} \left\{\sum_{x_2 = r_t-x_1+1}^{n_2} b(x_2, n_2, p) \right\} b(x_1, n_1, p)
+&= \sum_{x_1 = r_1+1}^{n_1} \left\{\sum_{x_2 = r_t-x_1+1}^{n_2} b(x_2, n_2, p) \right\} b(x_1, n_1, p)
 \end{aligned}
 \end{equation}
 We require $UCP(p_1) \geq 1-\beta$ and $UCP(p_0) \leq \alpha$ \\
@@ -540,13 +540,13 @@ where $X_2^\ast \sim \mbox{Binomial}(n_2^\ast, p_0)$ and $n_2^\ast$ is the attai
 \indent Zeng \textit{et al.} \cite{Zeng} propose methodology that attempts to maximize the unconditional power while controlling for the type I error to calculate the stage II critical value for the attained second stage sample size. The authors define $r_2^\ast$ to be the new second stage critical value when $x_1 \geq r_1$ and $r_t^\ast \equiv r_2^\ast + x_1$. The second stage critical value will be the integer that maximizes 
 \begin{equation}
 \begin{aligned}
-\mbox{Power} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1 - x_1} \sum_{r_2^\ast}^{n_2^\ast} {n_2^\ast \choose x_2} p_1^{x_2} (1-p_1)^{{n_2^\ast}-x_2}
+\mbox{Power} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1 - x_1} \sum_{x_2 = r_2^\ast}^{n_2^\ast} {n_2^\ast \choose x_2} p_1^{x_2} (1-p_1)^{{n_2^\ast}-x_2}
 \end{aligned}
 \end{equation}
 while subject to 
 \begin{equation}
 \begin{aligned}
- \mbox{Type I error} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1 - x_1} \sum_{r_2^\ast}^{n_2^\ast} {n_2^\ast \choose x_2} p_0^{x_2}(1-p_0)^{{n_2^\ast}-x_2} \leq \alpha
+ \mbox{Type I error} = \sum_{x_1 = r_1}^{n_1} {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1 - x_1} \sum_{x_2 = r_2^\ast}^{n_2^\ast} {n_2^\ast \choose x_2} p_0^{x_2}(1-p_0)^{{n_2^\ast}-x_2} \leq \alpha
 \end{aligned}
 \end{equation}
 Though it is theoretically possible to find $r_2^\ast$, it does not have a closed form solution, and the computation is exhaustive. Instead, the authors propose a normal approximation for the binomial random variable to ease the computation of power. That is, 
@@ -558,7 +558,7 @@ Though it is theoretically possible to find $r_2^\ast$, it does not have a close
 Substituting the above equation in for power and type I error, and using Lagrange multipliers and differentiating with respect to $r_2^\ast$, the problem is then equivalent to solving the equation 
 \begin{equation}
 \begin{aligned}
-\left(\frac{1}{p_0(1-p_0)} - \frac{1}{p_1(1-p_1)} \right) {r_2^\ast}^2 - \frac{2 n_2^\ast (p_0 - p_1)}{(1-p_0)(1-p_1)}r_2^\ast + \frac{{n_2^\ast}^2(p_0-p_1)}{(1-p_0)(1-p_1)}-2n_2^\ast log \left(\frac{\lambda a(x_1)}{b(x_1)}\right)
+\left(\frac{1}{p_0(1-p_0)} - \frac{1}{p_1(1-p_1)} \right) {r_2^\ast}^2 - \frac{2 n_2^\ast (p_0 - p_1)}{(1-p_0)(1-p_1)}r_2^\ast + \frac{{n_2^\ast}^2(p_0-p_1)}{(1-p_0)(1-p_1)}-2n_2^\ast log \left(\frac{\lambda a(x_1)}{b(x_1)}\right) = 0
 \end{aligned}
 \end{equation}
 where $a(x_1) = {n_1 \choose x_1} p_0^{x_1} (1-p_0)^{n_1-x_1}$, $b(x_1) = {n_1 \choose x_1} p_1^{x_1} (1-p_1)^{n_1-x_1}$, and $\lambda$ is the Lagrange multiplier. The new critical value, $r_2^\ast$, is then max$\left(0, min\left(r_2^\ast, n_2^\ast \right) \right)$. The authors suggest searching over a reasonable range of $\lambda$ to find a $\lambda$ such that the type I error is as closed to $\alpha$ as possible. \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 JUN 2017 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUN 2017 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1254,7 +1254,7 @@ Chapter 3.
 [6
 
 ] [7]
-Overfull \hbox (22.76857pt too wide) detected at line 563
+Overfull \hbox (43.42569pt too wide) detected at line 563
 [][][] []
  []
 
@@ -1562,7 +1562,7 @@ nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on ThesisManuscriptOlson.pdf (41 pages, 273004 bytes).
+Output written on ThesisManuscriptOlson.pdf (41 pages, 273089 bytes).
 PDF statistics:
  470 PDF objects out of 1000 (max. 8388607)
  404 compressed objects within 5 object streams
