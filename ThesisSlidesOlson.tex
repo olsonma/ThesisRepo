@@ -534,7 +534,6 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Comparison of Methods
-\section{Comparison of Methods}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Comparison of methods}
@@ -543,15 +542,56 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
         \item Original total sample size ($n_t^{\ast\ast}=n_t, n_2^{\ast\ast}=n_t-n_1^{\ast\ast}$)
         \item Original second stage sample size ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$)
     \end{itemize}
-\end{frame}
+\end{frame} %% talk about unlimited combinations, desire to stay closely to original design
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+\section{Example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Example}
+    \begin{itemize}
+        \item $n_1 = 17$, $n_t = 41$, $r_1 = 7$, $r_t = 21$, $p_0 \leq 0.4$, and $p_1 \geq 0.6$
+        \item Consider deviations that keep PET at least 50\%
+        \item $n_t^{\ast\ast} = n_t$
+    \end{itemize}
+\begin{table}[]
+\begin{tabular}{lllll}
+Design                  & $s_1$ & $n_1^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Likelihood              & 6     & 16    & 53\%           & 27.8          \\
+Chang \textit{et al.} & 6     & 16    & 53\%           & 27.8          \\
+Olson and Koyama        & 7     & 16    & 73\%           & 23.1         
+\end{tabular}
+\end{table}
+\end{frame}%% only sample size deviation that has different decisoin
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Example}
+\begin{table}[]
+\begin{tabular}{lllll}
+Design                  & $s_1$ & $n_1^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Likelihood              & 10     & 23    & 71\%           & 28.2          \\
+Chang \textit{et al.}   & 10     & 23    & 71\%           & 28.2          \\
+Olson and Koyama        & 10     & 23    & 71\%           & 28.2         
+\end{tabular}
+\end{table}
+%% all other deviations had similar conclusions
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+\section{Comparison of Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame} 
+\frametitle{Comparison of Methods}
     \begin{itemize}
-        \item Item
+        \item Admissible, Minimax, Optimal
+        \item $\alpha = 0.05, \beta = 0.2$ or $\alpha = 0.1, \beta = 0.1$
+        \item Deviations $\pm 10$
+        \item $n_t^{\ast\ast} = n_t$ - more realistic
     \end{itemize}
 \end{frame}
 
@@ -559,9 +599,108 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{$n_1=15, r_1=1, n_t=41, r_t=7, p_0 = 0.1, p_1 = 0.25$}
     \begin{itemize}
-        \item Item
+        \item $s_1$ can be different
+        \item Type I error, power, $\mbox{EN}_0$ similar
+        \item Same design when -6 %% after that gets a inconsistent 
+        \item Attained $<<$ planned, Chang, Likelihood more at risk of low PET
+    \end{itemize}
+$\mbox{PET}_0 = 55\%, \mbox{EN}_0 = 26.7$
+\begin{table}[]
+\begin{tabular}{llllllll}
+Design                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.} & 13               & 0     & 7     & 0.046                                 & 0.830                & 25\%                      & 27.8                     \\
+OK        & 13               & 1     & 7     & 0.040                                 & 0.771                & 62\%                      & 23.1                     \\
+Likelihood              & 13               & 0     & 7     & 0.046                                 & 0.830                & 25\%                      & 27.8                    
+\end{tabular}
+\end{table}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{$n_1=15, r_1=1, n_t=41, r_t=7, p_0 = 0.1, p_1 = 0.25$}
+$\mbox{PET}_0 = 55\%, \mbox{EN}_0 = 26.7$
+\begin{table}[]
+\begin{tabular}{llllllll}
+Design                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.}  & 23               & 3     & 7     & 0.040                                 & 0.785                & 80\%                      & 26.5                     \\
+OK                      & 23               & 2     & 7     & 0.046                                 & 0.827                & 59\%                      & 30.3                     \\
+Likelihood              & 23               & 2     & 7     & 0.046                                 & 0.827                & 59\%                      & 30.3                    
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\begin{tabular}{llllllll}
+Design                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.}  & 5               & 0     & 7     & 0.034                                 & 0.671                & 59\%                      & 19.7                     \\
+OK                      & 5               & 0     & 7     & 0.034                                 & 0.671                & 59\%                      & 19.7                     \\
+Likelihood              & 5               & 0     & 7     & 0.046                                 & 0.827                & 59\%                      & 19.7                    
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{$n_1=28, r_1=15, n_t=83, r_t=48, p_0 = 0.50, p_1 = 0.65$}
+    \begin{itemize}
+        \item $s_1$ inconsistent when under-accrual %% usually a difference by 1 in at least one design for every sample size change
+        \item Likelihood can be anticonservative in type I error
+        \item Chang, OK always below nominal type I error %% likelihood is often closer though
+        \item OK has lower expected sample size %% because PET close to original
+    \end{itemize}
+
+$\mbox{PET}_0 = 71\%, \mbox{EN}_0 = 43.7$
+\begin{table}[]
+\begin{tabular}{llllllll}
+Design                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.}   & 18               & 8     & 7     & 0.036                                 & 0.815                & 41\%                      & 56.5                     \\
+OK                      & 18               & 10     & 7     & 0.037                                 & 0.760                & 76\%                      & 33.6                     \\
+Likelihood              & 18               & 9     & 7     & 0.048                                 & 0.796                & 60\%                      & 44.5                    
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{$n_1=22, r_1=17, n_t=39, r_t=33, p_0 = 0.75, p_1 = 0.90$}
+    \begin{itemize}
+        \item Likelihood type I error and power close to planned design
+        \item Likelihood PET halves when -10
+        \item OK lower than planned error rates when over accrual %% still differ by 1 or so
+    \end{itemize}
+$\mbox{PET}_0 = 68\%, \mbox{EN}_0 = 27.5$
+\begin{table}[]
+\begin{tabular}{llllllll}
+Design                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.}   & 26               & 21     & 33     & 0.048                                 & 0.791                & 82\%                      & 28.4                     \\
+OK                      & 26               & 20     & 34     & 0.019                                 & 0.650                & 66\%                      & 30.4                     \\
+Likelihood              & 26               & 20     & 33     & 0.051                                 & 0.810                & 66\%                      & 30.4                    
+\end{tabular}
+\end{table}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{More Results}
+    \begin{itemize}
+        \item $\alpha = \beta = 0.1$
+        \item Stage I sample size low ($p_0 = 0.05, p_1 = 0.20$)
+          \begin{itemize}
+            \item Under-accrual, drop in power and type I error
+            \item Attained $n_1^{\ast\ast}$, $\mbox{PET}_0^{\ast\ast} \approx 1$ %% not practical
+          \end{itemize}
+        \item Other two cases, similar designs
     \end{itemize}
 \end{frame}
 
@@ -569,9 +708,52 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Monte Carlo Simulation}
+\tiny
+\begin{figure}
+\caption{Average error rates of 20 two-stage designs when $n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$. Number of simulations = 10,000}
+\includegraphics[scale=0.25]{n2same.png}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Monte Carlo Simulation}
+\tiny
+\begin{figure}
+\caption{Average error rates of 20 two-stage designs when $n_t^{\ast\ast} = n_t$. Number of simulations = 10,000}
+\includegraphics[scale=0.25]{ntsame.png}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Monte Carlo Simulation}
     \begin{itemize}
-        \item Item
+        \item Average of Average error rates
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+\section{Discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Discussion}
+    \begin{itemize}
+        \item Calculation of p-values is hard
+        \item Could calculate ignoring sample path - may have a different decision %% and what determines significance is unclear
+        \item Why can't we just wait for stage I sample size?
+        \item Why do we want to keep the original total sample size the same?
+          \begin{itemize}
+            \item Resources
+            \item Simulation results
+            \item Can result in a one stage design if don't
+          \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -579,9 +761,11 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Big picture results}
     \begin{itemize}
-        \item Item
+        \item Chang \textit{et al.} and OK differ when extreme deviations
+        \item OK and Likelihood most similar, especially over-accrual
+        \item $s_1$ usually within a difference of 1
     \end{itemize}
 \end{frame}
 
@@ -589,9 +773,13 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Recommending a design}
     \begin{itemize}
-        \item Item
+        \item Depends on statistical approach
+        \item Do you want to abandon hypothesis testing?
+        \item ``Hypothesis testing procedures do not place any interpretation on the numerical value of the LR. The extremeness of an obsevation is measured, not by the magnitude of the LR, but by the probability of observing a likelihood ratio that large or larger. It's the tail area, not the likelihood ratio, that is meaningful quantity in hypothesis testing," Blume, 2002
+        \item If yes, Likelihood design
+        \item If no, OK design %% penalizes for deviation
     \end{itemize}
 \end{frame}
 
@@ -599,9 +787,12 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Advantages of Likelihood design}
     \begin{itemize}
-        \item Item
+        \item Recall that we restricted the Likelihood design
+        \item Add cohorts
+        \item Inference is more straightforward %% would be complicated if we wanted to calculate a pvalue
+        \item Generalizable
     \end{itemize}
 \end{frame}
 
@@ -609,99 +800,13 @@ s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Concluding Thoughts}
     \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
+        \item OK design and Likelihood are highly competative when PET above 50\%
+        \item One may be more favorable over another depending on hypotheses
+        \item Attained designs able to accomodate shifts in stage II if needed
+        \item Concern is for allowance to deviate
+        \item May want to use more conservative approach
     \end{itemize}
 \end{frame}
 

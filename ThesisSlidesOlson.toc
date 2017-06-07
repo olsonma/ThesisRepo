@@ -4,4 +4,6 @@
 \beamer@sectionintoc {2}{Motivation}{6}{0}{2}
 \beamer@sectionintoc {3}{Deviation from Planned Sample Sizes in Second Stage}{8}{0}{3}
 \beamer@sectionintoc {4}{Deviation from planned sample sizes in first stage}{13}{0}{4}
-\beamer@sectionintoc {5}{Comparison of Methods}{23}{0}{5}
+\beamer@sectionintoc {5}{Example}{24}{0}{5}
+\beamer@sectionintoc {6}{Comparison of Methods}{26}{0}{6}
+\beamer@sectionintoc {7}{Discussion}{35}{0}{7}
