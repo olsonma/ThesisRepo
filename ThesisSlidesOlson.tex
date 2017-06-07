@@ -387,7 +387,7 @@ $\lambda$ is the Lagrange multiplier.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Chang et al
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%\subsection{Chang \textit{et al.}}
 %% prespecify new design 
 %% recalculate p-values
 %% recall tht we are focused on new designs to make a decision, not p-values
@@ -423,7 +423,9 @@ $\lambda$ is the Lagrange multiplier.
 \begin{frame}
 \frametitle{Olson and Koyama}
     \begin{itemize}
-        \item 
+        \item Select $s_1$ s.t. $\mbox{PET}_0^{\ast\ast} \approx \mbox{PET}_0$ 
+        \item Conservative
+        \item Could have done $\mbox{PET}_0^{\ast\ast} \leq \mbox{PET}_0$ 
     \end{itemize}
 \end{frame}
 
@@ -431,9 +433,23 @@ $\lambda$ is the Lagrange multiplier.
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Background: Likelihood}
     \begin{itemize}
-        \item Item
+        \item Law of likelihood: "If $H_1 \Rightarrow P(X=x) = P_1(X)$, $H_2 \Rightarrow P(X=x)=P_2(X)$, then the observation X=x is evidence supporting $H_1$ over $H_2$ iff $P_1(X) > P_2(X)$. Likelihood ratio measures strength of evidence. 
+        \item Likelihood function: 
+\begin{equation}
+\begin{aligned}
+\mbox{L}_n(p) &= P(X \vert p, n) \\
+&= {n \choose x} p^x (1-p)^{n-x} \\
+& \propto p^x (1-p)^{n-x}
+\end{aligned}
+\end{equation}
+      \item Likelihood ratio:
+\begin{equation}
+\begin{aligned}
+\mbox{LR}_n & = \frac{\mbox{L}_n(p_1)}{\mbox{L}_n(p_2)}  \\
+\end{aligned}
+\end{equation}
     \end{itemize}
 \end{frame}
 
@@ -441,9 +457,23 @@ $\lambda$ is the Lagrange multiplier.
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Example: Likelihood}
+\vspace{-2cm}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/like_curve-1} 
+
+\end{knitrout}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Likelihood}
     \begin{itemize}
-        \item Item
+        \item Can calculate probability of observing weak evidence, strong evidence, misleading evidence % explain what misleading evidence is
+        \item Universal bound of misleading evidence is $\leq 1/k$
     \end{itemize}
 \end{frame}
 
@@ -451,49 +481,67 @@ $\lambda$ is the Lagrange multiplier.
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Ayers and Blume}
     \begin{itemize}
-        \item Item
+        \item Likelihood two-stage design
+        \item Enroll $n_1$, 
+        \begin{itemize}
+           \item $1/k < LR_{n_1}$ < k $\rightarrow$ second stage
+           \item $LR_{n_1} < 1/k$ $\rightarrow$ stop for futility
+           \item $LR_{n_1} > k$ $\rightarrow$ stop for efficacy
+        \end{itemize}
+        \item Enroll $n_2$, $LR_{n_t}=LR_{n_1}LR_{n_2}$
+        \begin{itemize}
+           \item $1/k < LR_{n_1}$ < k $\rightarrow$ conclude weak
+           \item $LR_{n_1} < 1/k$ $\rightarrow$ conclude futility
+           \item $LR_{n_1} > k$ $\rightarrow$ conclude efficacy
+        \end{itemize}
     \end{itemize}
+    %% can add cohorts because not restricted by error rates or complication of p-values. can look at the data as much as we want. 
+    %% what the data say, so flexibility for unplanned sample sizes
+    %% strength of evidence is unaffected by number of looks at the data
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Ayers and Blume}
     \begin{itemize}
-        \item Item
+        \item Emulate conventional two-stage designs %% so that means, one look, two stages, using critical values for decision making, two evidential zones
+        \item Notation: $k_{a_1}, k_{a_t}, k_{b_1}, k_{b_t}$
+        \item Start with conventional two-stage design, set $k_{b_1}, k_{b_t} = \infty$, redefine $k_{a_1}, k_{a_t}$
     \end{itemize}
+\begin{equation}
+\begin{aligned}
+s_1 &= \frac{log(k_{a_1}) - n_1^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{log\left(\frac{p_1(1-p_0)}{p_0(1-p_1)}\right)} \\
+s_t &= \frac{log(k_{a_t}) - n_t^{\ast\ast} log\left(\frac{1-p_1}{1-p_0}\right)}{log\left(\frac{p_1(1-p_0)}{p_0(1-p_1)}\right)}
+\end{aligned}
+\end{equation}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Ayers and Blume}
     \begin{itemize}
-        \item Item
+        \item Can recalculate probability of weak, strong, and misleading evidence, $\mbox{PET}_0, \mbox{EN}_0$  under attained
+        \item Minimizes average of error rates
+        \item Type I error rate often below nominal rates %% but sometimes above with increase in power, as data accumulates, type I error rate driven to 0
     \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
+%%%%%%% Comparison of Methods
+\section{Comparison of Methods}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Title}
+\frametitle{Comparison of methods}
     \begin{itemize}
-        \item Item
-    \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Title}
-    \begin{itemize}
-        \item Item
+        \item Don't consider added cohorts
+        \item Original total sample size ($n_t^{\ast\ast}=n_t, n_2^{\ast\ast}=n_t-n_1^{\ast\ast}$)
+        \item Original second stage sample size ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$)
     \end{itemize}
 \end{frame}
 
