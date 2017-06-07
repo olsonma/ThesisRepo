@@ -598,7 +598,7 @@ They then find a new stage one critical value, $s_1$, using this probability spe
 Chang \textit{et al.}'s design can be used for any $\alpha$-level and is flexible, close to the original design, and preserves the desired traditional frequentist type I error rate. \\
 %Wu \textit{et al} \cite{Wu} also proposed an adjustment to Simon’s design based on attained sample sizes in both the first and second stages. Because Wu's methods don't work very well \textbf{wording}, we won't consider their method for the remainder of this paper. 
 \\
-\indent We modify Chang \textit{et al.}'s method because we prefer to be conservative when straying from a desired Simon's or Admissible design. We modify the Chang \textit{et al.}'s approach by selecting $s_1$ such that the new design's probability of early termination under the null ($\mbox{PET}_0^{\ast\ast}$) is closest to the planned PET under the null ($\mbox{PET}_0$). This is conservative because when the attained stage I sample size deviates further from the planned sample size, the $\mbox{PET}_0^{\ast\ast}$ in Chang \textit{et al.}'s designs can get further from the original design's. By selecting the closest integer such that the $\mbox{PET}_0^{\ast\ast}$ is closest to planned, the probability of early termination is greater under large deviations. We select $s_1$ such that 
+\indent We modify Chang \textit{et al.}'s method because we prefer to be conservative when straying from a desired Simon's or Admissible design. We modify the Chang \textit{et al.}'s approach by selecting $s_1$ such that the new design's probability of early termination under the null, ($\mbox{PET}_0^{\ast\ast}$), is closest to the planned PET under the null ($\mbox{PET}_0$). This is conservative because when the attained stage I sample size deviates further from the planned sample size, the $\mbox{PET}_0^{\ast\ast}$ in Chang \textit{et al.}'s designs can get further from the original design's. By selecting the closest integer such that the $\mbox{PET}_0^{\ast\ast}$ is closest to planned, the probability of early termination is greater under large deviations. We select $s_1$ such that 
 
 \begin{equation}
 \begin{aligned}
@@ -824,7 +824,7 @@ and the expected sample size under the null hypothesis is
 %% example
 %%%%%%%%%%%%%%%%%%%
 \chapter{Example}
-In order to compare these new methods for deviation of sample size in the first stage, we first introduce an example. An actual phase II cancer clinical trial was designed using a Likelihood two-stage design. In order to follow the convention, the trial would only stop early for futility. The planned design parameters are $n_1 = 17$, $n_t = 41$, $r_1 = 7$, $r_t = 21$, $p_0 \leq 0.4$, and $p_1 \geq 0.6$. This study design has an expected sample size of 25.6 and a probability of early termination of 64\% under the null hypothesis. This is considered an Admissible design and meets the nominal type I error rate, $\alpha = 0.05$, and type II error rate, $\beta = 0.2$ where the actual type I error rate is 0.047. The authors provide alternative interim stopping rules for sample sizes that deviate from the planned design using the Likelihood approach as shown in Table 5.1. These new designs have a probability of early termination under the null that exceed 50\% and preserve type I and type II error rates. Using the original likelihood design, but varying $n_1$, one can use Chang \textit{et al.}'s method and Olson and Koyama's method to obtain similar results. The total sample size is equal to the planned total sample size, $n_t^{\ast\ast}=n_t$ in this case. We compare attained methods' characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. 
+In order to compare these new methods for deviation of sample size in the first stage, we first introduce an example. An actual phase II cancer clinical trial was designed using a Likelihood two-stage design. In order to follow the convention, the trial would only stop early for futility. The planned design parameters are $n_1 = 17$, $n_t = 41$, $r_1 = 7$, $r_t = 21$, $p_0 \leq 0.4$, and $p_1 \geq 0.6$. This study design has an expected sample size of 25.6 and a probability of early termination of 64\% under the null hypothesis. This is considered an Admissible design and meets the nominal type I error rate, $\alpha = 0.05$, and type II error rate, $\beta = 0.2$ where the actual type I error rate is 0.047. The authors provide alternative interim stopping rules for sample sizes that deviate from the planned design using the Likelihood approach as shown in Table 5.1. These new designs have a probability of early termination under the null that exceed 50\% and preserve type I and type II error rates. Using the original likelihood design, but varying $n_1$, one can use Chang \textit{et al.}'s method and Olson and Koyama's method to obtain similar results. The total sample size is equal to the planned total sample size, $n_t^{\ast\ast}=n_t$ in this case. We compare attained methods' characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. Recall that $s_1$ is the new stage I critical value, $n_1^{\ast\ast}$ is the attained stage I sample size, and $\mbox{PET}_0^{\ast\ast}$ is the probability of termination under the null hypothesis for the attained design. Let $\mbox{EN}_0^{\ast\ast}$ be the expected sample size under the null hypothesis for the attained design.
 
 
 <<echo=FALSE>>=
@@ -849,7 +849,7 @@ table2 <- table2[Cs(Design, r1star, n1star, pet0star, EN0star)]
 \hspace*{-3.5cm}
 \begin{tabular}{|L|R|R|R|R|L|}
 \hline
-Design           & $r_1$ & $n_1$ & $\mbox{PET}_0$ & $\mbox{EN}_0$ & Likelihood ratio favoring $H_0$ that corresponds to Simon's futility stopping rule \\ \hline
+Design           & $s_1$ & $n_1^{\ast\ast}$ & $\mbox{PET}_0^{\ast\ast}$ & $\mbox{EN}_0^{\ast\ast}$ & Likelihood ratio favoring $H_0$ that corresponds to Simon's futility stopping rule \\ \hline
 Likelihood       & 6     & 16    & 53\%           & 27.8          & 1/5.062                                                                            \\ \hline
 Chang \textit{et al.}           & 6     & 16    & 53\%           & 27.8          &                                                                                    \\ \hline
 Olson and Koyama & 7     & 16    & 72\%           & 23.1          &                                                                                    \\ \hline
@@ -1015,8 +1015,8 @@ plott1 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom
 
 
 \indent We present results that are limited to our primary problem of interest in Tables 6.1 through 6.6. In each design table, the planned design is specified, and the first stage sample size varies from planned, while maintaining the original total sample size. We compare attained methods' characteristics, in particular, type I error, power, probability of early termination under the null hypothesis, and expected sample size under the null hypothesis. \\
-\indent Table 6.1 displays a planned Admissible design with varying first stage sample size $\pm$ 10. We notice that under low $p_0$ and $p_1$ (0.1 and 0.25, respectively), $s_1$ will vary between each method. Though, power and type I error are likely to be similar between and within each attained method, and expected sample size is also consistent. The Likelihood and Chang \textit{et al.} method are at risk of low probability of early termination, especially when the sample size is lower than planned. Table 6.2 shows an Optimal design when $p_0$ is 0.5. Between attained designs, particularly when there is over-accrual, $s_1$ is inconsistent. We particularly see a large difference when $n_1^{\ast\ast} = n_1 + 10$ or more between the Chang \textit{et al.} design and the other two.  The Likelihood design is anticonservative in type I error and conservative in type II error here, displaying a $\alpha^{\ast\ast} > \alpha$ and $1-\beta^{\ast\ast} > 1-\beta$. The Chang \textit{et al.} and OK designs both have a conservative type I error for all sample size deviations, though Chang \textit{et al.} and Likelihood designs maintain higher power than Olson and Koyama's. Probability of early termination is closest to the original under Olson and Koyama's and thus have a much lower expected sample size under the null hypothesis, with as much as a difference of approximately 23.\\
-\indent Table 6.3 displays results from a planned Minimax design when $p_0$ is larger than 0.5. Here, the Likelihood design has desirable properties where type I error and power are consistently close to the planned design for all deviations in sample size. Though, when the sample size is severely under-accrued, the probability of early termination nearly halves. The expected sample size is consistent between designs. The Chang \textit{et al.} and OK designs stray from the planned nominal type I and type II error rates when there is over-accrual. The $\mbox{PET}_0$ for the Chang \textit{et al.} design varies significantly between deviations. \\
+\indent Table 6.1 displays a planned Admissible design with varying first stage sample size $\pm$ 10. We notice that under low $p_0$ and $p_1$ (0.1 and 0.25, respectively), $s_1$ will vary between each method. Though, power and type I error are likely to be similar between and within each attained method, and expected sample size is also consistent. The Likelihood and Chang \textit{et al.} method are more at risk of low probability of early termination, especially when the sample size is lower than planned. Table 6.2 shows an Optimal design when $p_0$ is 0.5. Between attained designs, particularly when there is under-accrual, $s_1$ is moderately inconsistent. We particularly see a disagreement in designs when $n_1^{\ast\ast} = n_1 - 10$ or more.  The Likelihood design is anticonservative in type I error and conservative in type II error in some cases, displaying a $\alpha^{\ast\ast} > \alpha$ and $1-\beta^{\ast\ast} > 1-\beta$. The Chang \textit{et al.} and OK designs both have a conservative type I error for all sample size deviations, though Chang \textit{et al.} and Likelihood designs often maintain higher power than Olson and Koyama's. Probability of early termination is closest to the original under Olson and Koyama's and thus have a much lower expected sample size under the null hypothesis, with as much as a difference of approximately 23.\\
+\indent Table 6.3 displays results from a planned Minimax design when $p_0$ is larger than 0.5. Here, the Likelihood design has desirable properties where type I error and power are consistently close to the planned design for all deviations in sample size. Though, when the sample size is severely under-accrued, the probability of early termination nearly halves. The expected sample size is consistent between designs. The OK designs stray from the planned nominal type I and type II error rates when there is over-accrual. When there is moderate to large over-accrual, the error rates in the Chang \textit{et al.} designs can be much lower than the planned error rates and the $\mbox{PET}^{\ast\ast}_0$ can reach above 90\%. \\
 \indent Table 6.4 through 6.6 display results for planned designs when $\alpha = \beta = 0.1$. Table 6.4 displays attained design characteristics for deviations in sample size when the planned first stage sample size is low. In all three attained designs, we see that when the attained sample size is lower than planned, there is a significant drop in power and a moderate to severe drop in type I error. The probability of early termination almost occurs with probability 1 when the attained sample size is $n_1^{\ast\ast} = 1$. In practice, though, accrual lower than planned here is not practical. When there is over-accrual, attained design characteristics are not concerning. \\
 \indent Table 6.5 illustrates the similarity between attained designs when $p_0$ = 0.3. All designs and their deviations are relatively consistent in type I error, power, and $\mbox{PET}_0$. Though, the Olson and Koyama's design is most consistent in the probability of early termination with the planned design, but we see a conservative deviation in type I error for large over-accrual. Table 6.6 displays similar results as Table 6.3. \\
 
@@ -1029,7 +1029,7 @@ plott1 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geom
 %% Table 1
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
-\caption{Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.1, $p_1$ = 0.25, $\alpha$ = 0.05, $\beta$ = 0.20)}
+\caption{Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.10, $p_1$ = 0.25, $\alpha$ = 0.05, $\beta$ = 0.20)}
 \small
   \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
@@ -1069,7 +1069,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 %% Table 2
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
-\caption{Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.5, $p_1$ = 0.65, $\alpha$ = 0.05, $\beta$ = 0.2)}
+\caption{Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.50, $p_1$ = 0.65, $\alpha$ = 0.05, $\beta$ = 0.20)}
 \small
   \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
@@ -1111,7 +1111,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 %% Table 3
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
-\caption{Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.9, $\alpha$ = 0.05, $\beta$ = 0.2)}
+\caption{Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.90, $\alpha$ = 0.05, $\beta$ = 0.20)}
 \small
   \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
@@ -1152,7 +1152,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 %% Table 5
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
-\caption{Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.05, $p_1$ = 0.25, $\alpha$ = 0.1, $\beta$ = 0.1)}
+\caption{Attained design characteristics from deviation of Simon's Optimal II stage design ($p_0$ = 0.05, $p_1$ = 0.20, $\alpha$ = 0.10, $\beta$ = 0.10)}
 \small
   \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
@@ -1191,7 +1191,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 %% Table 4
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
-\caption{Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.3, $p_1$ = 0.45, $\alpha$ = 0.1, $\beta$ = 0.1)}
+\caption{Attained design characteristics from deviation of Admissible II stage design ($p_0$ = 0.30, $p_1$ = 0.45, $\alpha$ = 0.10, $\beta$ = 0.10)}
 \small
   \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
@@ -1241,7 +1241,7 @@ $p_0$ & $p_1$ & $n_1$ & $n$ & $r_1$ & $r_t$ & $\mbox{PET}_0$ &$\mbox{EN}_0$ & $n
 %% Table 6
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
-\caption{Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.9, $\alpha$ = 0.1, $\beta$ = 0.1)}
+\caption{Attained design characteristics from deviation of Simon's Minimax II stage design ($p_0$ = 0.75, $p_1$ = 0.90, $\alpha$ = 0.10, $\beta$ = 0.10)}
 \small
   \resizebox{\columnwidth}{!}{%
 <<echo=FALSE, results = "asis">>=
@@ -1426,7 +1426,7 @@ plott12 <- ggplot(data = df, aes(x=n.diff,y=averagetype1, color = design)) + geo
 % \end{figure}
 \begin{landscape}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$) Number of Simulations = \Sexpr{n.sim}.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Two-Stage Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$). Number of Simulations = \Sexpr{n.sim}.}
 \centering
 <<plot1, echo=FALSE, fig.width=9, fig.height=5>>=
 library(gridExtra)
@@ -1438,7 +1438,7 @@ grid.arrange(plott1, plotpow, nrow =1)
 
 \begin{landscape}
 \begin{figure}[]
-\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
+\caption{Monte Carlo Simulation of Average Type I Error Rates and Power of 20 Two-Stage Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$). Number of Simulations = \Sexpr{n.sim}.}
 <<plot2, echo=FALSE, fig.width=9, fig.height=5>>=
 grid.arrange(plott12, plotpow2, nrow=1)
 
@@ -1449,7 +1449,7 @@ grid.arrange(plott12, plotpow2, nrow=1)
 \begin{figure}[]
 \caption{Monte Carlo Simulation of the Average of the Average Type I and Type II Error Rates of 20 Simon-like Designs when Stage I Sample Size Deviates from Planned for Attained Designs ($n_t^{\ast\ast} = n_t$) Number of Simulations = \Sexpr{n.sim}.}
 <<echo=FALSE>>=
-ggplot(data = df, aes(x=n.diff,y=averageerror, color = design)) + geom_point() + ylab("Average of the Average Type I and Type II Error") + 
+ggplot(data = df, aes(x=n.diff,y=averageerror, color = design)) + geom_point() + ylab("Ave. of Ave. Type I and Type II Error") + 
   xlab("Deviation from planned sample size") + scale_colour_manual(name="Design", 
                                                                    values = c("Chang Adaptation" = "red",
                                                                                                     "Chang"     = "dodgerblue3",

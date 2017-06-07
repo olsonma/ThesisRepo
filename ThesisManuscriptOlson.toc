@@ -29,11 +29,11 @@
 \contentsline {chapter}{\hbox to\@tempdima {5\hfil }Example}{19}{chapter.5}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{21}{chapter.6}
+\contentsline {chapter}{\hbox to\@tempdima {6\hfil }Results}{22}{chapter.6}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{\hbox to\@tempdima {7\hfil }Discussion and Conclusion}{30}{chapter.7}
+\contentsline {chapter}{\hbox to\@tempdima {7\hfil }Discussion and Conclusion}{32}{chapter.7}
 \vspace {\li }
 \addvspace {\li }
-\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{34}{chapter.7}
+\contentsline {chapter}{ {REFERENCES\vspace {10mm}} }{36}{chapter.7}
 \contentsfinish 
