@@ -1,9 +1,9 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Background and Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Motivation}{6}{0}{2}
-\beamer@sectionintoc {3}{Deviation from Planned Sample Sizes in Second Stage}{8}{0}{3}
-\beamer@sectionintoc {4}{Deviation from planned sample sizes in first stage}{13}{0}{4}
-\beamer@sectionintoc {5}{Example}{24}{0}{5}
-\beamer@sectionintoc {6}{Comparison of Methods}{26}{0}{6}
-\beamer@sectionintoc {7}{Discussion}{35}{0}{7}
+\beamer@sectionintoc {2}{Motivation}{7}{0}{2}
+\beamer@sectionintoc {3}{Deviation from Planned Sample Sizes in Second Stage}{9}{0}{3}
+\beamer@sectionintoc {4}{Deviation from Planned Sample Sizes in First Stage}{14}{0}{4}
+\beamer@sectionintoc {5}{Example}{25}{0}{5}
+\beamer@sectionintoc {6}{Comparison of Methods}{27}{0}{6}
+\beamer@sectionintoc {7}{Discussion}{36}{0}{7}

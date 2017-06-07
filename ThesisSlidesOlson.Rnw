@@ -147,7 +147,13 @@
               \item Similar maximum sample sizes as Minimax
               \item Similar expected sample size under $H_0$ as Optimal
             \end{itemize}
-        \item Suppose $H_0: p_0 \leq 0.25$, $H_1: p_1 > 0.4$, $\alpha = 0.05$, $\beta = 0.2$
+        \item Language: PET and EN
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two-Stage Designs}
+ Suppose $H_0: p_0 \leq 0.25$, $H_1: p_1 > 0.4$, $\alpha = 0.05$, $\beta = 0.2$
 
 \begin{table}[]
 \centering
@@ -158,9 +164,7 @@ Minimax    &  60     &  51     &   16    &   20    &    52          &      0.886
 Admissible &  63     &   25    &   6    &   21    &     41.7     &     0.561          
 \end{tabular}
 \end{table}
-    \end{itemize}
 \end{frame}
-
 
 %----------------------------------------------------------------------------------------------
 % --------------- Motivation ----------------------------------------------------------------
@@ -200,7 +204,6 @@ Admissible &  63     &   25    &   6    &   21    &     41.7     &     0.561
         \item How do we do this if our attained sample size is different than planned?
         \item P-value calculations are complicated - we don't consider these solutions
         \item Consider prespecified ``redesigns" - recalculating critical values
-        \item Primary focus on deviation in first stage
         %% so there's a lot of literature about what to do if deviation in second stage
     \end{itemize}
 \end{frame}
@@ -296,13 +299,13 @@ $\lambda$ is the Lagrange multiplier.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Deviation from planned sample sizes in first stage}
+\section{Deviation from Planned Sample Sizes in First Stage}
 %%%%%%% Devoatopm from planned sample sizes in first stage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Accreument can be unexpected, some cases require early interim
 \begin{frame}
-\frametitle{Deviation from planned sample sizes in first stage}
+\frametitle{Deviation from Planned Sample Sizes in First Stage}
     \begin{itemize}
         \item SWOG: 
         \begin{itemize}
@@ -324,7 +327,7 @@ $\lambda$ is the Lagrange multiplier.
 %%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Deviation from planned sample sizes in first stage}
+\frametitle{Deviation from Planned Sample Sizes in First Stage}
     \begin{itemize}
       \item Chen and Ng, StatMed, 1998
       \item Consider range of sample sizes
@@ -361,7 +364,8 @@ $\lambda$ is the Lagrange multiplier.
 \end{aligned}
 \end{equation*}
   \begin{itemize}
-      \item Integer s.t. type II error probability given $s_1, n_1^{\ast\ast}$ is closest to $\beta(n_1^{\ast\ast})$
+      \item $\beta_1$ is planned stage I type II error probability
+      \item Integer s.t. type II error probability in first stage given $s_1, n_1^{\ast\ast}$ is closest to $\beta(n_1^{\ast\ast})$
       \item Choose $s_t$ s.t. type I error $\leq \alpha$
   \end{itemize}
 %% where beta1 is the type II error probability in first stage
@@ -474,15 +478,15 @@ bin.lik(17, 50,lolim=0,hilim=1, like.only=F, plotcol='blue', h0 = .3, h1  = .45)
         \item Likelihood two-stage design
         \item Enroll $n_1$, 
         \begin{itemize}
-           \item $1/k < LR_{n_1}$ < k $\rightarrow$ second stage
+           \item $1/k < LR_{n_1} < k \rightarrow$ second stage
            \item $LR_{n_1} < 1/k$ $\rightarrow$ stop for futility
            \item $LR_{n_1} > k$ $\rightarrow$ stop for efficacy
         \end{itemize}
         \item Enroll $n_2$, $LR_{n_t}=LR_{n_1}LR_{n_2}$
         \begin{itemize}
-           \item $1/k < LR_{n_1}$ < k $\rightarrow$ conclude weak
-           \item $LR_{n_1} < 1/k$ $\rightarrow$ conclude futility
-           \item $LR_{n_1} > k$ $\rightarrow$ conclude efficacy
+           \item $1/k < LR_{n_t} < k \rightarrow$ conclude weak
+           \item $LR_{n_t} < 1/k$ $\rightarrow$ conclude futility
+           \item $LR_{n_t} > k$ $\rightarrow$ conclude efficacy
         \end{itemize}
     \end{itemize}
     %% can add cohorts because not restricted by error rates or complication of p-values. can look at the data as much as we want. 
