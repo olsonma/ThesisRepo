@@ -695,7 +695,7 @@ Furthermore, the probability of observing weak evidence is
 \gamma_i = P(k_a \leq LR_n \leq k_b | H_i), k_a \leq 1 \leq k_b
 \end{aligned}
 \end{equation}
-$i$=0 for null hypothesis and $i$=1 for alternative hypothesis, where $k_a$ and $k_b$ are benchmarks for description of evidence. The probability of observing strong evidence is 
+$i$=0 for null hypothesis and $i$=1 for alternative hypothesis, where $k_a$ and $k_b$ are lower and upper benchmarks, respectively, for description of evidence. Usually, $k_b = k$ and $k_a = 1/k$. The probability of observing strong evidence is 
 \begin{equation}
 \begin{aligned}
 \tau_i = \left\{
@@ -775,7 +775,7 @@ and the expected sample size under the null hypothesis is
 \end{equation}
 
  
-\indent Ayers and Blume \cite{Ayers} show that the Likelihood designs preserves type I error rate that is bounded by $\frac{1}{k_{b_t}}$ and is equal to $O_{p_i}\left({n}^{-1/2}\right)$. Under the Likelihood design, error rates tend to be less of an issue because the average of the error rates, $\frac{\alpha + \beta}{2}$, is minimized with the likelihood approach \cite{Ayers}. For the purpose of comparing methods, we do not consider the cases in which cohorts can be added after the second stage. We also only consider Likelihood redesign methods to emulate traditional frequentist designs -- to calculate new critical values -- and do not consider pure likelihood method two-stage design as formerly introduced. \\
+\indent Ayers and Blume \cite{Ayers} show that the Likelihood designs often preserve type I error rates, although, some cases exceed nominal rates with an increase in power. Under the Likelihood design, error rates tend to be less of an issue because the average of the error rates, $\frac{\alpha + \beta}{2}$, is minimized with the likelihood approach \cite{Ayers}. For the purpose of comparing methods, we do not consider the cases in which cohorts can be added after the second stage. We also only consider Likelihood redesign methods to emulate traditional frequentist designs -- to calculate new critical values -- and do not consider pure likelihood method two-stage design as formerly introduced. \\
 \indent We consider new approaches to unplanned sample sizes in the first stage in both the traditional frequentist and likelihood settings. In the interest of prespecifying designs, we focus on deviation from the planned sample size only in the first stage because it is impractical to prespecify limitless combinations of unplanned sample sizes in both the first and second. Because it is desired to stay as closely to the original design as possible for financial and resource planning reasons, we investigate this method while maintaining the original second stage sample size ($n_2$) or original total sample size ($n_t$). Then, the two situations we consider are 1. $n_2^{\ast\ast} = n_t + n_1^{\ast\ast}$ and 2. $n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$. Lastly, we refer to Chang \textit{et al.}, OK, and Likelihood designs as ``attained designs".
 
 % \newline
