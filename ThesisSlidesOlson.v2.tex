@@ -1,0 +1,852 @@
+\documentclass{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Montpellier}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+%\usepackage{Sweave}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {/Users/mollyolson/Desktop/} }
+\usepackage{listings}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{marvosym}
+
+\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
+
+\title[]{A Comparison of Approaches for Unplanned Sample Size Changes in Phase II Clinical Trials}
+\author{Molly Olson \\ \small molly.a.olson@vanderbilt.edu \\ Advisor: Tatsuki Koyama}
+\institute{Vanderbilt University \\ Department of Biostatistics}
+\date{June 13, 2017}
+
+  \makeatletter
+%   \setbeamertemplate{sidebar \beamer@sidebarside}%{sidebar theme}
+%   {
+%     \beamer@tempdim=\beamer@sidebarwidth%
+%     \advance\beamer@tempdim by -6pt%
+%     \insertverticalnavigation{\beamer@sidebarwidth}%
+%     \vfill
+%     \ifx\beamer@sidebarside\beamer@lefttext%
+%     \else%
+%       \usebeamercolor{normal text}%
+%       \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+%       \vskip2pt%
+%     \fi%
+%   }%
+% \makeatother
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\frame{\titlepage}
+
+
+% Uncomment these lines for an automatically generated outline.
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+% I'm going to be talking a lot about phase two trials - and in particular two stage phase II trials - 
+% and what happens when we deviate from our plans, so I'm first going to start with an 
+% introduction to two stage phase II trials to kind of orient ourselves and then we will go into the problem that we are interested in:
+% which is what happens when we deviate from these planned phase II trials. We will look into the motivation and why we should care
+% when we deviate. Then we will go into details about methods for handling deviations from planned sample sizes in second stage, and then deviations in the first stage
+% And my thesis focuses more on the latter - first stage deviations - and it will become clear in my talk why that is. Then we will walk through an 
+% example for deviation in the first stage to orient ourselves again and make things a little more concrete. Then we will talk about results of some investigation
+% of these methods and then discuss them.
+% 
+
+%----------------------------------------------------------------------------------------------
+% --------------- Introduction ----------------------------------------------------------------
+\section{Background and Introduction}
+%% \section{Motivation}
+%% \section{Deviation from Planned Sample Sizes in Second Stage}
+%% \section{Deviation from Planned Sample Sizes in First Stage}
+%% \section{Example}
+%% \section{Results}
+%% \section{Discussion}
+%----------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Phase II trials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Phase II Trials}
+    \begin{itemize}
+        \item Phase I: Evaluate safety and dose
+        \item Phase II: Evaluate initial effect to determine phase III trial
+        \item Phase III: Evaluate efficacy  
+    \end{itemize}
+    \begin{itemize}
+        \item Phase II - Two-stage with futility stop
+          \begin{itemize}
+            \item Mitigate the risk of exposure
+            \item Don't want to ``waste" resources
+          \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Two-stage Phase II Tria
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Two-stage Phase II Trial}
+ $H_0: p \leq p_0$, $H_1: p > p_0$, power set at $p_1 > p_0$ %where p is the true response probability, p0 is the highest probability of response that would indicate that the research regimen is uninteresting and p1 is the lowest probability of response that would indicate that the research regimien warrants further investigation
+    \begin{enumerate} %% we're kind of working in notation here
+        \item Stage 1:
+          \begin{itemize}
+            \item $X_1 \sim \mbox{Binomial}(n_1,p)$ = \# of successes in first stage
+          \end{itemize}
+        \item If $x_1 \leq r_1$, trial stopped for futility
+        \item Otherwise, stage 2:  
+          \begin{itemize}
+            \item $X_2 \sim \mbox{Binomial}(n_2,p)$ = \# of successes in second stage
+            \item $X_t = X_1 + X_2$
+            \item $n_t = n_1 + n_2$
+          \end{itemize}
+        \item If $x_t \leq r_t$, lack of efficacy concluded
+        \item Otherwise efficacy concluded
+    \end{enumerate}
+    \begin{itemize}
+      \item $n_1, n_t, r_1, r_t, \alpha,\beta$ are design parameters
+      \item $n_1, n_t, r_1, r_t$ are chosen so that type I error rate is less than $\alpha$ and the type II error rate is less than $\beta$.
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Types of two stage designs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% note that we don't consider stopping early for efficacy here
+\begin{frame}
+\frametitle{Types of Two-Stage Designs}
+    \begin{itemize}
+        \item Simon introduced Optimal and Minimax criteria for good designs
+          \begin{itemize}
+             \item Optimal minimizes the expected sample size under $H_0$
+             \item Minimax minimizes the maximum sample size ($n_t$)
+          \end{itemize}
+        \item Jung \textit{et al.} introduced Admissible designs
+            \begin{itemize}
+              \item Compromise between Optimal and Minimax
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two-Stage Designs}
+ Suppose $H_0: p_0 \leq 0.25$, $H_1: p_1 > 0.4$, $\alpha = 0.05$, $\beta = 0.2$
+
+\begin{table}[]
+\centering
+\begin{tabular}{l|llllll}
+Design     & $n_t$ & $n_1$ & $r_1$ & $r_t$ & $\mbox{EN}_0$    & $\mbox{PET}_0$ \\ \hline
+Optimal    & 71      &  20     &   5    &   23    &      39.5      &    0.617            \\
+Admissible &  63     &   25    &   6    &   21    &     41.7     &     0.561          \\
+Minimax    &  60     &  51     &   16    &   20    &    52.0          &      0.886          \\
+\end{tabular}
+\end{table}
+\end{frame}
+
+%----------------------------------------------------------------------------------------------
+% --------------- Motivation ----------------------------------------------------------------
+\section{Motivation}
+%----------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Deviation: The problem
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Deviation from the Design}
+    \begin{itemize}
+        \item Attain different enrollment than planned in first and/or second stage
+        \item Why would we deviate?
+          \begin{itemize}
+            \item Unanticipated recruitment speed
+            \item Unanticipated drop out rates
+            \item Delay in communication for multi-center trials
+          \end{itemize}
+        \item Nice properties go out the window
+        \item Currently, common practice is to treat attained sample size as planned
+        \item Leads to inflated type I error
+        \item Hypothesis testing (controlling type I error) is not straightforward
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%  Setting the scene
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Setting the Scene}
+    \begin{itemize}
+        \item Goal is to make a decision
+        \item How do we do this if our attained sample size is different than planned?
+        \item Consider prespecified ``redesigns" - recalculating critical values
+        %% so there's a lot of literature about what to do if deviation in second stage
+    \end{itemize}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------------
+% --------------- Deviation in second stage ----------------------------------------------------------------
+\section{Deviation from Planned Sample Sizes in Second Stage}
+%----------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%  Deviation from Planned Sample Sizes in Second Stage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Deviation from Planned Sample Sizes in Second Stage}
+    \begin{itemize}
+        \item Over-enrollment in first stage: perform interim analysis on the planned number of first stage, adjust testing procedure for attained second stage %% this is the straightforward solution and this is what we use here
+        \item Under-enrollment: just wait
+        \item Literature exists for point estimation, calculation of p-values when stage II differs (Review: Porcher \textit{et al.})
+        \item Koyama and Chen, 2008 -- calculate new stage II CV s.t. $P[X_2^\ast \geq r_t^\ast \vert X_1 = x_1] \leq P[X_2 \geq r_t \vert X_1 = x_1]$ % so, because of this, we don't focus on calculating p-values, but rather redesigns. Koyama and Chen first propose the redesign
+        \item Zeng \textit{et al}, 2015 -- calculate new stage II CV s.t. unconditional power maximized while subject to type I error constraint
+        \item Use normal approximation 
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Deviation from Planned Sample Sizes in First Stage}
+%%%%%%% Devoatopm from planned sample sizes in first stage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Accreument can be unexpected, some cases require early interim
+\begin{frame}
+\frametitle{Deviation from Planned Sample Sizes in First Stage}
+    \begin{itemize}
+        \item Older methods exist (1990s)
+        \item Green \& Dahlberg and Chen \& Ng of note
+        \item Limitation: Unclear how to generalize
+        \item Limitation: Lacks theoretical justification
+        \item Newer methods introduced
+    \end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Chang et al
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Chang \textit{et al.}}
+%% prespecify new design 
+%% recalculate p-values
+%% recall tht we are focused on new designs to make a decision, not p-values
+\begin{frame}
+\frametitle{Chang \textit{et al.}}
+    \begin{itemize}
+        \item Chang \textit{et al.} Biometrics \& Biostatistics, 2015
+        \item Recall: $n_1, n_t, r_1, r_t, p_0, p_1, \alpha, \beta$
+        \item Notation: $n_1^{\ast\ast}, n_2^{\ast\ast}$ - attained sample sizes
+        \item Notation: $s_1$, $s_t$ - new critical values
+        \item First define $\beta$-spending function
+    \end{itemize}
+\begin{equation*}
+\begin{aligned}
+\beta(n_1^{\ast\ast}) = \left\{
+        \begin{array}{ll}
+            \beta_1 n_1^{\ast\ast}/n_1 & \quad \text{if } n_1^{\ast\ast} \leq n_1 \\
+            \beta_1 + (\beta - \beta_1)(n_1^{\ast\ast} - n_1)/n_2 & \quad \text{if } n_1^{\ast\ast} > n_1
+        \end{array}
+    \right.
+\end{aligned}
+\end{equation*}
+  \begin{itemize}
+      \item $\beta_1$ is planned stage I type II error probability
+      \item Choose $s_1$ s.t. P[type II error $\vert n_1^{\ast\ast}$] $\approx \beta(n_1^{\ast\ast})$
+      \item Choose $s_t$ s.t. type I error $\leq \alpha$
+  \end{itemize}
+%% where beta1 is the type II error probability in first stage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Olson and Koyama}
+    \begin{itemize}
+        \item Probability of early termination (PET) -- probability that trial stops in first stage, usually under $H_0$
+        \item Select $s_1$ s.t. $\mbox{PET}_0^{\ast\ast} \approx \mbox{PET}_0$ 
+        \item Conservative
+        \item Could have done $\mbox{PET}_0^{\ast\ast} \geq \mbox{PET}_0$, but similar when small deviations
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Background: Likelihood}
+    \begin{itemize}
+        \item Law of likelihood: ``If $H_1 \Rightarrow P(X=x) = P_1(X)$, $H_2 \Rightarrow P(X=x)=P_2(X)$, then the observation X=x is evidence supporting $H_1$ over $H_2$ iff $P_1(X) > P_2(X)$. Likelihood ratio measures strength of evidence." 
+        \item Likelihood function: 
+\begin{equation}
+\begin{aligned}
+\mbox{L}_n(p) &= P(X \vert p, n) \\
+&= {n \choose x} p^x (1-p)^{n-x} \\
+& \propto p^x (1-p)^{n-x}
+\end{aligned}
+\end{equation}
+      \item Likelihood ratio:
+\begin{equation}
+\begin{aligned}
+\mbox{LR}_n & = \frac{\mbox{L}_n(p_1)}{\mbox{L}_n(p_2)}  \\
+\end{aligned}
+\end{equation}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Likelihood}
+    \begin{itemize}
+        \item $k$ is a benchmark for strength of evidence
+        \item Can calculate probability of observing weak evidence, strong evidence, misleading evidence % explain what misleading evidence is
+        \item Universal bound of misleading evidence is $\leq 1/k$
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Ayers and Blume}
+    \begin{itemize}
+        \item Likelihood two-stage design
+        \item Enroll $n_1$ 
+        \begin{itemize}
+           \item $1/k < LR_{n_1} < k \rightarrow$ second stage
+           \item $LR_{n_1} < 1/k$ $\rightarrow$ stop, conclude futility
+           \item $LR_{n_1} > k$ $\rightarrow$ stop, conclude efficacy
+        \end{itemize}
+        \item Enroll $n_2$, $LR_{n_t}=LR_{n_1}LR_{n_2}$
+        \begin{itemize}
+           \item $1/k < LR_{n_t} < k \rightarrow$ conclude weak
+           \item $LR_{n_t} < 1/k$ $\rightarrow$ conclude futility
+           \item $LR_{n_t} > k$ $\rightarrow$ conclude efficacy
+        \end{itemize}
+        \item Can add cohorts, easily generalized
+        \item Likelihood unaffected by number of looks at data
+    \end{itemize}
+    %% can add cohorts because not restricted by error rates or complication of p-values. can look at the data as much as we want. 
+    %% what the data say, so flexibility for unplanned sample sizes
+    %% strength of evidence is unaffected by number of looks at the data
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Ayers and Blume}
+    \begin{itemize}
+        \item Emulate conventional two-stage designs
+          \begin{itemize}
+            \item One look (interim)
+            \item Two stages
+            \item Two evidential zones
+            \item Use of critical values for decision making
+          \end{itemize}%% so that means, one look, two stages, using critical values for decision making, two evidential zones
+        \item Start with conventional two-stage design
+        \item Conventional $\rightarrow$ Likelihood by redefining lower LR bound, set upper LR bound $= \infty$
+        \item Likelihood $\rightarrow$ conventional by translating LR bounds to critical values
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Ayers and Blume}
+    \begin{itemize}
+        \item Can recalculate probability of weak, strong, and misleading evidence, $\mbox{PET}_0, \mbox{EN}_0$  under attained
+        \item Minimizes average of error rates
+        \item Type I error rate often below nominal rates %% but sometimes above with increase in power, as data accumulates, type I error rate driven to 0
+        \item Inference more straightforward because no concern for error rates or p-values
+    \end{itemize}
+\end{frame}
+
+\section{Comparison of Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Comparison of Methods
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Comparison of Attained Methods}
+    \begin{itemize}
+        \item Compare methods of Chang \textit{et al.}, OK, Likelihood
+        \item Start with conventional two-stage design
+        \item Vary stage I sample size up to $\pm 10$
+        \item Compare each method using type I and type II error rates, PET, EN 
+        \item Keep original total sample size ($n_t^{\ast\ast}=n_t, n_2^{\ast\ast}=n_t-n_1^{\ast\ast}$)
+        \begin{itemize}
+           \item Could keep original second stage sample size ($n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Comparison of Attained Methods}
+    \begin{itemize}
+      \item Two concrete examples comparing methods
+      \item Simulation results
+      \item Big picture results and takeaways (from situations that we've considered)
+      \item Discussion points
+    \end{itemize}
+\end{frame} %% talk about unlimited combinations, desire to stay closely to original design
+
+\begin{frame}
+\frametitle{Comparison of Attained Methods}
+Recall:
+  \begin{itemize}
+    \item Chang \textit{et al.} method: used type II error $\beta$-spending function 
+    \item OK method: aimed to keep PET close to planned
+    \item Likelihood: restricted likelihood
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Scenerio 1: Low $p_0$}
+$$p_0 = 0.10, p_1 = 0.25$$
+$$n_1 = 15, n_t = 41$$
+$$r_1 = 1, r_t = 7$$
+$$\mbox{PET}_0 = 55\%, \mbox{EN}_0 = 26.7$$
+
+
+\begin{table}[]
+\begin{tabular}{llllllll}
+Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.} & 13               & 0     & 7     & 0.046                                 & 0.830                & 25\%                      & 27.8                     \\
+OK                    & 13               & 1     & 7     & 0.040                                 & 0.771                & 62\%                      & 23.1                     \\
+Likelihood              & 13               & 0     & 7     & 0.046                                 & 0.830                & 25\%                      & 27.8
+\end{tabular}
+\end{table}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \begin{frame}
+% \textbf{Accrual close to planned}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.} & 13               & 0     & 7     & 0.046                                 & 0.830                & 25\%                      & 27.8                     \\
+% OK                    & 13               & 1     & 7     & 0.040                                 & 0.771                & 62\%                      & 23.1                     \\
+% Likelihood              & 13               & 0     & 7     & 0.046                                 & 0.830                & 25\%                      & 27.8
+% \end{tabular}
+% \end{table}
+% 
+% \textbf{Underaccrual}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}  & 5               & 0     & 7     & 0.034                                 & 0.671                & 59\%                      & 19.7                     \\
+% OK                      & 5               & 0     & 7     & 0.034                                 & 0.671                & 59\%                      & 19.7                     \\
+% Likelihood              & 5               & 0     & 7     & 0.034                                 & 0.671                & 59\%                      & 19.7
+% \end{tabular}
+% \end{table}
+% 
+% \textbf{Overaccrual}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}  & 23               & 3     & 7     & 0.040                                 & 0.785                & 80\%                      & 26.5                     \\
+% OK                      & 23               & 2     & 7     & 0.046                                 & 0.827                & 59\%                      & 30.3                     \\
+% Likelihood              & 23               & 2     & 7     & 0.046                                 & 0.827                & 59\%                      & 30.3
+% \end{tabular}
+% \end{table}
+%\end{frame}
+
+\begin{frame}
+\frametitle{Scenerio 1}
+\begin{figure}
+  \includegraphics[scale=0.52]{scenerio1v2.png}
+\end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}
+% \frametitle{Scenerio 2, moderate $p_0$}
+% $$p_0=0.5, p_1=0.65$$
+% $$n_1=28, n_t=83$$
+% $$r_1=15, r_t=48$$
+% $$\mbox{PET}_0 = 71\%, \mbox{EN}_0 = 43.7$$
+% 
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 32               & 17     & 49    & 0.033                                   & 0.783                & 70\%                      & 47.2                     \\
+% OK                      & 32               & 17     & 49     & 0.033                                 & 0.793                & 70\%                      & 47.2                     \\
+% Likelihood              & 32               & 17     & 48     & 0.050                                 & 0.828                & 70\%                      & 47.2                    
+% \end{tabular}
+% \end{table}
+% \end{frame}
+
+
+%\begin{frame}
+% \textbf{Accrual close to planned}
+% \vspace{-4mm}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 30               & 16     & 48     & 0.049                                 & 0.816                & 71\%                      &45.5                     \\
+% OK                      & 30               & 16     & 48     & 0.049                                 & 0.816                & 71\%                      & 45.5                     \\
+% Likelihood              & 30               & 16     & 48     & 0.049                                 & 0.816                & 71\%                      & 45.5                    
+% \end{tabular}
+% \end{table}
+% 
+% \textbf{Underaccrual}
+% \vspace{-4mm}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 18               & 8     & 48     & 0.036                                 & 0.815                & 41\%                      & 56.5                     \\
+% OK                      & 18               & 10     & 48     & 0.037                                 & 0.760                & 76\%                      & 33.6                     \\
+% Likelihood              & 18               & 9     & 48     & 0.048                                 & 0.796                & 60\%                      & 44.5                    
+% \end{tabular}
+% \end{table}
+% 
+% \textbf{Overaccrual} 
+% \vspace{-4mm}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 38               & 21     & 48     & 0.047                                 & 0.813                & 79\%                      & 47.4                     \\
+% OK                      & 38               & 20     & 49     & 0.035                                 & 0.818                & 69\%                      & 52.1                     \\
+% Likelihood              & 38               & 20     & 48     & 0.054                                 & 0.856                & 69\%                      & 52.1                    
+% \end{tabular}
+% \end{table}
+% 
+% \end{frame}
+
+% \begin{frame}
+% \frametitle{Scenerio 2}
+% \includegraphics[scale=0.52]{scenerio2.png}
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Scenerio 2: High $p_0$}
+$$p_0=0.75, p_1=0.90$$
+$$n_1=22, n_t=39$$
+$$r_1=17, r_t=33$$
+$$\mbox{PET}_0 = 68\%, \mbox{EN}_0 = 27.5$$
+
+\begin{table}[]
+\begin{tabular}{llllllll}
+Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+Chang \textit{et al.}   & 26               & 21     & 33     & 0.048                                 & 0.791                & 82\%                      & 28.4                     \\
+OK                      & 26               & 20     & 34     & 0.019                                 & 0.650                & 66\%                      & 30.4                     \\
+Likelihood              & 26               & 20     & 33     & 0.051                                 & 0.810                & 66\%                      & 30.4                    
+\end{tabular}
+\end{table}
+\end{frame}
+
+
+% 
+% \begin{frame}
+% 
+% \textbf{Accrual close to planned}
+% \vspace{-4mm}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 20               & 15     & 34     & 0.019                                 & 0.650                & 59\%                      & 27.9                     \\
+% OK                      & 20               & 15     & 34     & 0.019                                 & 0.659                & 59\%                      & 27.9                     \\
+% Likelihood              & 20               & 15     & 33     & 0.050                                 & 0.805                & 59\%                      & 27.9                    
+% \end{tabular}
+% \end{table}
+% 
+% \textbf{Underaccrual}
+% \textbf{Accrual close to planned}
+% \vspace{-4mm}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 14               & 10     & 33     & 0.050                                 & 0.800                & 49\%                      & 29.5                     \\
+% OK                      & 14               & 11     & 33     & 0.042                                 & 0.738                & 72\%                      & 21.0                     \\
+% Likelihood              & 14               & 10     & 33     & 0.050                                 & 0.800                & 49\%                      & 29.5                    
+% \end{tabular}
+% \end{table}
+% 
+% \textbf{Overaccrual}
+% \vspace{-4mm}
+% \begin{table}[]
+% \begin{tabular}{llllllll}
+% Method                  & $n_1^{\ast\ast}$ & $s_1$ & $s_t$ & $\alpha^{\ast\ast}$ & $1-\beta^{\ast\ast}$ & $\mbox{PET}^{\ast\ast}_0$ & $\mbox{EN}^{\ast\ast}_0$ \\ \hline
+% Chang \textit{et al.}   & 32               & 26     & 34     & 0.019                                 & 0.650                & 86\%                      & 33.0                     \\
+% OK                      & 32               & 25     & 34     & 0.019                                 & 0.650                & 72\%                      & 33.9                     \\
+% Likelihood              & 32               & 25     & 33     & 0.051                                 & 0.810                & 72\%                      & 33.9                    
+% \end{tabular}
+% \end{table}
+% 
+% \end{frame}
+
+\begin{frame}
+\frametitle{Scenerio 2}
+\includegraphics[scale=0.52]{scenerio3.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\small Monte Carlo Simulation}
+\footnotesize
+\vspace{-0.5mm}
+Average error rates of 20 two-stage designs when $n_t^{\ast\ast} = n_1^{\ast\ast} + n_2$
+\vspace{-4.5mm}
+\begin{figure}
+\includegraphics[scale=0.3]{n2same.png}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\small Monte Carlo Simulation}
+\footnotesize
+\vspace{-0.5mm}
+Average error rates of 20 two-stage designs when $n_t^{\ast\ast} = n_t$
+\vspace{-4.5mm}
+\begin{figure}
+\includegraphics[scale=0.3]{ntsame.png}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\small Monte Carlo Simulation}
+\footnotesize
+Average of average error rates of 20 two-stage designs when $n_t^{\ast\ast} = n_t$
+\begin{figure}
+\includegraphics[scale=0.4]{aveofave.png}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Big Picture Results}
+    \begin{itemize}
+        \item Chang \textit{et al.} and OK mostly differ when there are extreme deviations
+        \item OK design and Likelihood are competative when PET above 50\%
+        \item One may be more favorable over another depending on hypotheses
+        \item If $s_1$ is inconsistent between designs for a given deviation, usually within $\pm$ 1 of each other in cases considered
+    \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Recommending a Method}
+    \begin{itemize}
+        \item Depends on statistical approach
+        \item Do you want to abandon hypothesis testing?
+          \begin{itemize}
+           \item If yes, Likelihood method
+            \item If no, OK method %% penalizes for deviation
+          \end{itemize}
+        \item Do you want a conventional two-stage method? 
+          \begin{itemize}
+            \item Can't go wrong with either Likelihood or OK
+          \end{itemize}
+        \item Do you want flexibility?
+          \begin{itemize}
+            \item Likelihood
+          \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+
+
+\section{Discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+\frametitle{Discussion}
+    \begin{itemize}
+        \item Calculation of p-values is hard -- ordering of sample space is not straightforward
+        \item Could calculate ignoring sample path -- may have a different decision %% and what determines significance is unclear
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Discussion}
+    \begin{itemize}
+        \item Calculation of p-values is hard -- ordering of sample space is not straightforward
+        \item Could calculate ignoring sample path -- may have a different decision %% and what determines significance is unclear
+        \item Why can't we just wait for stage I sample size?
+        \item Why do we want to keep the original total sample size the same?
+          \begin{itemize}
+            \item Resources
+            \item Simulation results
+          \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Discussion}
+    \begin{itemize}
+        \item Calculation of p-values is hard -- ordering of sample space is not straightforward
+        \item Could calculate ignoring sample path -- may have a different decision %% and what determines significance is unclear
+        \item Why can't we just wait for stage I sample size?
+        \item Why do we want to keep the original total sample size the same?
+          \begin{itemize}
+            \item Resources
+            \item Simulation results
+          \end{itemize}
+        \item Attained designs able to accomodate shifts in stage II if needed
+        \item These methods provide solutions to unplanned sample sizes... don't take advantage of them
+        \item May want to use more conservative approach
+    \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Future Directions}
+    \begin{itemize}
+        \item More conservative approach to OK design
+        \item Investigate p-value calculation 
+        \item Consider a Bayesian approach
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Acknowledgements}
+My deepest appreciation goes to:
+    \begin{itemize}
+        \item Advisor: Tatsuki Koyama
+        \item DGS and committee member: Jeffrey Blume
+        \item My family
+        \item Faculty
+        \item Fellow graduate students
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\centering
+\Large
+  Questions?
+\end{frame}
+
+\begin{frame}
+\frametitle{Supplemental slide... More Results: $\alpha = \beta = 0.10$}
+    \begin{itemize}
+        \item $\alpha = \beta = 0.1$
+        \item Stage I sample size low ($p_0 = 0.05, p_1 = 0.20$)
+          \begin{itemize}
+            \item Under-accrual, drop in power and type I error
+            \item Attained $n_1^{\ast\ast}$ = 1, $\mbox{PET}_0^{\ast\ast} \approx 1$ %% not practical
+          \end{itemize}
+        \item Other two cases, similar results to $\alpha = 0.05, \beta = 0.20$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+ ``Hypothesis testing procedures do not place any interpretation on the numerical value of the LR. The extremeness of an obsevation is measured, not by the magnitude of the LR, but by the probability of observing a likelihood ratio that large or larger. It's the tail area, not the likelihood ratio, that is meaningful quantity in hypothesis testing," Blume, 2002
+\end{frame}
+
+\end{document}
+
